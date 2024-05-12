@@ -1,0 +1,49 @@
+
+.cards h1{
+    font-family: "Merriweather", serif;
+    font-weight: 900;
+    font-style: normal;
+    color: #134c57;
+    font-size: 40px;
+    padding-left: 20%;
+    padding-bottom: 10px;
+}
+
+.carousel-container {
+    max-width: 70%;
+    margin: 0 auto;
+  }
+  
+  .carousel-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   cursor: pointer;
+ 
+
+  }
+  
+  .carousel-image img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+  }
+  
+  .carousel-name p {
+    margin-top: 10px;
+    margin-left: 20px;
+    font-size: 18px;
+    font-weight: bold;
+   
+  }
+
+  .slick-prev{
+    background-color: #008DDA;
+    border-radius: 50%;
+  }
+  .slick-next{
+    background-color: #008DDA;
+    border-radius: 50%;
+  }
+  
