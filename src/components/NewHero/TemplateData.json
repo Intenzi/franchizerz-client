@@ -1,0 +1,20 @@
+[
+	{
+		"id": 1,
+		"image": "https://imagetolink.com/ib/cmakxdENDC.jpg",
+		"title": "Subway",
+		"price": 335
+	},
+	{
+		"id": 2,
+		"image": "https://imagetolink.com/ib/dI4KyZYf4R.jpg",
+		"title": "MC Donalds",
+		"price": 450
+	},
+	{
+		"id": 3,
+		"image": "https://imagetolink.com/ib/7dWpv1zFUL.jpg",
+		"title": "Wow Momos",
+		"price": 200
+	}
+]

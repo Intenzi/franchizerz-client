@@ -1,0 +1,207 @@
+.carousel-container {
+	width: 100%;
+	height: 99vh; /* Adjust to take 80% of the viewport height */
+	position: relative;
+	overflow: hidden;
+	margin-top: 0px; /* Adjust according to your fixed topbar and navbar heights */
+}
+
+.carousel {
+	width: 100%; /* Ensure carousel takes full width */
+	height: 100%; /* Ensure carousel takes full height */
+	margin: 0;
+	padding: 0;
+	position: relative;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+
+	align-items: center;
+}
+
+.slide {
+	width: 100%; /* Ensure slides take full width */
+	height: 100%; /* Ensure slides take full height */
+	/* object-fit: cover; Ensure images fit within the slide */
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0; /* Initially hidden */
+	transition: opacity 0.5s ease;
+}
+
+.slide.active {
+	opacity: 1; /* Show active slide */
+}
+.nav {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	background: rgba(0, 0, 0, 0.5);
+	color: white;
+	border: none;
+	cursor: pointer;
+	padding: 10px;
+	font-size: 1.5rem;
+	z-index: 1;
+}
+
+.nav.prev {
+	left: 2%; /* Adjust left position */
+}
+
+.nav.next {
+	right: 2%; /* Adjust right position */
+}
+
+@media (max-width: 768px) {
+	.nav.prev {
+		left: 1%; /* Adjust left position for smaller screens */
+	}
+
+	.nav.next {
+		right: 1%; /* Adjust right position for smaller screens */
+	}
+}
+
+@media (max-width: 480px) {
+	.nav.prev {
+		left: 0.5%; /* Further adjust left position for mobile screens */
+	}
+
+	.nav.next {
+		right: 0.5%; /* Further adjust right position for mobile screens */
+	}
+}
+
+.dots {
+	position: absolute;
+	bottom: 20px; /* Adjust margin from bottom */
+	left: 50%;
+	transform: translateX(-50%);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 1; /* Ensure dots are above slides */
+}
+
+.dot {
+	width: 10px;
+	height: 10px;
+	background-color: #bbb;
+	border-radius: 50%;
+	margin: 0 5px;
+	cursor: pointer;
+}
+
+.dot.active {
+	background-color: #333;
+}
+
+.carousel-content {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	position: absolute;
+	top: 35%;
+	left: 35%;
+	transform: translate(-50%, -50%);
+	width: auto; /* Adjust width as necessary */
+	max-width: 90%; /* Limit width for smaller screens */
+	padding: 20px; /* Add padding for spacing */
+	text-align: center;
+	z-index: 2;
+	opacity: 0;
+	animation: fadeInUp 1s forwards;
+}
+
+.btn {
+	display: inline-block;
+	padding: 15px 35px;
+	font-size: 1.2rem;
+	font-weight: 500;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	color: #aa9166;
+	background: #121518;
+	border: 2px solid #aa9166;
+	border-radius: 0;
+	transition: 0.3s;
+	text-decoration: none;
+	margin-top: 20px;
+	opacity: 0;
+}
+
+.btn.show {
+	animation: fadeInUp 0.5s forwards;
+}
+
+.btn:hover {
+	color: #121518;
+	background: #aa9166;
+}
+
+@keyframes fadeInUp {
+	from {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@media (max-width: 1024px) {
+	.carousel-container {
+		height: 50vh; /* Adjust height for medium screens */
+	}
+	.btn {
+		padding: 12px 30px;
+		font-size: 1rem;
+	}
+}
+
+@media (max-width: 768px) {
+	.carousel-container {
+		height: 40vh; /* Adjust height for smaller screens */
+	}
+	.carousel-content {
+		top: 25%; /* Adjust vertical position for smaller screens */
+		left: 28%; /* Adjust horizontal position for smaller screens */
+	}
+	.btn {
+		padding: 10px 25px;
+		font-size: 0.9rem;
+	}
+}
+
+@media (max-width: 480px) {
+	.carousel-container {
+		height: 30vh; /* Further adjust height for mobile screens */
+	}
+	.carousel-content {
+		top: 18%; /* Adjust vertical position for mobile screens */
+		left: 18%; /* Adjust horizontal position for mobile screens */
+		transform: translateX(-50%, -50%);
+	}
+	.btn {
+		padding: 8px 20px;
+		font-size: 0.7rem;
+	}
+}
+
+@media (max-width: 320px) {
+	.carousel-container {
+		height: 40vh; /* Adjust height for smaller screens */
+	}
+	.carousel-content {
+		top: 25%; /* Adjust vertical position for smaller screens */
+		left: 16%; /* Adjust horizontal position for smaller screens */
+	}
+	.btn {
+		padding: 10px 25px;
+		font-size: 0.5rem;
+	}
+}

@@ -1,0 +1,179 @@
+/* TopBar.css */
+
+.top-bar {
+	position: relative;
+	top: 0;
+	z-index: 50; /* Ensures the top bar stays on top of other content */
+	background-color: #000; /* Added background color directly */
+	height: 75px; /* Added height directly */
+}
+
+.text-gold {
+	color: #ffd700;
+}
+
+.text-white {
+	color: #fff;
+}
+
+.border-white\/16 {
+	border-color: rgba(255, 255, 255, 0.16);
+}
+
+.text {
+	font-size: 22px;
+}
+
+.font-extrabold {
+	font-weight: 800;
+}
+
+.font-medium {
+	font-weight: 500;
+}
+
+.leading {
+	line-height: 55px;
+}
+
+.text-6xl {
+	font-size: 4rem; /* Adjust as needed */
+}
+
+.text-2xl {
+	font-size: 1.5rem; /* Adjust as needed */
+}
+
+.text-sm {
+	font-size: 0.875rem; /* Adjust as needed */
+}
+
+.text-base {
+	font-size: 1rem; /* Adjust as needed */
+}
+
+.text-xs {
+	font-size: 0.75rem; /* Adjust as needed */
+}
+
+.hover\:text-gold:hover {
+	color: #ffd700;
+}
+
+.hover\:bg-white:hover {
+	background-color: #fff;
+}
+
+.font-size-0 {
+	font-size: 0;
+}
+
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+.mx-auto {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.px-4 {
+	padding-left: 1rem;
+	padding-right: 1rem;
+}
+
+.lg\:px-0 {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.flex {
+	display: flex;
+}
+
+.items-center {
+	align-items: center;
+}
+
+.justify-between {
+	justify-content: space-between;
+}
+
+.justify-end {
+	justify-content: flex-end;
+}
+
+.w-full {
+	width: 100%;
+}
+
+.h-full {
+	height: 100%;
+}
+
+.flex-shrink-0 {
+	flex-shrink: 0;
+}
+
+.flex-grow {
+	flex-grow: 1;
+}
+
+.flex-col {
+	flex-direction: column;
+}
+
+.border-l {
+	border-left-width: 1px;
+}
+
+.border-r {
+	border-right-width: 1px;
+}
+
+.m-0 {
+	margin: 0;
+}
+
+.px-3 {
+	padding-left: 0.75rem;
+	padding-right: 0.75rem;
+}
+
+.px-5 {
+	padding-left: 1.25rem;
+	padding-right: 1.25rem;
+}
+
+.w {
+	width: 40px;
+}
+
+.md\:w {
+	width: 60px;
+}
+
+.text {
+	font-size: 18px;
+}
+
+.md\:text {
+	font-size: 22px;
+}
+
+.text-4xl {
+	font-size: 2.25rem;
+}
+
+@media (max-width: 768px) {
+	.top-bar-right {
+		display: none;
+	}
+
+	.top-bar .logo {
+		justify-content: center;
+		width: 100%;
+	}
+}

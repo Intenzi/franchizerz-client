@@ -1,0 +1,16 @@
+.product-section {
+	display: flex;
+	align-items: center;
+	margin-bottom: 2rem;
+}
+
+.product-image {
+	width: 30%;
+	height: 30%;
+	margin-right: 2rem;
+	margin-left: 10%;
+}
+
+.product-content {
+	width: 60%;
+}

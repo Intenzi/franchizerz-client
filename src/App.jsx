@@ -1,24 +1,32 @@
-import React from 'react'
-import Navbar from './components/Navbar/Navbar'
+import { Routes, Route, useMatch } from "react-router-dom"
+import Navbar from "./components/Navbar/Navbar"
+import Footer from "./components/Footer/Footer"
 import "./App.css"
-import Hero from './components/Hero/Hero'
-import Card from './components/Card/Card'
-import CustomCard from './components/CustomizedCard/CustomCard'
-import { data1 , data2 } from './data/db'
+import Franchise from "./components/Franchise/Franchise"
+import HomePage from "./components/HomePage/HomePage"
+import "bootstrap/dist/css/bootstrap.min.css"
+
+import { data } from "./data/db_new"
 
 const App = () => {
+	const match = useMatch("/franchise/:id")
+	const franchise = match
+		? data.find((franchise) => franchise.id === Number(match.params.id))
+		: null
 
- 
-  return (
-    <div>
-      <Navbar/>
-      <Hero/>
-      <CustomCard heading="What's On Your Mind" data={data1}/>
-      <Card/>
-      <CustomCard  heading = "Categories!" data={data2}/>
-
-    </div>
-  )
+	return (
+		<>
+			<Navbar />
+			<Routes>
+				<Route
+					path="/franchise/:id"
+					element={<Franchise franchise={franchise} />}
+				/>
+				<Route path="/" element={<HomePage />} />
+			</Routes>
+			<Footer />
+		</>
+	)
 }
 
 export default App

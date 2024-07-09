@@ -1,0 +1,148 @@
+.cardHolder {
+	height: 300px;
+	width: 300px;
+	display: flex;
+	justify-content: "center";
+	align-items: "center";
+	margin-top: 20px;
+	margin-right: 20px;
+}
+.card1 {
+	background-color: white;
+	border: 2px white solid;
+	height: 290px;
+	width: 280px;
+	border-radius: 5px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+}
+.imageContainer {
+	margin-bottom: -30px;
+	position: relative;
+	bottom: 20px;
+}
+.image {
+	width: 50px;
+	height: 50px;
+	border: 2px gray solid;
+	border-radius: 50%;
+}
+.nameContainer {
+	padding: 0;
+	margin-top: 5px;
+}
+.name {
+	margin: 0;
+}
+.ratingContainer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.textContainer {
+	width: 260px;
+	height: 170px;
+}
+.dateCont {
+	font-size: 10px;
+	margin: 0;
+}
+.reviewHead {
+	font-weight: bold;
+	text-align: center;
+	margin: 0;
+}
+.reviewPara {
+	text-align: left;
+	margin: 0;
+	font-size: 12px;
+}
+.likbtn {
+	border-radius: 10px;
+	border: none;
+	background-color: white;
+}
+.lklogo:active {
+	fill: gray;
+}
+.reviewCardSlider {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	overflow-x: scroll;
+	margin-top: 20px;
+	padding-left: 20px;
+}
+.reviewCardSlider::-webkit-scrollbar {
+	display: none;
+}
+
+.reviewCardSlider {
+	scrollbar-width: none; /* Hide scrollbar in Firefox */
+	-ms-overflow-style: none; /* Hide scrollbar in IE and Edge */
+}
+
+.mainHeadText {
+	font-size: 30px;
+	margin: 0;
+	margin-left: 10px;
+}
+.userReviewLink {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	background-color: white;
+	border: none;
+	margin: 0;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-right: 30px;
+	border-radius: 20px;
+	margin-top: 10px;
+	margin-bottom: 2px;
+}
+.userReviewLink:active {
+	background-color: gray;
+	border: none;
+}
+.userReviewLinkText {
+	color: black;
+}
+
+.userReviewLinkLogo {
+	fill: black;
+}
+.headerContainer {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+.subMainContainer {
+	background-color: white;
+	width: 90vw;
+	height: 460px;
+	border-radius: 10px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+}
+.mainContainer {
+	display: flex;
+	align-items: center;
+	height: 100vh;
+	background-color: white;
+	justify-content: center;
+}
+.mainRatingPanel {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	padding-left: 20px;
+	background-color: black;
+}
+.averageRatingText {
+	color: gold;
+	margin-right: 20px;
+}

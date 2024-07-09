@@ -1,0 +1,110 @@
+.mainFooterContainer {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	border-top: 2px solid black;
+	padding-bottom: 30px;
+	height: 300px;
+	margin-top: 5vh;
+}
+a {
+	text-decoration: none;
+	color: black;
+}
+.footHeadText {
+	font-weight: 500;
+	font-size: 23px;
+}
+a:hover,
+a:active {
+	text-decoration: underline;
+	text-decoration-color: black;
+}
+
+.inputContainer {
+	display: flex;
+	flex-direction: row;
+	width: 40vw;
+}
+.footer {
+	height: 30px;
+	text-align: center;
+	border: 2px solid black;
+	border-radius: 2px;
+	margin-right: 10px;
+}
+.submit {
+	background-color: white;
+	border: 2px solid black;
+	height: 35px;
+	border-radius: 2px;
+}
+.submit:hover {
+	background-color: black;
+	color: white;
+}
+.newsletterText {
+	width: 40vw;
+}
+.newslettersubText {
+	width: 40vw;
+}
+.socialContainer {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+.socialText {
+	font-size: 20px;
+	font-weight: 600;
+}
+.logo {
+	height: 25px;
+}
+.logolink {
+	margin-left: 1vw;
+	border-radius: 50%;
+}
+@media (max-width: 890px) {
+	.inputContainer {
+		flex-direction: column;
+		height: 100px;
+		align-items: left;
+		justify-content: space-around;
+	}
+}
+@media (max-width: 600px) {
+	.newslettersubText,
+	a,
+	.newsletterText {
+		font-size: 10px;
+	}
+	.submit {
+		height: 20px;
+		font-size: 10px;
+	}
+	.input {
+		height: 20px;
+		font-size: 10px;
+	}
+	.footHeadText {
+		font-size: 13px;
+	}
+	.logo {
+		height: 15px;
+	}
+	.socialText {
+		font-size: 12px;
+	}
+}
+@media (max-width: 335px) {
+	.mainFooterContainer {
+		flex-direction: column;
+	}
+	.subFooterContainer {
+		margin-left: 10px;
+	}
+	.submit {
+		height: auto;
+	}
+}
