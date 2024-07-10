@@ -3,10 +3,12 @@ import Navbar from "./components/Navbar/Navbar"
 import Footer from "./components/Footer/Footer"
 import "./App.css"
 import Franchise from "./components/Franchise/Franchise"
+
 import HomePage from "./components/HomePage/HomePage"
 import "bootstrap/dist/css/bootstrap.min.css"
 
 import { data } from "./data/db_new"
+import NewsSection from "./components/Blog/NewsSection"
 
 const App = () => {
 	const match = useMatch("/franchise/:id")
@@ -22,7 +24,9 @@ const App = () => {
 					path="/franchise/:id"
 					element={<Franchise franchise={franchise} />}
 				/>
+				<Route path="/blog" element={<NewsSection />} />
 				<Route path="/" element={<HomePage />} />
+				
 			</Routes>
 			<Footer />
 		</>
