@@ -1,11 +1,12 @@
 import React from 'react';
-import '../styles/ContactForm.css'; // Import your CSS file for styling
+import "bootstrap/dist/css/bootstrap.min.css";
+import './styles/ContactForm.css'; // Import your CSS file for styling
 
 const ContactForm = () => {
   return (
     <section className="contact" id="contact">
       <h2 className="heading">
-        Contact <span>Me!</span>
+        Contact <span>Us!</span>
         <hr className="horizontal-line" />
       </h2>
 
@@ -22,7 +23,7 @@ const ContactForm = () => {
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vehicula nibh vel tempus ultrices.</p>
           </div>
           <div className="form-fields">
-            <div className="input-box small-inputs">
+            <div className="input-box">
               <input
                 className="form-control"
                 id="name"
@@ -40,9 +41,9 @@ const ContactForm = () => {
                 required
               />
             </div>
-            <div className="input-box small-inputs contac">
+            <div className="input-box contac">
               <input
-                className="form-control "
+                className="form-control"
                 id="phone"
                 name="phone"
                 placeholder="Contact No"
@@ -59,7 +60,7 @@ const ContactForm = () => {
               placeholder="Query"
               required
             ></textarea>
-            <input type="submit" value="Send Message" className="" style={{border:"1px solid black", backgroundColor:"#0f38" , borderRadius:"5px",padding:"10px", marginTop:"15px"}} />
+            <input type="submit" value="Send Message" className="submit-btn" />
           </div>
         </div>
       </form>

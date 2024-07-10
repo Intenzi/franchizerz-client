@@ -7,6 +7,7 @@ import HomePage from "./components/HomePage/HomePage"
 import "bootstrap/dist/css/bootstrap.min.css"
 
 import { data } from "./data/db_new"
+import ContactForm from "./components/NewHero/ContactForm"
 
 const App = () => {
 	const match = useMatch("/franchise/:id")
@@ -23,6 +24,8 @@ const App = () => {
 					element={<Franchise franchise={franchise} />}
 				/>
 				<Route path="/" element={<HomePage />} />
+				<Route path="/contact-us" element={<ContactForm/>} />
+				
 			</Routes>
 			<Footer />
 		</>
