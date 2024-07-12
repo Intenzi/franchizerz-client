@@ -1,6 +1,6 @@
 import React from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
-import './styles/ContactForm.css'; // Import your CSS file for styling
+import './ContactForm.css'; // Import your CSS file for styling
 
 const ContactForm = () => {
   return (
@@ -44,10 +44,10 @@ const ContactForm = () => {
             <div className="input-box contac">
               <input
                 className="form-control"
+                type='tel'
                 id="phone"
                 name="phone"
                 placeholder="Contact No"
-                type="text"
                 required
               />
             </div>

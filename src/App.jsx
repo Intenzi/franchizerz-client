@@ -7,7 +7,7 @@ import HomePage from "./components/HomePage/HomePage"
 import "bootstrap/dist/css/bootstrap.min.css"
 
 import { data } from "./data/db_new"
-import ContactForm from "./components/NewHero/ContactForm"
+import ContactForm from "./components/Contact/ContactForm"
 
 const App = () => {
 	const match = useMatch("/franchise/:id")
