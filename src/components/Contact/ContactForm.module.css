@@ -1,0 +1,119 @@
+/* ContactForm.css */
+
+.contact {
+  padding: 2rem;
+  background-image: url('contact.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.heading {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: rgb(13, 13, 14);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.heading span {
+  font-weight: bold;
+  margin-left: 0.5rem;
+}
+
+.horizontal-line {
+  flex-grow: 1;
+  height: 2px;
+  background-color: #000;
+  margin-left: 1rem;
+}
+
+.form-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background-color: rgba(255, 255, 255, 0.4);
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+.content {
+  flex: 1;
+  max-width: 40%;
+  padding: 1rem;
+}
+
+.form-fields {
+  flex: 2;
+  max-width: 55%;
+  padding: 1rem;
+}
+
+.input-box {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.input-box input,
+textarea {
+  width: 100%;
+  padding: 0.8rem;
+  font-size: 0.7rem;
+  background: #d8d1d1;
+  margin: 0.4rem 0;
+  border: 1px solid #474747;
+  border-radius: 5px;
+}
+
+.input-box input {
+  width: 48%;
+}
+
+.input-box .contac {
+  width: 100%;
+}
+
+textarea {
+  width: 100%;
+  resize: none;
+  
+}
+#query{
+  border: 1px solid #474747;
+  background: #cac1c1;
+}
+
+
+.submit-btn {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  font-size: 0.7rem;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.submit-btn:hover {
+  background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+  .content {
+    max-width: 100%;
+  }
+
+  .form-fields {
+    max-width: 100%;
+  }
+
+  .input-box input {
+    width: 100%;
+  }
+}
