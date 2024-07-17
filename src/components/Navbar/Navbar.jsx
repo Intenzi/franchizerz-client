@@ -1,64 +1,106 @@
-import React from "react"
-import "./Navbar.css"
-import HomeIcon from "@mui/icons-material/HomeOutlined"
-import BookIcon from "@mui/icons-material/BookOutlined"
-import CallIcon from "@mui/icons-material/CallOutlined"
-import HandshakeIcon from "@mui/icons-material/HandshakeOutlined"
-import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined"
-import LoginOutlinedIcon from "@mui/icons-material/LoginOutlined"
-import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined"
-import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined"
-import logo from "../../assets/logo.png"
-// import Partnerwithus from '../../Partnerwithus/Partnerwithus';
+import Home from "../../assets/home.svg"
+import BrandName from "../../assets/logo.svg"
+import Logo from "../../assets/logo_1.svg"
+import Auth from "../../assets/auth.svg"
+import { NavLink } from "react-router-dom"
+import About from "../../assets/AboutUs.svg"
+import Blog from "../../assets/blog.svg"
+import styles from "../NavBar/NavBar.module.css"
+// import SearchBar from "../SearchBar/SearchBar";
+import Search from "../../assets/search.svg"
 
-const Navbar = () => {
+export default function NavBar() {
+	const activeLinkStyle = {
+		fontWeight: "bold",
+		color: "black",
+		// backgroundColor: "#1a73e8",
+		// padding: "1px",
+		borderRadius: "1px",
+	}
 	return (
-		<section className="navbar">
-			<div className="logo">
-				{/* <img  src={logo}   className = 'logo-img' alt='logo' /> */}
-				<h1>Franchizerz</h1>
-				<h4>Your Own Partner</h4>
-			</div>
+		<div>
+			<nav className={styles.navigation}>
+				<div>
+					<ul className={styles.ul1}>
+						<li className={styles.li}>
+							<NavLink
+								exact
+								to="/"
+								style={({ isActive }) =>
+									isActive ? activeLinkStyle : undefined
+								}
+							>
+								<div style={{ display: "flex" }}>
+									<Logo className={styles.svglogo} />
+									<BrandName
+										className={styles.franchizerzlogo}
+									/>
+								</div>
+							</NavLink>
+						</li>
 
-			<ul>
-				<li>
-					<HomeIcon /> Home
-				</li>
-				<li>
-					{" "}
-					<BookIcon />
-					Blogs{" "}
-				</li>
-				<li>
-					{" "}
-					<CallIcon />
-					Contact Us
-				</li>
-				<li>
-					{" "}
-					<HandshakeIcon />{" "}
-				</li>
-			</ul>
+						<li className={styles.li}>
+							<NavLink
+								exact
+								to="/"
+								style={({ isActive }) =>
+									isActive ? activeLinkStyle : undefined
+								}
+							>
+								<Home className={styles.svglogo} />
+							</NavLink>
+						</li>
 
-			<div className="search-box">
-				<input type="text" placeholder="Search" />
-				<SearchOutlinedIcon />
-			</div>
+						<li className={styles.li}>
+							<NavLink
+								exact
+								to="/franchise/1"
+								style={({ isActive }) =>
+									isActive ? activeLinkStyle : undefined
+								}
+							>
+								<About className={styles.svglogo} />
+							</NavLink>
+						</li>
 
-			<ul>
-				<li>
-					{" "}
-					<LoginOutlinedIcon />
-					Log In
-				</li>
-				<li>
-					{" "}
-					<FavoriteBorderOutlinedIcon />
-					WishList
-				</li>
-			</ul>
-		</section>
+						<li className={styles.li}>
+							<NavLink
+								exact
+								to="/"
+								style={({ isActive }) =>
+									isActive ? activeLinkStyle : undefined
+								}
+							>
+								<Search className={styles.searchlogo} />
+							</NavLink>
+						</li>
+
+						<li className={styles.li}>
+							<NavLink
+								exact
+								to="/blog"
+								style={({ isActive }) =>
+									isActive ? activeLinkStyle : undefined
+								}
+							>
+								<Blog className={styles.svglogo} />
+							</NavLink>
+						</li>
+
+						<li className={styles.li}>
+							<NavLink
+								exact
+								to="/sign-up"
+								style={({ isActive }) =>
+									isActive ? activeLinkStyle : undefined
+								}
+							>
+								<Auth className={styles.svglogo} />
+							</NavLink>
+						</li>
+					</ul>
+				</div>
+			</nav>
+		</div>
 	)
 }
-
-export default Navbar

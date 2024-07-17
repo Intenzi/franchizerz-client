@@ -1,0 +1,47 @@
+.navigation {
+	background-color: white;
+}
+.svglogo {
+	width: 7vw;
+	height: 8vw;
+}
+.searchlogo {
+	width: 12vw;
+	height: 8vw;
+}
+.franchizerzlogo {
+	width: 14vw;
+	height: 10vw;
+}
+.ul1 {
+	display: flex;
+	height: 12vw;
+	justify-content: space-between;
+	padding: 0 0 0 0;
+	width: 100vw;
+}
+
+.li {
+	margin-top: 1rem;
+	margin-right: 1rem;
+	margin-left: 1rem;
+	/* margin-left: 10px; */
+}
+
+@media screen and (max-width: 600px) {
+	.navigation {
+		display: block;
+	}
+	.logo {
+		font-size: 2vh;
+		font-family: Arial, Helvetica, sans-serif;
+	}
+	.ul1 {
+		justify-content: space-around;
+	}
+}
+@media screen and (max-width: 1024px) {
+	.menuText {
+		display: none;
+	}
+}
