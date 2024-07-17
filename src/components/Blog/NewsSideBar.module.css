@@ -3,12 +3,13 @@
     margin-top: 10vh; */
 
 
-    border: 1px solid rgb(56, 55, 55);
+    /* border: 1px solid rgb(56, 55, 55); */
     /* box-shadow: -3px 1px 10px; */
     height: 90vh;
     border-radius: 0px 0px 0px 0px;
     position: absolute;
     width: 25%;
+    margin-top: 5.68vh;
 
    overflow:scroll;
 }
@@ -38,7 +39,7 @@
     list-style: none;
     padding: 2vh 2vw 10vh;
     font-size: 1.2rem;
-    margin-top: 1vh;
+    /* margin-top: 1vh; */
 }
 .techItems{
     margin-top: 1.3vh;

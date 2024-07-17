@@ -1,0 +1,94 @@
+/* Import FontAwesome for the search icon */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+
+/* Container Styles */
+.appContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  width: 100%;
+}
+
+/* Search Input Styles */
+.searchInput_Container {
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+#searchInput {
+  width: 100%;
+  padding: 10px 40px 10px 20px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  font-size: 16px;
+}
+
+.search-icon {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  font-size: 16px;
+  color: #aaa;
+}
+
+/* Suggestions List Styles */
+.suggestions-list {
+  width: 100%;
+  max-width: 400px;
+  max-height: 150px;
+  overflow-y: auto;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 10px;
+  z-index: 10;
+}
+
+.suggestion-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.suggestion-item:hover {
+  background-color: #f5f5f5;
+}
+
+.suggestion-image {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+  border-radius: 5px;
+}
+
+/* Scrollbar Styles */
+.suggestions-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.suggestions-list::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.suggestions-list::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+.suggestions-list::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .searchInput_Container,
+  .suggestions-list {
+    max-width: 300px;
+  }
+}

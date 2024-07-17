@@ -1,11 +1,12 @@
 .post {
-    width: 70vw;
+    width: 77vw;
     /* box-shadow: 0px 0px 10px; */
-    border: 1px solid rgba(78, 78, 78, 0.839);
+    /* border: 1px solid rgba(78, 78, 78, 0.839); */
     height: 90vh;
     padding: 1vh;
-    margin-left: 25vw;
+    margin-left: 24.3vw;
     overflow: auto;
+    margin-top: -5vh;
     /* position: fixed; */
     /* top: 20; */
     padding-bottom: 20vh;
@@ -23,6 +24,9 @@
   
   .likeCount {
     margin-left: 5px;
+  }
+  .userDP{
+    /* margin-top: 3vw; */
   }
   
   .reactions {
@@ -45,6 +49,7 @@
   .pstimg {
     box-shadow: 0px 0px 2px;
     width: 100%;
+
   }
   .userpost {
     padding: 1vw;
