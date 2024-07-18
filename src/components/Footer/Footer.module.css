@@ -4,19 +4,23 @@
 	justify-content: space-around;
 	border-top: 2px solid black;
 	padding-bottom: 30px;
-	height: 300px;
+	height: auto;
 	margin-top: 5vh;
 }
-a {
+.subFooterContainer{
+	margin-top: 30px;
+}
+.mainFooterContainer a{
 	text-decoration: none;
 	color: black;
+	font-size: 18px;
 }
 .footHeadText {
-	font-weight: 500;
+	font-weight: 550;
 	font-size: 23px;
 }
-a:hover,
-a:active {
+.mainFooterContainer a:hover,
+.mainFooterContainer a:active {
 	text-decoration: underline;
 	text-decoration-color: black;
 }
@@ -25,6 +29,8 @@ a:active {
 	display: flex;
 	flex-direction: row;
 	width: 40vw;
+	align-items: center;
+	margin-bottom: 10px;
 }
 .footer {
 	height: 30px;
@@ -36,8 +42,12 @@ a:active {
 .submit {
 	background-color: white;
 	border: 2px solid black;
-	height: 35px;
+	height: auto;
 	border-radius: 2px;
+	font-size: 15px;
+	padding: 2px;
+	padding-left: 5px;
+	padding-right: 5px;
 }
 .submit:hover {
 	background-color: black;
@@ -45,9 +55,11 @@ a:active {
 }
 .newsletterText {
 	width: 40vw;
+	font-size: 18px;
 }
 .newslettersubText {
 	width: 40vw;
+	font-size: 18px;
 }
 .socialContainer {
 	display: flex;
@@ -57,13 +69,27 @@ a:active {
 .socialText {
 	font-size: 20px;
 	font-weight: 600;
+	margin-top: 20px;
 }
+
 .logo {
 	height: 25px;
 }
 .logolink {
 	margin-left: 1vw;
 	border-radius: 50%;
+}
+.socialLogo{
+	display: flex;
+	flex-direction: row;
+}
+.input{
+	background-color: white;
+	border: 2px solid black;
+	text-align: center;
+	font-size: 18px;
+	margin-right: 10px;
+	height: auto;
 }
 @media (max-width: 890px) {
 	.inputContainer {
@@ -75,7 +101,7 @@ a:active {
 }
 @media (max-width: 600px) {
 	.newslettersubText,
-	a,
+	.mainFooterContainer a,
 	.newsletterText {
 		font-size: 10px;
 	}
