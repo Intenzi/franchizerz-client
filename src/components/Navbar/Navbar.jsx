@@ -54,7 +54,7 @@ export default function NavBar() {
 						<li className={styles.li}>
 							<NavLink
 								exact
-								to="/franchise/1"
+								// to="/franchise/1"
 								style={({ isActive }) =>
 									isActive ? activeLinkStyle : undefined
 								}

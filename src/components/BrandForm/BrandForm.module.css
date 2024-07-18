@@ -1,6 +1,7 @@
-/* .brand-form-container {
+.brand_form_container {
     max-width: 600px;
-    margin: 0 auto;
+    margin-top: 10vw;
+    margin-left: 30vw;
     padding: 20px;
     text-align: center;
     background-color: #f5f5f5;
@@ -8,18 +9,18 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
   
-  .brand-form-container .heading {
+  .brand_form_container .heading {
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 20px;
   }
   
-  .brand-form .form-group {
+  .brand_form .form-group {
     margin-bottom: 15px;
   }
   
-  .brand-form .form-group input,
-  .brand-form .form-group textarea {
+  .brand_form .form_group input,
+  .brand_form .form_group textarea {
     width: 100%;
     padding: 10px;
     font-size: 16px;
@@ -27,11 +28,11 @@
     border-radius: 5px;
   }
   
-  .brand-form .form-group textarea {
+  .brand_form .form_group textarea {
     resize: none;
   }
   
-  .brand-form .submit-btn {
+  .brand_form .submit_btn {
     padding: 10px 20px;
     font-size: 16px;
     color: #fff;
@@ -41,17 +42,17 @@
     cursor: pointer;
   }
   
-  .brand-form .submit-btn:hover {
+  .brand_form .submit_btn:hover {
     background-color: #0056b3;
   }
   
   @media (max-width: 768px) {
-    .brand-form-container {
+    .brand_form_container {
       padding: 10px;
     }
   
-    .brand-form-container .heading {
+    .brand_form_container .heading {
       font-size: 20px;
     }
   }
-   */
+  
