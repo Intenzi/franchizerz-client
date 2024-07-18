@@ -28,9 +28,10 @@ const Reviews = ({ reviews }) => {
 					</button>
 				</div>
 				<div className={styles.mainRatingPanel}>
-					<p className={styles.averageRatingText}>
+					<div><p className={styles.averageRatingText}>
 						Average user rating:
-					</p>
+					</p></div>
+					
 					<StarRatings
 						rating={averageRating(reviews)}
 						starRatedColor="gold"

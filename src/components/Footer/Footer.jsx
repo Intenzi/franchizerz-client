@@ -38,10 +38,8 @@ const Footer = () => {
 						</p>
 					</div>
 					<div className={s.socialContainer}>
-						<div>
-							<p className={s.socialText}>Follow Us: </p>
-						</div>
-						<div>
+						<p className={s.socialText}>Follow Us: </p>
+						<div className={s.socialLogo}>
 							<a className={s.logolink} href="googl.in">
 								<FacebookLogo className={s.logo} />
 							</a>
