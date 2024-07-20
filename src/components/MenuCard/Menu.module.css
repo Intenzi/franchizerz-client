@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+.mainContainer{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    height: 820px;
+    width: 90vw;
+    border-radius: 10px;
+    align-items: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+    margin-top: 100px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 100px;
+
+    
+}
+.headText{
+    color: black;
+    font-size: 25px;
+    font-family: "Lora", serif;
+    border: 5px double rgb(20, 20, 20);
+    font-weight: 500;
+    width: 78vw;
+    border-radius: 8px;
+    margin-bottom: 100px;
+    background-color: rgb(250, 251, 251);
+    text-align: center;
+    margin-top: 30px;
+}
+.imageContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 430px;
+    width: 75vw;
+    z-index: 2;
+    
+}
+.menuImage{
+    height: 600px;
+    width: 300px;
+    margin-left: 20px;
+    margin-right: 20px;
+    transition: transform 0.3s ease-in-out,box-shadow 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+}
+.menuImage:hover{
+    z-index: 10;
+    transform: scale(1.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+}
+.logo{
+    height: 50px;
+    width: 50px;
+    fill:black;
+}
+.subContainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 100px;
+}
+.navBtn {
+    background-color: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    height: 60px;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+    border-radius: 10%;
+    position: relative;
+    top: 200px;
+}
+.arrowIcon {
+    width: 50px;
+    height: 50px;
+    fill: rgb(17, 17, 17);
+    padding: 0;
+    margin: 0;
+}
+.arrowIcon:hover{
+    fill: white;
+}
+.navBtn:hover{
+    background-color: rgba(0, 0, 0, 0.3);
+    border: none;
+}
+.navBtn:active{
+    border: none;
+}
+.modalOverlay {
+    position:fixed;
+    left: 0;
+    top:0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modalContent {
+    background-color: transparent;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.modalImage {
+    height: 800px;
+    width: 400px;
+    border-radius: 5px;
+}
+
+.modalNavBtn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    height: 60px;
+    width: 60px;
+    display: flex;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    background-color: rgb(250, 251, 251,0.5);
+}
+
+.modalNavBtn:focus {
+    outline: none;
+}
+
+.modalArrowIcon {
+    width: 20px;
+    height: 20px;
+    fill: black;
+}
+
+.modalNavBtn:hover .modalArrowIcon {
+    fill: white;
+}
+
+.modalNavBtn:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modalContent button:first-child {
+    left: -100px;
+}
+
+.modalContent button:last-child {
+    right: -100px;
+}
+@media(max-width:860px){
+    .modalContent button:first-child {
+        left: -50px;
+    }
+    
+    .modalContent button:last-child {
+        right: -50px;
+    }
+}
+@media(max-width:750px){
+    .modalImage{
+        transform: scale(0.75);
+    }
+    .modalContent button:first-child {
+        left: -10px;
+    }
+    
+    .modalContent button:last-child {
+        right: -10px;
+    }
+}
+@media(max-width:595px){
+    .modalContent button:first-child {
+        position:absolute;
+        top:750px;
+        left:150px;
+    }
+    
+    .modalContent button:last-child {
+        position:absolute;
+        top:750px;
+        right:150px;
+    }
+}
+@media(max-width:480px){
+    .modalImage{
+        transform: scale(0.5);
+    }
+    .modalContent button:first-child {
+        position:absolute;
+        top:700px;
+        left:150px;
+    }
+    
+    .modalContent button:last-child {
+        position:absolute;
+        top:700px;
+        right:150px;
+    }
+}
