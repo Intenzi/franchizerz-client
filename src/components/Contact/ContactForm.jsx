@@ -1,17 +1,18 @@
 import React from 'react';
-import '../styles/ContactForm.css'; // Import your CSS file for styling
+import styles from './ContactForm.module.css'; // Import your CSS Modules file for styling
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const ContactForm = () => {
   return (
-    <section className="contact" id="contact">
-      <h2 className="heading">
-        Contact <span>Me!</span>
-        <hr className="horizontal-line" />
+    <section className={styles.contact} id="contact">
+      <h2 className={styles.heading}>
+        Contact <span>Us!</span>
+        <hr className={styles['horizontal-line']} />
       </h2>
 
       <form>
-        <div className="form-container">
-          <div className="content">
+        <div className={styles['form-container']}>
+          <div className={styles.content}>
             <h3>Get in touch</h3>
             <address>
               <strong>Email:</strong>{' '}
@@ -21,10 +22,10 @@ const ContactForm = () => {
             </address>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vehicula nibh vel tempus ultrices.</p>
           </div>
-          <div className="form-fields">
-            <div className="input-box small-inputs">
+          <div className={styles['form-fields']}>
+            <div className={styles['input-box']}>
               <input
-                className="form-control"
+                className={`${styles['form-control']}`}
                 id="name"
                 name="name"
                 placeholder="Full Name"
@@ -32,7 +33,7 @@ const ContactForm = () => {
                 required
               />
               <input
-                className="form-control"
+                className={`${styles['form-control']}`}
                 id="email"
                 name="email"
                 placeholder="Email"
@@ -40,18 +41,18 @@ const ContactForm = () => {
                 required
               />
             </div>
-            <div className="input-box small-inputs contac">
+            <div className={`${styles['input-box']} ${styles.contac}`}>
               <input
-                className="form-control "
+                className={`${styles['form-control']}`}
+                type='tel'
                 id="phone"
                 name="phone"
                 placeholder="Contact No"
-                type="text"
                 required
               />
             </div>
             <textarea
-              className="form-control"
+              className={`${styles['form-control']}`}
               name="query"
               id="query"
               cols="30"
@@ -59,7 +60,7 @@ const ContactForm = () => {
               placeholder="Query"
               required
             ></textarea>
-            <input type="submit" value="Send Message" className="" style={{border:"1px solid black", backgroundColor:"#0f38" , borderRadius:"5px",padding:"10px", marginTop:"15px"}} />
+            <input type="submit" value="Send Message" className={styles['submit-btn']} />
           </div>
         </div>
       </form>
