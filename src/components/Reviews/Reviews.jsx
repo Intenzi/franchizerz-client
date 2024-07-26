@@ -20,26 +20,6 @@ const Reviews = ({ reviews }) => {
 			<div className={styles.subMainContainer}>
 				<div className={styles.headerContainer}>
 					<p className={styles.mainHeadText}>User Reviews</p>
-					<button className={styles.userReviewLink}>
-						<p className={styles.userReviewLinkText}>
-							See all user reviews
-						</p>
-						<ArrowLogo className={styles.userReviewLinkLogo} />
-					</button>
-				</div>
-				<div className={styles.mainRatingPanel}>
-					<div><p className={styles.averageRatingText}>
-						Average user rating:
-					</p></div>
-					
-					<StarRatings
-						rating={averageRating(reviews)}
-						starRatedColor="gold"
-						numberOfStars={5}
-						name="rating"
-						starDimension="20px"
-						starSpacing="2px"
-					/>
 				</div>
 				<div className={styles.reviewCardSlider}>
 					{reviews.map((review, index) => (
