@@ -1,0 +1,344 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+
+:root {
+  --header-height: 3rem;
+  --first-color: #181059;
+  --two-color: #8645ff;
+  --greay-color: #b6b6b6;
+  --yellow-color: #edbb01;
+  --white-color: #fcf8f8;
+  --black-color: #000000;
+  --body-font: "Inter", sans-serif;
+  --big-font-size: 2rem;
+  --normal-font-size: 0.938rem;
+  --z-fixed: 100;
+}
+
+@media screen and (min-width: 768px) {
+  :root {
+    --big-font-size: 2rem;
+    --normal-font-size: 1.1rem;
+  }
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+*,
+*:active,
+*:focus {
+  outline: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: var(--first-color);
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background: var(--white-color);
+  font-weight: 400;
+}
+
+h1,
+p,
+ul {
+  margin: 0;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 100%;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  gap: 1.2rem;
+}
+
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+.main {
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+body {
+  background: #f6f5fa;
+}
+
+section {
+  padding: 80px 0;
+}
+
+/*=======================================================
+Base
+===============================================*/
+
+input[type="checkbox"] {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+  display: none;
+}
+
+.chech-text-month {
+  font-weight: 700;
+}
+
+.pricing.on_check .chech-text-month {
+  font-weight: 400;
+}
+
+.chech-text-year,
+.chech-text-month {
+  width: 110px;
+  text-align: center;
+}
+
+.pricing.on_check .chech-text-year {
+  font-weight: 700;
+}
+
+.pricing .title,
+.pricing .description {
+  text-align: center;
+}
+
+.pricingBox {
+  display: flex;
+  justify-content: space-between; /* Distribute space evenly between cards */
+  gap: 20px; /* Space between cards */
+  flex-wrap: wrap; /* Wrap cards on smaller screens */
+}
+
+/********************************************************************************/
+.card3dPart {
+  flex: 1; /* Allow cards to grow and shrink equally */
+  max-width: 300px; /* Limit the width of each card */
+  margin: 0; /* Remove default margin */
+  transition: transform 0.3s ease-in-out;
+}
+
+.card3dWrap {
+  position: relative;
+  width: 280px;
+  max-width: calc(100% - 20px);
+  height: 417px;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  margin-top: 80px;
+}
+
+.card3dWrapper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform-style: preserve-3d;
+  transition: transform 700ms 400ms ease-out;
+}
+
+.cardFront {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 1);
+  position: absolute;
+  border-radius: 6px;
+  left: 0;
+  top: 0;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  box-shadow: 0 12px 35px 0 rgba(16, 39, 112, 0.07);
+}
+
+.pricingWrap {
+  position: relative;
+  width: 100%;
+  display: block;
+  z-index: 1;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  margin-top: 0;
+}
+
+.sale {
+  font-size: 12px;
+  float: right;
+  background: #ffffff;
+  border-radius: 4px;
+  padding: 5px 8px;
+  color: var(--two-color);
+}
+
+.description {
+  font-size: 16px;
+  opacity: 0.68;
+  margin-bottom: 40px;
+}
+
+.cardFront {
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 24px;
+}
+
+.cardTitle {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  margin-top: 1px;
+}
+
+.cardListItem {
+  display: flex;
+  align-items: baseline;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.cardListItemHidden {
+  opacity: 0.3;
+}
+
+.cardListItemIcon {
+  margin-right: 12px;
+}
+
+.price {
+  font-size: 17px;
+  margin-bottom: 16px;
+}
+
+.priceSpan {
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.priceTime {
+  font-size: 16px;
+  font-weight: 400;
+  margin-left: 4px;
+}
+
+.btn {
+  background: #f8f4ff;
+  border-radius: 8px;
+  border: none;
+  display: block;
+  width: 100%;
+  padding: 14px;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--two-color);
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: var(--first-color);
+  color: var(--white-color);
+}
+
+/* Card Styles */
+.card3dPart:nth-child(1) .cardFront {
+  background: var(--greay-color); /* Silver background */
+  color: black;
+}
+
+.card3dPart:nth-child(1) .cardTitle {
+  color: black; /* Text color for silver card */
+}
+
+.card3dPart:nth-child(1) .btn {
+  background: var(--first-color);
+  color: var(--white-color);
+}
+
+.card3dPart:nth-child(1) .btn:hover {
+  background: var(--two-color);
+}
+
+.card3dPart:nth-child(2) .cardFront {
+  background: var(--first-color); /* Gold background */
+  color: var(--white-color);
+}
+
+.card3dPart:nth-child(2) .cardTitle {
+  color: var(--white-color); /* Text color for gold card */
+}
+
+.card3dPart:nth-child(2) .btn {
+  background: var(--two-color);
+  color: var(--white-color);
+}
+
+.card3dPart:nth-child(2) .btn:hover {
+  background: var(--greay-color);
+}
+
+.card3dPart:nth-child(3) .cardFront {
+  background: var(--yellow-color); /* Platinum background */
+  color: var(--black-color);
+}
+
+.card3dPart:nth-child(3) .cardTitle {
+  color: var(--black-color); /* Text color for platinum card */
+}
+
+.card3dPart:nth-child(3) .btn {
+  background: var(--first-color);
+  color: var(--white-color);
+}
+
+.card3dPart:nth-child(3) .btn:hover {
+  background: var(--two-color);
+}
+
+/* Uplift the middle card */
+.card3dPart:nth-child(2) {
+  transform: translateY(-20px);
+}
+
+.card3dPart:nth-child(2) .card3dWrap {
+  margin-top: 50px;
+}
+
+@media screen and (max-width: 1240px) {
+  .pricing__box {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .pricing__box {
+    flex-direction: column;
+  }
+}
