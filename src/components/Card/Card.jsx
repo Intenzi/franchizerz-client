@@ -1,94 +1,106 @@
-import React from "react"
-import Slider from "react-slick"
-import "slick-carousel/slick/slick.css"
-import "slick-carousel/slick/slick-theme.css"
-import "./Card.css"
+import React from "react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import styles from "./Card.module.css";
 
 const Card = () => {
-	const settings = {
-		dots: false,
-		infinite: true,
-		speed: 500,
-		slidesToShow: 3,
-		slidesToScroll: 1,
-		centerMode: true,
-		centerPadding: "60px",
-		responsive: [
-			{
-				breakpoint: 768,
-				settings: {
-					arrows: true,
-				},
-			},
-		],
-	}
+  const settings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    centerMode: true,
+    centerPadding: "0px",
+    nextArrow: <SampleNextArrow />,
+    prevArrow: <SamplePrevArrow />,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: true,
+          centerPadding: "20px",
+        },
+      },
+    ],
+  };
 
-	const data = [
-		{
-			id: 1,
-			name: "Coca Cola",
-			image: "https://cdn.ebaumsworld.com/mediaFiles/picture/2452130/85386506.jpg",
-		},
-		{
-			id: 2,
-			name: "Star Bucks",
-			image: "https://cdn.ebaumsworld.com/mediaFiles/picture/2452130/85386506.jpg",
-		},
-		{
-			id: 3,
-			name: "Star Bucks",
-			image: "https://cdn.ebaumsworld.com/mediaFiles/picture/2452130/85386506.jpg",
-		},
-		{
-			id: 4,
-			name: "Star Bucks",
-			image: "https://cdn.ebaumsworld.com/mediaFiles/picture/2452130/85386506.jpg",
-		},
-		{
-			id: 5,
-			name: "Star Bucks",
-			image: "https://cdn.ebaumsworld.com/mediaFiles/picture/2452130/85386506.jpg",
-		},
-		{
-			id: 6,
-			name: "Star Bucks",
-			image: "https://cdn.ebaumsworld.com/mediaFiles/picture/2452130/85386506.jpg",
-		},
-		{
-			id: 7,
-			name: "Star Bucks",
-			image: "https://cdn.ebaumsworld.com/mediaFiles/picture/2452130/85386506.jpg",
-		},
-		{
-			id: 8,
-			name: "Star Bucks",
-			image: "https://cdn.ebaumsworld.com/mediaFiles/picture/2452130/85386506.jpg",
-		},
-	]
+  const data = [
+    {
+      id: 1,
+      name: "Coca Cola",
+      image: "https://cdn.ebaumsworld.com/mediaFiles/picture/2452130/85386506.jpg",
+    },
+    {
+      id: 2,
+      name: "Star Bucks",
+      image: "https://cdn.ebaumsworld.com/mediaFiles/picture/2452130/85386506.jpg",
+    },
+    {
+      id: 3,
+      name: "Pepsi",
+      image: "https://cdn.ebaumsworld.com/mediaFiles/picture/2452130/85386506.jpg",
+    },
+    {
+      id: 4,
+      name: "Sprite",
+      image: "https://cdn.ebaumsworld.com/mediaFiles/picture/2452130/85386506.jpg",
+    },
+    {
+      id: 5,
+      name: "Fanta",
+      image: "https://cdn.ebaumsworld.com/mediaFiles/picture/2452130/85386506.jpg",
+    },
+  ];
 
-	return (
-		<section className="cards">
-			<h1>Top Categories</h1>
-			<div className="carousel-container1">
-				<Slider {...settings}>
-					{data.map((item) => (
-						<div key={item.id} className="carousel-item">
-							<div className="carousel-image">
-								<img
-									className="main-img"
-									src={item.image}
-									alt={item.name}
-								/>
-							</div>
-							<div className="carousel-name">
-								<p>{item.name}</p>
-							</div>
-						</div>
-					))}
-				</Slider>
-			</div>
-		</section>
-	)
-}
+  return (
+    <section className={styles.cards}>
+      <h1>Top Categories</h1>
+      <div className={styles["carousel-container1"]}>
+        <Slider {...settings}>
+          {data.map((item) => (
+            <div key={item.id} className={styles["carousel-item"]}>
+              <div className={styles["carousel-image"]}>
+                <img className={styles["main-img"]} src={item.image} alt={item.name} />
+              </div>
+              <div className={styles["carousel-name"]}>
+                <p>{item.name}</p>
+              </div>
+            </div>
+          ))}
+        </Slider>
+      </div>
+    </section>
+  );
+};
 
-export default Card
+const SampleNextArrow = (props) => {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{ ...style, display: "block", background: "#134c57", borderRadius: "50%" }}
+      onClick={onClick}
+    >
+      <span style={{ color: "white" }}>›</span>
+    </div>
+  );
+};
+
+const SamplePrevArrow = (props) => {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{ ...style, display: "block", background: "#134c57", borderRadius: "50%" }}
+      onClick={onClick}
+    >
+      <span style={{ color: "white" }}>‹</span>
+    </div>
+  );
+};
+
+export default Card;
