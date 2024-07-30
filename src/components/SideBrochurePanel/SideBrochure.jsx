@@ -3,7 +3,7 @@ import FormatQuoteIcon from '@mui/icons-material/FormatQuote';
 import { saveAs } from 'file-saver';
 import { Document, Page, Text, pdf } from '@react-pdf/renderer';
 import { FaFilePdf } from 'react-icons/fa';
-import styles from './SideBrochure.module.css'; // Assuming you're using CSS modules
+import styles from './SideBrochure.module.css';
 
 const SideBrochure = ({ name }) => {
   const handleDownload = () => {
