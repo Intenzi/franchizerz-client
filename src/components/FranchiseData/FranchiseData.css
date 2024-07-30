@@ -2,15 +2,59 @@
 	display: flex;
 	align-items: center;
 	margin-bottom: 2rem;
-}
-
-.product-image {
+	justify-content: center; /* Center items horizontally */
+  }
+  
+  .product-image {
 	width: 30%;
-	height: 30%;
+	height: auto; /* Maintain aspect ratio */
 	margin-right: 2rem;
 	margin-left: 10%;
-}
-
-.product-content {
+  }
+  
+  .product-content {
 	width: 60%;
-}
+  }
+  
+  /* Media query for larger screens */
+  @media (max-width: 1350px) {
+	.product-section {
+	  flex-direction: column; /* Stack items vertically */
+	  align-items: center;    /* Center items horizontally */
+	  justify-content: center; /* Center items vertically */
+	}
+  
+	.product-image {
+	  width: 50%; /* Adjust size for better fit on smaller screens */
+	  margin-left: 0; /* Remove left margin */
+	  margin-right: 0; /* Remove right margin */
+	}
+  
+	.product-content {
+	  width: 80%; /* Adjust width for better fit on smaller screens */
+	  text-align: center; /* Center text in the content */
+	}
+  }
+  
+  /* Media query for smaller screens */
+  @media (max-width: 768px) {
+	.product-image {
+	  width: 70%; /* Further adjust size for smaller screens */
+	}
+  
+	.product-content {
+	  width: 90%; /* Adjust width for even smaller screens */
+	}
+  }
+  
+  /* Media query for very small screens */
+  @media (max-width: 480px) {
+	.product-image {
+	  width: 90%; /* Use most of the screen width on very small screens */
+	}
+  
+	.product-content {
+	  width: 95%; /* Use almost the entire screen width */
+	}
+  }
+  
