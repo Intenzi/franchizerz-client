@@ -18,14 +18,12 @@
 }
 .headText{
     color: black;
-    font-size: 25px;
+    font-size: 45px;
     font-family: "Lora", serif;
-    border: 5px double rgb(20, 20, 20);
     font-weight: 500;
     width: 78vw;
     border-radius: 8px;
     margin-bottom: 100px;
-    background-color: rgb(250, 251, 251);
     text-align: center;
     margin-top: 30px;
 }
