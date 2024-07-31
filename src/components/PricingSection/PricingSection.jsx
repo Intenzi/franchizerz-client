@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './PricingSection.module.css'; // Import the CSS module
+import styles from './PricingSection.module.css'; 
 import 'remixicon/fonts/remixicon.css';
 
 const Card = ({ title, price, features, btnText, btnClassName, sale }) => {
