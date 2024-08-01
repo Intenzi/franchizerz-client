@@ -1,106 +1,54 @@
-import s from "./Footer.module.css"
-import FacebookLogo from "../../images/icons8-facebook.svg"
-import InstagramLogo from "../../images/icons8-instagram.svg"
-import LinkedinLogo from "../../images/icons8-linkedin.svg"
-import TwitterLogo from "../../images/icons8-x-logo.svg"
+import React from 'react';
+import styles from './Footer.module.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEnvelope, faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { faFacebook, faTwitter, faWhatsapp, faPinterest } from '@fortawesome/free-brands-svg-icons';
+
 const Footer = () => {
-	return (
-		<div className={s.mainFooterContainer}>
-			<div className={s.subFooterContainer}>
-				<div>
-					<p className={s.footHeadText}>Franchizerz</p>
-				</div>
-				<div>
-					<div>
-						<p className={s.newsletterText}>
-							Subscribe to our newsletter for latest updates on
-							new features and product releases
-						</p>
-					</div>
-					<div className={s.inputContainer}>
-						<div>
-							<input
-								className={s.input}
-								type="email"
-								placeholder="Enter your email"
-							/>
-						</div>
-						<div>
-							<button className={s.submit}>
-								Subscribe to Newsletter
-							</button>
-						</div>
-					</div>
-					<div>
-						<p className={s.newslettersubText}>
-							Get in touch with us for more information on our
-							franchize models
-						</p>
-					</div>
-					<div className={s.socialContainer}>
-						<p className={s.socialText}>Follow Us: </p>
-						<div className={s.socialLogo}>
-							<a className={s.logolink} href="googl.in">
-								<FacebookLogo className={s.logo} />
-							</a>
-							<a className={s.logolink} href="googl.in">
-								<InstagramLogo className={s.logo} />
-							</a>
-							<a className={s.logolink} href="googl.in">
-								<LinkedinLogo className={s.logo} />
-							</a>
-							<a className={s.logolink} href="googl.in">
-								<TwitterLogo className={s.logo} />
-							</a>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div className={s.subFooterContainer}>
-				<div>
-					<p className={s.footHeadText}>Franchize Models</p>
-				</div>
-				<div>
-					<div>
-						<a href="sample.com">Express Package</a>
-					</div>
-					<div>
-						<a href="sample.com">Classic Package</a>
-					</div>
-					<div>
-						<a href="sample.com">Platinum Package</a>
-					</div>
-					<div>
-						<a href="sample.com">About Us</a>
-					</div>
-					<div>
-						<a href="sample.com">FAQs</a>
-					</div>
-				</div>
-			</div>
-			<div className={s.subFooterContainer}>
-				<div>
-					<p className={s.footHeadText}>Contact Us</p>
-				</div>
-				<div>
-					<div>
-						<a href="sample.com">Terms & Conditions</a>
-					</div>
-					<div>
-						<a href="sample.com">Privacy Policy</a>
-					</div>
-					<div>
-						<a href="sample.com">Cookie Policy</a>
-					</div>
-					<div>
-						<a href="sample.com">Careers</a>
-					</div>
-					<div>
-						<a href="sample.com">Blog</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	)
-}
-export default Footer
+    return (
+        <footer className={styles.footer}>
+            <div className={styles.row}>
+                <div className={styles.col}>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, a?</p>
+                </div>
+                <div className={styles.col}>
+                    <h3>Office <div className={styles.underline}><span></span></div></h3>
+                    <p>IIPl Road</p>
+                    <p>Ludhiana Punjab</p>
+                    <p>PIN 22122, India</p>
+                    <p className={styles.emailId}>saurabh@franchizerz.com</p>
+                    <h4>+91132232242</h4>
+                </div>
+                <div className={styles.col}>
+                    <h3>Links <div className={styles.underline}><span></span></div></h3>
+                    {/* <ul className={styles.linkList}> */}
+                    <p><a href="/">Home</a></p>
+                    <p><a href="/">About Us</a></p>
+                    <p><a href="/">Services</a></p>
+                    <p><a href="/">Features</a></p>
+                    <p><a href="/contact-us">Contact Us</a></p>
+                    
+                    {/* </ul> */}
+                </div>
+                <div className={styles.col}>
+                    <h3>Newsletter <div className={styles.underline}><span></span></div></h3>
+                    <form action="" className={styles.form}>
+                        <FontAwesomeIcon icon={faEnvelope} className={styles.icon} />
+                        <input type="email" placeholder="Enter your email-id" required className={styles.input} />
+                        <button type="submit" className={styles.button}><FontAwesomeIcon icon={faArrowRight} /></button>
+                    </form>
+                    <div className={styles.socialIcons}>
+                        <FontAwesomeIcon icon={faFacebook} className={styles.icon} />
+                        <FontAwesomeIcon icon={faTwitter} className={styles.icon} />
+                        <FontAwesomeIcon icon={faWhatsapp} className={styles.icon} />
+                        <FontAwesomeIcon icon={faPinterest} className={styles.icon} />
+                    </div>
+                </div>
+            </div>
+            <hr className={styles.hr} />
+            <p className={styles.copyright}>Franchizerz &copy; 2024 - All Rights Reserved </p>
+        </footer>
+    );
+};
+
+export default Footer;
