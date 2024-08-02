@@ -1,4 +1,4 @@
-import React from "react";
+// import React from "react";
 import { Link } from "react-router-dom";
 import styles from "./Navbar.module.css"; // Import the CSS module
 import HomeIcon from "@mui/icons-material/HomeOutlined";
@@ -7,9 +7,9 @@ import CallIcon from "@mui/icons-material/CallOutlined";
 import HandshakeIcon from "@mui/icons-material/HandshakeOutlined";
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 import LoginOutlinedIcon from "@mui/icons-material/LoginOutlined";
-import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
+// import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
-import logo from "../../assets/logo.png";
+// import logo from "../../assets/logo.png";
 
 const Navbar = () => {
   return (

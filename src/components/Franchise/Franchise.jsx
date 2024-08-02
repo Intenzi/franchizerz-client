@@ -1,4 +1,5 @@
-import React from 'react';
+// import React from 'react';
+import PropTypes from 'prop-types';
 import FranchiseData from "../FranchiseData/FranchiseData";
 import WhyFranchizerz from "../WhyFranchizerz/WhyFranchizerz";
 import FranchiseModels from "../FranchiseModels/FranchiseModels";
@@ -14,5 +15,11 @@ const Franchise = ({ franchise }) => (
     <Reviews reviews={franchise.reviews} />
   </>
 );
+
+Franchise.propTypes = {
+  franchise: PropTypes.shape({
+    reviews: PropTypes.arrayOf(PropTypes.object).isRequired,
+  }).isRequired,
+};
 
 export default Franchise;

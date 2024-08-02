@@ -1,4 +1,5 @@
-import React from "react";
+// import React from "react";
+import PropTypes from "prop-types";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -90,6 +91,12 @@ const SampleNextArrow = (props) => {
   );
 };
 
+SampleNextArrow.propTypes = {
+  className: PropTypes.string,
+  style: PropTypes.object,
+  onClick: PropTypes.func,
+};
+
 const SamplePrevArrow = (props) => {
   const { className, style, onClick } = props;
   return (
@@ -101,6 +108,12 @@ const SamplePrevArrow = (props) => {
       <span style={{ color: "white" }}>‹</span>
     </div>
   );
+};
+
+SamplePrevArrow.propTypes = {
+  className: PropTypes.string,
+  style: PropTypes.object,
+  onClick: PropTypes.func,
 };
 
 export default Card;

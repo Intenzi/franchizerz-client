@@ -1,4 +1,5 @@
-import React from 'react';
+// import React from 'react';
+import PropTypes from 'prop-types';
 import styles from './PricingSection.module.css'; // Import the CSS module
 import 'remixicon/fonts/remixicon.css';
 
@@ -32,6 +33,21 @@ const Card = ({ title, price, features, btnText, btnClassName, sale }) => {
       </div>
     </div>
   );
+};
+
+Card.propTypes = {
+  title: PropTypes.string.isRequired,
+  price: PropTypes.string.isRequired,
+  features: PropTypes.arrayOf(
+    PropTypes.shape({
+      text: PropTypes.string.isRequired,
+      included: PropTypes.bool.isRequired,
+      hidden: PropTypes.bool,
+    })
+  ).isRequired,
+  btnText: PropTypes.string.isRequired,
+  btnClassName: PropTypes.string.isRequired,
+  sale: PropTypes.bool,
 };
 
 const PricingSection = () => {

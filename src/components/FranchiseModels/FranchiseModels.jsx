@@ -1,6 +1,7 @@
-import { useEffect, useRef } from "react"
-import { motion, useAnimation, useScroll, useTransform } from "framer-motion"
-import { FaCreditCard, FaWallet, FaMoneyBillAlt } from "react-icons/fa"
+import { useEffect, useRef } from "react";
+import { motion, useAnimation, useScroll, useTransform } from "framer-motion";
+import { FaCreditCard, FaWallet, FaMoneyBillAlt } from "react-icons/fa";
+import PropTypes from 'prop-types';
 
 const franchiseModels = [
 	{
@@ -30,11 +31,11 @@ const franchiseModels = [
 		totalSales: "5 lakh",
 		employees: "10",
 	},
-]
+];
 
 function FranchiseModels() {
-	const containerRef = useRef(null)
-	const { scrollYProgress } = useScroll({ container: containerRef })
+	const containerRef = useRef(null);
+	const { scrollYProgress } = useScroll({ container: containerRef });
 
 	return (
 		<div className="flex h-screen">
@@ -50,7 +51,7 @@ function FranchiseModels() {
 				<Cards scrollYProgress={scrollYProgress} />
 			</div>
 		</div>
-	)
+	);
 }
 
 function Cards({ scrollYProgress }) {
@@ -66,11 +67,15 @@ function Cards({ scrollYProgress }) {
 				/>
 			))}
 		</div>
-	)
+	);
 }
 
+Cards.propTypes = {
+	scrollYProgress: PropTypes.object.isRequired,
+};
+
 function Card({ card, index, scrollYProgress, totalCards }) {
-	const controls = useAnimation()
+	const controls = useAnimation();
 	const y = useTransform(
 		scrollYProgress,
 		[
@@ -79,7 +84,7 @@ function Card({ card, index, scrollYProgress, totalCards }) {
 			(index + 1) / totalCards,
 		],
 		["100vh", "0vh", "-100vh"]
-	)
+	);
 
 	const scale = useTransform(
 		scrollYProgress,
@@ -89,7 +94,7 @@ function Card({ card, index, scrollYProgress, totalCards }) {
 			(index + 1) / totalCards,
 		],
 		[0.9, 1, 0.9]
-	)
+	);
 
 	const opacity = useTransform(
 		scrollYProgress,
@@ -99,13 +104,13 @@ function Card({ card, index, scrollYProgress, totalCards }) {
 			(index + 1) / totalCards,
 		],
 		[0.5, 1, 0.5]
-	)
+	);
 
 	useEffect(() => {
 		if (index === 0) {
-			controls.start({ y: "0vh", scale: 1, opacity: 1 })
+			controls.start({ y: "0vh", scale: 1, opacity: 1 });
 		}
-	}, [index, controls])
+	}, [index, controls]);
 
 	return (
 		<motion.div
@@ -148,7 +153,22 @@ function Card({ card, index, scrollYProgress, totalCards }) {
 				</p>
 			</div>
 		</motion.div>
-	)
+	);
 }
 
-export default FranchiseModels
+Card.propTypes = {
+	card: PropTypes.shape({
+		id: PropTypes.number.isRequired,
+		name: PropTypes.string.isRequired,
+		icon: PropTypes.element.isRequired,
+		areaRequired: PropTypes.string.isRequired,
+		totalInvestment: PropTypes.string.isRequired,
+		totalSales: PropTypes.string.isRequired,
+		employees: PropTypes.string.isRequired,
+	}).isRequired,
+	index: PropTypes.number.isRequired,
+	scrollYProgress: PropTypes.object.isRequired,
+	totalCards: PropTypes.number.isRequired,
+};
+
+export default FranchiseModels;
