@@ -1,5 +1,4 @@
-// import React from "react";
-import PropTypes from "prop-types";
+import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -32,28 +31,33 @@ const Card = () => {
   const data = [
     {
       id: 1,
-      name: "Coca Cola",
-      image: "https://cdn.ebaumsworld.com/mediaFiles/picture/2452130/85386506.jpg",
+      name: "Education",
+      image: `/img/Education (1).png`,
     },
     {
       id: 2,
-      name: "Star Bucks",
-      image: "https://cdn.ebaumsworld.com/mediaFiles/picture/2452130/85386506.jpg",
+      name: "Food $ Beverage",
+      image: `/img/Food & Beverage (1).png`,
     },
     {
       id: 3,
-      name: "Pepsi",
-      image: "https://cdn.ebaumsworld.com/mediaFiles/picture/2452130/85386506.jpg",
+      name: "HealthCare",
+      image: `/img/Healthcare (1) (1).png`,
     },
     {
       id: 4,
-      name: "Sprite",
-      image: "https://cdn.ebaumsworld.com/mediaFiles/picture/2452130/85386506.jpg",
+      name: "Open to any",
+      image: `/img/Open to any (1).png`,
     },
     {
       id: 5,
-      name: "Fanta",
-      image: "https://cdn.ebaumsworld.com/mediaFiles/picture/2452130/85386506.jpg",
+      name: "Service and retail",
+      image: `/img/Service and retail (2).png`,
+    },
+    {
+      id: 5,
+      name: "Tour & Leisure",
+      image: `/img/Tour & Leisure.png`,
     },
   ];
 
@@ -91,12 +95,6 @@ const SampleNextArrow = (props) => {
   );
 };
 
-SampleNextArrow.propTypes = {
-  className: PropTypes.string,
-  style: PropTypes.object,
-  onClick: PropTypes.func,
-};
-
 const SamplePrevArrow = (props) => {
   const { className, style, onClick } = props;
   return (
@@ -108,12 +106,6 @@ const SamplePrevArrow = (props) => {
       <span style={{ color: "white" }}>‹</span>
     </div>
   );
-};
-
-SamplePrevArrow.propTypes = {
-  className: PropTypes.string,
-  style: PropTypes.object,
-  onClick: PropTypes.func,
 };
 
 export default Card;
