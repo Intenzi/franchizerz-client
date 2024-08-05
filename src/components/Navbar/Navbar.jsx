@@ -1,72 +1,106 @@
-import React from "react"
-import { Link } from "react-router-dom"
-import "./Navbar.css"
-import HomeIcon from "@mui/icons-material/HomeOutlined"
-import BookIcon from "@mui/icons-material/BookOutlined"
-import CallIcon from "@mui/icons-material/CallOutlined"
-import HandshakeIcon from "@mui/icons-material/HandshakeOutlined"
-import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined"
-import LoginOutlinedIcon from "@mui/icons-material/LoginOutlined"
-import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined"
-import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined"
-import logo from "../../assets/logo.png"
+import Home from "../../assets/home.svg"
+import BrandName from "../../assets/logo.svg"
+import Logo from "../../assets/logo_1.svg"
+import Auth from "../../assets/auth.svg"
+import { NavLink } from "react-router-dom"
+import About from "../../assets/AboutUs.svg"
+import Blog from "../../assets/blog.svg"
+import styles from "../Navbar/Navbar.module.css"
+// import SearchBar from "../SearchBar/SearchBar";
+import Search from "../../assets/search.svg"
 
-const Navbar = () => {
-  return (
-    <section className="navbar">
-      <div className="logo">
-        {/* <img src={logo} className='logo-img' alt='logo' /> */}
-        <h1>Franchizerz</h1>
-        <h4>Your Own Partner</h4>
-      </div>
+export default function NavBar() {
+	const activeLinkStyle = {
+		fontWeight: "bold",
+		color: "black",
+		// backgroundColor: "#1a73e8",
+		// padding: "1px",
+		borderRadius: "1px",
+	}
+	return (
+		<div>
+			<nav className={styles.navigation}>
+				<div>
+					<ul className={styles.ul1}>
+						<li className={styles.li}>
+							<NavLink
+								exact
+								to="/"
+								style={({ isActive }) =>
+									isActive ? activeLinkStyle : undefined
+								}
+							>
+								<div style={{ display: "flex" }}>
+									<Logo className={styles.svglogo} />
+									<BrandName
+										className={styles.franchizerzlogo}
+									/>
+								</div>
+							</NavLink>
+						</li>
 
-      <ul>
-        <li>
-          <Link to="/">
-            <HomeIcon /> Home
-          </Link>
-        </li>
-        <li>
-          <Link to="/blogs">
-            <BookIcon />
-            Blogs
-          </Link>
-        </li>
-        <li>
-          <Link to="/contact-us">
-            <CallIcon />
-            Contact Us
-          </Link>
-        </li>
-        <li>
-          <Link to="/partners">
-            <HandshakeIcon />
-            Partners
-          </Link>
-        </li>
-      </ul>
+						<li className={styles.li}>
+							<NavLink
+								exact
+								to="/"
+								style={({ isActive }) =>
+									isActive ? activeLinkStyle : undefined
+								}
+							>
+								<Home className={styles.svglogo} />
+							</NavLink>
+						</li>
 
-      <div className="search-box">
-        <input type="text" placeholder="Search" />
-        <SearchOutlinedIcon />
-      </div>
+						<li className={styles.li}>
+							<NavLink
+								exact
+								to="/contact-us"
+								style={({ isActive }) =>
+									isActive ? activeLinkStyle : undefined
+								}
+							>
+								<About className={styles.svglogo} />
+							</NavLink>
+						</li>
 
-      <ul>
-        <li>
-          <Link to="/login">
-            <LoginOutlinedIcon />
-            Log In
-          </Link>
-        </li>
-        <li>
-          <Link to="/wishlist">
-            <FavoriteBorderOutlinedIcon />
-            WishList
-          </Link>
-        </li>
-      </ul>
-    </section>
-  )
+						<li className={styles.li}>
+							<NavLink
+								exact
+								to="/"
+								style={({ isActive }) =>
+									isActive ? activeLinkStyle : undefined
+								}
+							>
+								<Search className={styles.searchlogo} />
+							</NavLink>
+						</li>
+
+						<li className={styles.li}>
+							<NavLink
+								exact
+								to="/blog"
+								style={({ isActive }) =>
+									isActive ? activeLinkStyle : undefined
+								}
+							>
+								<Blog className={styles.svglogo} />
+							</NavLink>
+						</li>
+
+						<li className={styles.li}>
+							<NavLink
+								exact
+								to="/sign-in"
+								style={({ isActive }) =>
+									isActive ? activeLinkStyle : undefined
+								}
+							>
+								<Auth className={styles.svglogo} />
+							</NavLink>
+						</li>
+					</ul>
+				</div>
+			</nav>
+		</div>
+	)
 }
-
-export default Navbar
