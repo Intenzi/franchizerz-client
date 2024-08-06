@@ -1,6 +1,6 @@
 export let postdata=[
     { userProfile:{
-        userName:'TechiSpot',
+        userName:'Franchizerz',
         userImage:'https://i.pinimg.com/474x/bd/26/b7/bd26b704fca0c5e3fe68f10322bf65c0.jpg',
         alt:'profileimage'
     },
@@ -13,7 +13,7 @@ export let postdata=[
     },
     {
         userProfile:{
-            userName:'TechiSpot',
+            userName:'Franchizerz',
             userImage:'https://i.pinimg.com/474x/bd/26/b7/bd26b704fca0c5e3fe68f10322bf65c0.jpg',
             alt:'profileimage'
         },
@@ -26,7 +26,7 @@ export let postdata=[
     },
     {
         userProfile:{
-            userName:'TechiSpot',
+            userName:'Franchizerz',
             userImage:'https://i.pinimg.com/474x/bd/26/b7/bd26b704fca0c5e3fe68f10322bf65c0.jpg',
             alt:'profileimage'
         },
@@ -39,7 +39,7 @@ export let postdata=[
     },
     {
         userProfile:{
-            userName:'TechiSpot',
+            userName:'Franchizerz',
             userImage:'https://i.pinimg.com/474x/bd/26/b7/bd26b704fca0c5e3fe68f10322bf65c0.jpg',
             alt:'profileimage'
         },
@@ -52,7 +52,7 @@ export let postdata=[
     },
     {
         userProfile:{
-            userName:'TechiSpot',
+            userName:'Franchizerz',
             userImage:'https://i.pinimg.com/474x/bd/26/b7/bd26b704fca0c5e3fe68f10322bf65c0.jpg',
             alt:'profileimage'
         },

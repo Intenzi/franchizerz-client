@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import styles from "./NewsPost.module.css";
-
 import { postdata } from "./NewsPosts";
 import CloseIcon from "@mui/icons-material/Close";
 
@@ -53,22 +52,7 @@ export default function NewsPost() {
     <>
     <div className={styles.post}>
       <div className={styles.newPost}>
-        <img
-          src="https://i.pinimg.com/564x/ac/18/49/ac18498ee93158817a026a82e8655fa7.jpg"
-          alt="user"
-          className={styles.userDP}
-        />
-        <label htmlFor="userpost">
-          <input
-            type="text"
-            id="userpost"
-            placeholder="Create new post"
-            className={styles.Input}
-            onClick={handlePostClick}
-          />
-        </label>
       </div>
-      <hr />
      
       {postdata.map((data, idx) => (
         <div className={styles.userpost} key={idx}>
@@ -78,20 +62,7 @@ export default function NewsPost() {
           <hr />
             <div>
               
-              <img
-                src={data.userProfile.userImage}
-                alt={data.userProfile.alt}
-                className={styles.profilePic}
-              />
               <span className={styles.usern}>{data.userProfile.userName}</span>
-              <button
-              className={`${styles.followButton} ${
-                isFollowing ? styles.whenclick1 : ""
-              }`}
-              onClick={handleFollowToggle}
-            >
-              {isFollowing ? "Following" : "Follow +"}
-            </button>
             </div>
             
           </div>
