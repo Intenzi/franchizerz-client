@@ -1,5 +1,5 @@
 import "./FranchiseData.css"
-
+import SideBrochure from "../SideBrochurePanel/SideBrochure"
 const FranchiseData = ({ franchise }) => {
 	const {
 		img,
@@ -53,6 +53,7 @@ const FranchiseData = ({ franchise }) => {
 					{growth}
 				</p>
 			</div>
+			<SideBrochure name={name} className='downloadBrochure'/>
 		</section>
 	)
 }

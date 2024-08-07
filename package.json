@@ -17,7 +17,9 @@
     "@fortawesome/react-fontawesome": "^0.2.2",
     "@mui/icons-material": "^5.15.17",
     "@mui/material": "^5.15.17",
+    "@react-pdf/renderer": "^3.4.4",
     "bootstrap": "^5.3.3",
+    "file-saver": "^2.0.5",
     "framer-motion": "^11.2.13",
     "react": "^18.2.0",
     "react-bootstrap": "^2.10.2",
@@ -26,6 +28,7 @@
     "react-router-dom": "^6.24.1",
     "react-slick": "^0.30.2",
     "react-star-ratings": "^2.3.0",
+    "remixicon": "^4.3.0",
     "slick-carousel": "^1.8.1",
     "typed.js": "^2.1.0",
     "vite-plugin-svgr": "^4.2.0"
