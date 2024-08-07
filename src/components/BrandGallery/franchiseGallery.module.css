@@ -1,31 +1,58 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
 .mainContainer{
-    background-color: white;
     display: flex;
     flex-direction: column;
     height: 380px;
     width: 90vw;
     border-radius: 10px;
     align-items: center;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
     position: relative;
     left: 50%;
     transform: translateX(-50%);
     margin-bottom: 20px;
-    
+    z-index: 10;
+}
+
+.Container{
+    height: 390px;
+    width: 90vw;
+    background-color: rgb(0, 162, 255);
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    position: relative;
+    top: 400px;
+    left: 45px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+}
+.Containers{
+    height: 390px;
+    width: 90vw;
+    background-color: rgb(91, 188, 245);
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top:10px;
+    left: 50px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+    z-index: 4;
 }
 .headText{
-    color: black;
-    font-size: 25px;
+    color: white;
+    font-size: 35px;
     font-family: "Lora", serif;
-    border: 5px double rgb(20, 20, 20);
     font-weight: 500;
-    width: 78vw;
-    border-radius: 8px;
+    width: 450px;
+    border-radius: 50px;
     margin-bottom: 100px;
-    background-color: rgb(250, 251, 251);
     margin-top: 20px;
     text-align: center;
+    background-color: #0096ff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
 }
 .imageContainer{
     display: flex;
@@ -39,7 +66,7 @@
     width: 250px;
     margin-left: 20px;
     margin-right: 20px;
-    transition: transform 0.3s ease-in-out,box-shadow 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     border-radius: 5px;
 }
@@ -47,11 +74,12 @@
     z-index: 10;
     transform: scale(1.2);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+    border: 10px solid white;
 }
 .logo{
     height: 50px;
     width: 50px;
-    fill:black;
+    fill: black;
 }
 .subContainer{
     display: flex;
@@ -70,13 +98,12 @@
     align-items: center;
     justify-content: center;
     padding: 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
     border-radius: 10%;
 }
 .arrowIcon {
     width: 50px;
     height: 50px;
-    fill: rgb(17, 17, 17);
+    fill: #0096ff;
     padding: 0;
     margin: 0;
 }
@@ -86,14 +113,18 @@
 .navBtn:hover{
     background-color: rgba(0, 0, 0, 0.3);
     border: none;
+    border-radius: 50%;
 }
 .navBtn:active{
     border: none;
 }
+.navBtn:disabled .arrowIcon {
+    fill: lightgrey;
+}
 .modalOverlay {
     position: fixed;
-    top:0;
-    left:0;
+    top: 0;
+    left: 0;
     width: 100vw;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.7);
@@ -102,7 +133,6 @@
     justify-content: center;
     z-index: 2000;
 }
-
 .modalContent {
     background-color: transparent;
     padding: 20px;
@@ -112,13 +142,11 @@
     justify-content: center;
     position: relative;
 }
-
 .modalImage {
     height: 500px;
     width: 580px;
     border-radius: 5px;
 }
-
 .modalNavBtn {
     background-color: transparent;
     border: none;
@@ -129,82 +157,75 @@
     align-items: center;
     justify-content: center;
     position: absolute;
-    background-color: rgb(250, 251, 251,0.5);
+    background-color: rgba(250, 251, 251, 0.5);
     border-radius: 5px;
 }
-
 .modalNavBtn:focus {
     outline: none;
 }
-
 .modalArrowIcon {
     width: 20px;
     height: 20px;
     fill: black;
 }
-
 .modalNavBtn:hover .modalArrowIcon {
     fill: white;
 }
-
 .modalNavBtn:hover {
     background-color: rgba(0, 0, 0, 0.5);
 }
-
+.modalNavBtn:disabled .modalArrowIcon {
+    fill: lightgrey;
+}
 .modalContent button:first-child {
     left: -100px;
 }
-
 .modalContent button:last-child {
     right: -100px;
 }
-@media(max-width:860px){
+@media(max-width:860px) {
     .modalContent button:first-child {
         left: -50px;
     }
-    
     .modalContent button:last-child {
         right: -50px;
     }
 }
-@media(max-width:750px){
-    .modalImage{
+@media(max-width:750px) {
+    .modalImage {
         transform: scale(0.75);
     }
     .modalContent button:first-child {
         left: 30px;
     }
-    
     .modalContent button:last-child {
         right: 30px;
     }
 }
-@media(max-width:595px){
+@media(max-width:595px) {
     .modalContent button:first-child {
-        position:absolute;
-        top:500px;
-        left:200px;
+        position: absolute;
+        top: 500px;
+        left: 200px;
     }
-    
     .modalContent button:last-child {
-        position:absolute;
-        top:500px;
-        right:200px;
+        position: absolute;
+        top: 500px;
+        right: 200px;
     }
 }
-@media(max-width:480px){
-    .modalImage{
+@media(max-width:480px) {
+    .modalImage {
         transform: scale(0.5);
     }
     .modalContent button:first-child {
-        position:absolute;
-        top:400px;
-        left:200px;
+        position: absolute;
+        top: 400px;
+        left: 200px;
     }
-    
     .modalContent button:last-child {
-        position:absolute;
-        top:400px;
-        right:200px;
+        position: absolute;
+        top: 400px;
+        right: 200px;
     }
 }

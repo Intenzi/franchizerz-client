@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
 .cardHolder {
 	height: 300px;
 	width: 300px;
@@ -8,8 +9,8 @@
 	margin-right: 20px;
 }
 .card1 {
-	border-top: 10px solid #41c9e2;
-	border-bottom: 10px solid #41c9e2;
+	border-top: 10px solid #0096ff;
+	border-bottom: 10px solid #0096ff;
 	background-color: white;
 	height: 290px;
 	width: 280px;
@@ -18,7 +19,7 @@
 	flex-direction: column;
 	align-items: center;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
-	background-color: rgb(233, 237, 238);
+	background-color: white;
 }
 .imageContainer {
 	margin-bottom: -30px;
@@ -83,6 +84,7 @@
 .reviewCardSlider {
 	display: flex;
 	flex-direction: row;
+	justify-content: center;
 	align-items: center;
 	overflow-x: scroll;
 	margin-top: 20px;
@@ -98,51 +100,33 @@
 }
 
 .mainHeadText {
-	font-size: 30px;
+	font-size: 35px;
 	font-weight: 600;
 	margin: 0;
+	font-family: "Lora", serif;
+	width: 450px;
 	margin-left: 10px;
-}
-.userReviewLink {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	justify-content: center;
-	background-color: transparent;
-	border: none;
-	margin: 0;
-	padding-left: 10px;
-	padding-right: 10px;
-	margin-right: 30px;
-	border-radius: 20px;
-	margin-top: 10px;
-	margin-bottom: 2px;
-	height: auto;
-	position: relative;
-	top: 10px;
-}
-.userReviewLinkText {
-	color: black;
+	padding-left: 20px;
+	padding-right: 20px;
+	border-radius: 50px;
+	text-align: center;
+	color: white;
+	background-color: #0096ff;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
 }
 
-.userReviewLinkLogo {
-	fill: black;
-	position: relative;
-	bottom: 10px;
-}
 .headerContainer {
 	display: flex;
 	flex-direction: row;
-	justify-content: center;
 	align-items: center;
-	background-color: #0096ff;
+	justify-content: center;
+	margin-left: 10px;
 }
 .subMainContainer {
 	background-color: white;
-	width: 90vw;
+	width: 85vw;
 	height: 400px;
 	border-radius: 10px;
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
 }
 .mainContainer {
 	display: flex;
@@ -150,17 +134,18 @@
 	height: 100vh;
 	justify-content: center;
 }
-.mainRatingPanel {
+.reviewCardSlider {
 	display: flex;
-	align-items: center;
-	padding-left: 20px;
-	background-color: rgb(12, 126, 241);
+	overflow: hidden;
+	justify-content: left;
 }
-.averageRatingText {
-	color: rgb(7, 7, 7);
-	margin-right: 20px;
-	position: relative;
-	top: 10px;
-	font-weight: 600;
+  
+.navigationButtons {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 1rem;
+}
+.arrowIcon{
+	fill: #0096ff;
 }
 

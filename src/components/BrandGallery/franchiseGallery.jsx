@@ -1,9 +1,9 @@
-import { useState,useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import s from './franchiseGallery.module.css';
 import ArrowLeft from "../../images/arrowLeft.svg";
 import ArrowRight from "../../images/arrowRight.svg";
 
-const FranchiseGallery = ({galleryPhotos}) => {
+const FranchiseGallery = ({ galleryPhotos }) => {
   const [startIndex, setStartIndex] = useState(0);
   const [selectedImage, setSelectedImage] = useState(null);
   const [imagesPerPage, setImagesPerPage] = useState(4);
@@ -45,8 +45,9 @@ const FranchiseGallery = ({galleryPhotos}) => {
       setStartIndex(startIndex - 1);
     }
   };
+
   const handleImageClick = (index) => {
-    setSelectedImage(startIndex+index);
+    setSelectedImage(startIndex + index);
   };
 
   const handleCloseModal = () => {
@@ -67,42 +68,46 @@ const FranchiseGallery = ({galleryPhotos}) => {
 
   return (
     <>
-    <div className={s.mainContainer}>
-      <div><p className={s.headText}>Brand Gallery</p></div>
-      <div className={s.subContainer}>
-      <button onClick={handlePrev} className={s.navBtn}>
-       <ArrowLeft className={s.arrowIcon} />
-      </button>
-      <div className={s.imageContainer}>
-        {images.slice(startIndex, startIndex + imagesPerPage).map((image, index) => (
-          <div key={index} className={s.imageWrapper}>
-            <img src={image.url} alt={image.alt} className={s.menuImage} onClick={()=>{handleImageClick(index);}} />
-          </div>
-        ))}
-      </div>
-
-      <button onClick={handleNext} className={s.navBtn}>
-       <ArrowRight className={s.arrowIcon} />
-      </button>
-      </div>
-    </div>
-    {selectedImage !== null && (
-      <div className={s.modalOverlay} onClick={handleCloseModal}>
-        <div className={s.modalContent} onClick={(e) => e.stopPropagation()}>
-          <button onClick={handleModalPrev} className={s.modalNavBtn}>
-            <ArrowLeft className={s.modalArrowIcon} />
+      <div className={s.mainContainer}>
+        <div><p className={s.headText}>Brand Gallery</p></div>
+        <div className={s.subContainer}>
+          <button onClick={handlePrev} className={s.navBtn} disabled={startIndex === 0}>
+            <ArrowLeft className={s.arrowIcon} />
           </button>
-          <img 
-            src={images[selectedImage].url} 
-            alt={images[selectedImage].alt} 
-            className={s.modalImage} 
-          />
-          <button onClick={handleModalNext} className={s.modalNavBtn}>
-            <ArrowRight className={s.modalArrowIcon} />
+          <div className={s.imageContainer}>
+            {images.slice(startIndex, startIndex + imagesPerPage).map((image, index) => (
+              <div key={index} className={s.imageWrapper}>
+                <img
+                  src={image.url}
+                  alt={image.alt}
+                  className={s.menuImage}
+                  onClick={() => { handleImageClick(index); }}
+                />
+              </div>
+            ))}
+          </div>
+          <button onClick={handleNext} className={s.navBtn} disabled={startIndex + imagesPerPage >= images.length}>
+            <ArrowRight className={s.arrowIcon} />
           </button>
         </div>
       </div>
-    )}
+      {selectedImage !== null && (
+        <div className={s.modalOverlay} onClick={handleCloseModal}>
+          <div className={s.modalContent} onClick={(e) => e.stopPropagation()}>
+            <button onClick={handleModalPrev} className={s.modalNavBtn} disabled={selectedImage === 0}>
+              <ArrowLeft className={s.modalArrowIcon} />
+            </button>
+            <img
+              src={images[selectedImage].url}
+              alt={images[selectedImage].alt}
+              className={s.modalImage}
+            />
+            <button onClick={handleModalNext} className={s.modalNavBtn} disabled={selectedImage + 1 >= images.length}>
+              <ArrowRight className={s.modalArrowIcon} />
+            </button>
+          </div>
+        </div>
+      )}
     </>
   );
 };
