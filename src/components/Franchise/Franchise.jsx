@@ -1,19 +1,17 @@
 import FranchiseData from "../FranchiseData/FranchiseData"
 import WhyFranchizerz from "../WhyFranchizerz/WhyFranchizerz"
-import FranchiseModels from "../FranchiseModels/FranchiseModels"
 import Reviews from "../Reviews/Reviews"
 import Menu from "../MenuCard/Menu"
 import FranchiseGallery from "../BrandGallery/franchiseGallery"
-import DownloadBrochure from "../DownloadBrochure/DownloadBrochure"
+import PricingSection from "../PricingSection/PricingSection"
 
 const Franchise = ({ franchise }) => (
 	<>
 		<FranchiseData franchise={franchise} />
 		<WhyFranchizerz />
-		<FranchiseModels />
+		<PricingSection />
 		<Menu menuPhotos={franchise.menuPhotos}/>
 		<FranchiseGallery galleryPhotos={franchise.brandGalleryPhotos}/>
-		<DownloadBrochure />
 		<Reviews reviews={franchise.reviews} />
 	</>
 )

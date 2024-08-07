@@ -6,7 +6,7 @@ export default function NewsSideBar() {
   return (
     <>
     <div className={styles.sideNav}>
-    <h1 className={styles.navHeading}><i class="fa-solid fa-fire-flame-curved"></i>Breaking News</h1><hr/>
+    <h1 className={styles.navHeading}><i class="fa-solid fa-fire-flame-curved"></i>Breaking News</h1>
    <ul className={styles.sideMenu}>
       <li className={styles.techItems}><i class="fa-solid fa-robot"></i> Artificial Intelligence(AI)</li>
       <li className={styles.techItems}><i class="fa-solid fa-shield-halved"></i> Cybersecurity</li>
