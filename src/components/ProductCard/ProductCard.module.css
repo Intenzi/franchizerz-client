@@ -10,15 +10,12 @@
     /* margin-top: 2vw; */
     margin-right: 50vw;
   }
-  .headContainer{
-    /* margin-bottom: 10px; */
-  }
   .sliderContent {
     display: flex;
     flex-direction: row;
     overflow: hidden;
     height: 30vw;
-    width: 90vw;
+    width: 85vw;
   }
   
   .sliderItem {
@@ -73,11 +70,17 @@
     margin-left: 1vw;
   }
   .prevButton{
-    margin-top: -45vw;
-    font-size: 1vw;
+    border: 1px solid black;
+    margin-top: -25vw;
+    margin-left: 2vw;
+    /* background-color: #3d9bde; */
+    background-color: #ffffff;
   }
   .nextButton{
-    margin-top: -45vw;
-    font-size: 1vw;
+    border: 1px solid black;
+    margin-top: -25vw;
+   margin-right: 2vw;
+    /* background-color: #3d9bde; */
+    background-color: #ffffff;
   }
   
