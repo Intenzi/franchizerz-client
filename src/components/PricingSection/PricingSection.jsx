@@ -16,7 +16,7 @@ const Card = ({ title, features, btnText, btnClassName, sale }) => {
               <ul className={styles.cardList}>
                 {features.map((feature, index) => (
                   <li key={index} className={feature.hidden ? styles.cardListItemHidden : styles.cardListItem}>
-                    <i className={`ri-${feature.included ? 'check' : 'close'}-fill`}></i> {feature.text}
+                    {feature.text}
                   </li>
                 ))}
               </ul>

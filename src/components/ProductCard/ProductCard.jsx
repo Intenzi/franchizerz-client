@@ -1,5 +1,8 @@
 import { useState } from 'react';
 import styles from '../ProductCard/ProductCard.module.css'
+import NavigateNextSharpIcon from '@mui/icons-material/NavigateNextSharp';
+import ArrowForwardIosSharpIcon from '@mui/icons-material/ArrowForwardIosSharp';
+import ArrowBackIosSharpIcon from '@mui/icons-material/ArrowBackIosSharp';
 
 const data1 = [
   { id: 1, name: 'Chilli Chatkara',title:'Food Beverage',image: 'https://tse1.mm.bing.net/th?id=OIP.M7OldxPjZcyuzXOYUkQ6mQHaHP&pid=Api&P=0&h=180' },
@@ -37,7 +40,7 @@ const ProductCard = () => {
             key={item.id}
             className={styles.sliderItem}
             style={{
-                transform: `translateX(-${currentSlide * 86}%)`,
+                transform: `translateX(-${currentSlide * 90}%)`,
               }}
           >
             <div className={styles.imageContainer}>
@@ -53,8 +56,10 @@ const ProductCard = () => {
         
       </div>
       <div className={styles.navigationButtons}>
-        <button onClick={prevSlide} className={styles.prevButton}>Previous</button>
-        <button onClick={nextSlide} className={styles.nextButton}>Next</button>
+        
+        <ArrowBackIosSharpIcon onClick={prevSlide} className={styles.prevButton} />
+        <ArrowForwardIosSharpIcon onClick={nextSlide} className={styles.nextButton} />
+
       </div>
     </div>
   );

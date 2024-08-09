@@ -11,6 +11,9 @@ const HomePage = () => (
 		<Card />
 		<ProductCard />
 		<ProductCard />
+		<ProductCard />
+		<ProductCard />
+
 	</>
 )
 
