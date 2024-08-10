@@ -67,6 +67,7 @@ const Card = () => {
   return (
     <section className={styles.cards}>
       <h1>Top Categories</h1>
+      
       <div className={styles["carousel-container1"]}>
         <Slider {...settings}>
           {data.map((item) => (
