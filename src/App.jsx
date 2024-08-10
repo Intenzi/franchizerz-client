@@ -5,12 +5,12 @@ import "./App.css"
 import Franchise from "./components/Franchise/Franchise"
 import HomePage from "./components/HomePage/HomePage"
 import "bootstrap/dist/css/bootstrap.min.css"
-import Navbar from "./components/Navbar/Navbar"
 import { data } from "./data/db_new"
 import ContactForm from "./components/Contact/ContactForm"
 import SignUp from './components/SignUp/SignUp'
 import SignIn from './components/SignIn/SignIn'
 import NewsSection from "./components/Blog/NewsSection"
+import NavBar from "./components/NewNavBar/NavBar"
 
 const App = () => {
 	const match = useMatch("/franchise/:id")
@@ -20,7 +20,7 @@ const App = () => {
 
 	return (
 		<>
-			<Navbar />
+			<NavBar />
 			<Routes>
 				<Route
 					path="/franchise/:id"
