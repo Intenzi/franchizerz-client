@@ -1,53 +1,28 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import s from './franchiseGallery.module.css';
 import ArrowLeft from "../../images/arrowLeft.svg";
 import ArrowRight from "../../images/arrowRight.svg";
 
 const FranchiseGallery = ({ galleryPhotos }) => {
-  const [startIndex, setStartIndex] = useState(0);
   const [selectedImage, setSelectedImage] = useState(null);
-  const [imagesPerPage, setImagesPerPage] = useState(4);
 
   const images = galleryPhotos.map(photo => ({
     url: photo.url,
     alt: photo.description,
   }));
 
-  useEffect(() => {
-    const updateImagesPerPage = () => {
-      if (window.innerWidth < 730) {
-        setImagesPerPage(1);
-      } else if (window.innerWidth < 1100) {
-        setImagesPerPage(2);
-      } else if (window.innerWidth < 1490) {
-        setImagesPerPage(3);
-      } else {
-        setImagesPerPage(4);
-      }
-    };
-
-    updateImagesPerPage();
-    window.addEventListener('resize', updateImagesPerPage);
-
-    return () => {
-      window.removeEventListener('resize', updateImagesPerPage);
-    };
-  }, []);
-
   const handleNext = () => {
-    if (startIndex + imagesPerPage < images.length) {
-      setStartIndex(startIndex + 1);
-    }
+    const container = document.getElementById('imageContainer');
+    container.scrollBy({ left: 300, behavior: 'smooth' });
   };
 
   const handlePrev = () => {
-    if (startIndex > 0) {
-      setStartIndex(startIndex - 1);
-    }
+    const container = document.getElementById('imageContainer');
+    container.scrollBy({ left: -300, behavior: 'smooth' });
   };
 
   const handleImageClick = (index) => {
-    setSelectedImage(startIndex + index);
+    setSelectedImage(index);
   };
 
   const handleCloseModal = () => {
@@ -71,22 +46,22 @@ const FranchiseGallery = ({ galleryPhotos }) => {
       <div className={s.mainContainer}>
         <div><p className={s.headText}>Brand Gallery</p></div>
         <div className={s.subContainer}>
-          <button onClick={handlePrev} className={s.navBtn} disabled={startIndex === 0}>
+          <button onClick={handlePrev} className={s.navBtn}>
             <ArrowLeft className={s.arrowIcon} />
           </button>
-          <div className={s.imageContainer}>
-            {images.slice(startIndex, startIndex + imagesPerPage).map((image, index) => (
+          <div id="imageContainer" className={s.imageContainer}>
+            {images.map((image, index) => (
               <div key={index} className={s.imageWrapper}>
                 <img
                   src={image.url}
                   alt={image.alt}
                   className={s.menuImage}
-                  onClick={() => { handleImageClick(index); }}
+                  onClick={() => handleImageClick(index)}
                 />
               </div>
             ))}
           </div>
-          <button onClick={handleNext} className={s.navBtn} disabled={startIndex + imagesPerPage >= images.length}>
+          <button onClick={handleNext} className={s.navBtn}>
             <ArrowRight className={s.arrowIcon} />
           </button>
         </div>
