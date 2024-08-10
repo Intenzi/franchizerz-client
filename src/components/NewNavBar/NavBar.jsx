@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import Home from "../../assets/home.svg";
 import FranchizerzTitle from "../../assets/logo.svg";
@@ -11,7 +11,9 @@ import ContactUs from "../../assets/contactUs.svg";
 import Franchises from "../../assets/franchises.svg";
 import WishList from "../../assets/wishlist.svg";
 import Search from "../../assets/search.svg";
-import { Input } from "@mui/material";
+import MenuIcon from "@mui/icons-material/Menu";
+import CloseIcon from "@mui/icons-material/Close";
+import { IconButton, Input } from "@mui/material";
 import { Login as LoginIcon, PersonAdd as SignUpIcon } from "@mui/icons-material";
 import styles from "./NavBar.module.css";
 
@@ -19,23 +21,32 @@ export default function NavBar() {
     const [searchQuery, setSearchQuery] = useState("");
     const [isDropdownVisible, setIsDropdownVisible] = useState(false);
     const [isCategoryDropdownVisible, setIsCategoryDropdownVisible] = useState(false);
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const [isProfileMenuOpen, setIsProfileMenuOpen] = useState(false);
+    const [isMobile, setIsMobile] = useState(window.innerWidth < 1160);
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+    useEffect(() => {
+        const handleResize = () => setIsMobile(window.innerWidth < 1160);
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
 
     const handleSearch = (e) => {
-        const query = e.target.value;
-        setSearchQuery(query);
+        setSearchQuery(e.target.value);
     };
 
     const handleDropdownToggle = () => {
-        setIsDropdownVisible(!isDropdownVisible);
+        setIsProfileMenuOpen(!isProfileMenuOpen);
     };
 
     const handleCategoryDropdownToggle = () => {
         setIsCategoryDropdownVisible(!isCategoryDropdownVisible);
     };
 
-    const handleSuggestionClick = (suggestion) => {
-        setSearchQuery(suggestion);
-        setIsDropdownVisible(false);
+    const handleMobileMenuToggle = () => {
+        setIsMobileMenuOpen(!isMobileMenuOpen);
+        setIsMenuOpen(!isMenuOpen);
     };
 
     return (
@@ -86,7 +97,7 @@ export default function NavBar() {
                 <div className={styles.profileContainer} onClick={handleDropdownToggle}>
                     <Profile />
                     <ArrowDown className={styles.arrowdownLogo} />
-                    {isDropdownVisible && (
+                    {isProfileMenuOpen && (
                         <div className={styles.dropdownModal}>
                             <NavLink to="/sign-in" className={styles.dropdownLink}>
                                 <LoginIcon className={styles.dropdownIcon} />
@@ -99,75 +110,151 @@ export default function NavBar() {
                         </div>
                     )}
                 </div>
+                {isMobile && (
+                    <IconButton
+                        color="inherit"
+                        aria-label="menu"
+                        onClick={handleMobileMenuToggle}
+                        className={styles.hamburgerIcon}
+                    >
+                        {isMenuOpen ? <CloseIcon /> : <MenuIcon />}
+                    </IconButton>
+                )}
             </div>
-            <div className={styles.bottomBar}>
-                <NavLink
-                    to="/"
-                    className={({ isActive }) =>
-                        isActive ? `${styles.navItemContainer} ${styles.activeNavLink}` : `${styles.navItemContainer} ${styles.inactiveNavLink}`
-                    }
-                >
-                    <div className={styles.navItemContainer}>
+            {!isMobile && (
+                <div className={styles.bottomBar}>
+                    <NavLink
+                        to="/"
+                        className={({ isActive }) =>
+                            isActive ? `${styles.navItemContainer} ${styles.activeNavLink}` : `${styles.navItemContainer} ${styles.inactiveNavLink}`
+                        }
+                    >
+                        <div className={styles.navItemContainer}>
+                            <Home className={styles.navLogo} />
+                            <p className={styles.navText}>Home</p>
+                        </div>
+                    </NavLink>
+                    <NavLink
+                        to="/about"
+                        className={({ isActive }) =>
+                            isActive ? `${styles.navItemContainer} ${styles.activeNavLink}` : `${styles.navItemContainer} ${styles.inactiveNavLink}`
+                        }
+                    >
+                        <div className={styles.navItemContainer}>
+                            <About className={styles.navLogo} />
+                            <p className={styles.navText}>About Us</p>
+                        </div>
+                    </NavLink>
+                    <NavLink
+                        to="/blog"
+                        className={({ isActive }) =>
+                            isActive ? `${styles.navItemContainer} ${styles.activeNavLink}` : `${styles.navItemContainer} ${styles.inactiveNavLink}`
+                        }
+                    >
+                        <div className={styles.navItemContainer}>
+                            <Blog className={styles.navLogo} />
+                            <p className={styles.navText}>Blog</p>
+                        </div>
+                    </NavLink>
+                    <NavLink
+                        to="/contact-us"
+                        className={({ isActive }) =>
+                            isActive ? `${styles.navItemContainer} ${styles.activeNavLink}` : `${styles.navItemContainer} ${styles.inactiveNavLink}`
+                        }
+                    >
+                        <div className={styles.navItemContainer}>
+                            <ContactUs className={styles.navLogo} />
+                            <p className={styles.navText}>Contact Us</p>
+                        </div>
+                    </NavLink>
+                    <NavLink
+                        to="/franchises"
+                        className={({ isActive }) =>
+                            isActive ? `${styles.navItemContainer} ${styles.activeNavLink}` : `${styles.navItemContainer} ${styles.inactiveNavLink}`
+                        }
+                    >
+                        <div className={styles.navItemContainer}>
+                            <Franchises className={styles.navLogo} />
+                            <p className={styles.navText}>Franchises</p>
+                        </div>
+                    </NavLink>
+                    <NavLink
+                        to="/wishlist"
+                        className={({ isActive }) =>
+                            isActive ? `${styles.navItemContainer} ${styles.activeNavLink}` : `${styles.navItemContainer} ${styles.inactiveNavLink}`
+                        }
+                    >
+                        <div className={styles.navItemContainer}>
+                            <WishList className={styles.navLogo} />
+                            <p className={styles.navText}>WishLists</p>
+                        </div>
+                    </NavLink>
+                </div>
+            )}
+            {isMobile && isMobileMenuOpen && (
+                <div className={styles.mobileMenu}>
+                    <NavLink
+                        to="/"
+                        className={({ isActive }) =>
+                            isActive ? `${styles.navItemContainer} ${styles.activeNavLink}` : `${styles.navItemContainer} ${styles.inactiveNavLink}`
+                        }
+                        onClick={() => setIsMobileMenuOpen(false)}
+                    >
                         <Home className={styles.navLogo} />
                         <p className={styles.navText}>Home</p>
-                    </div>
-                </NavLink>
-                <NavLink
-                    to="/about"
-                    className={({ isActive }) =>
-                        isActive ? `${styles.navItemContainer} ${styles.activeNavLink}` : `${styles.navItemContainer} ${styles.inactiveNavLink}`
-                    }
-                >
-                    <div className={styles.navItemContainer}>
+                    </NavLink>
+                    <NavLink
+                        to="/about"
+                        className={({ isActive }) =>
+                            isActive ? `${styles.navItemContainer} ${styles.activeNavLink}` : `${styles.navItemContainer} ${styles.inactiveNavLink}`
+                        }
+                        onClick={() => setIsMobileMenuOpen(false)}
+                    >
                         <About className={styles.navLogo} />
                         <p className={styles.navText}>About Us</p>
-                    </div>
-                </NavLink>
-                <NavLink
-                    to="/blog"
-                    className={({ isActive }) =>
-                        isActive ? `${styles.navItemContainer} ${styles.activeNavLink}` : `${styles.navItemContainer} ${styles.inactiveNavLink}`
-                    }
-                >
-                    <div className={styles.navItemContainer}>
+                    </NavLink>
+                    <NavLink
+                        to="/blog"
+                        className={({ isActive }) =>
+                            isActive ? `${styles.navItemContainer} ${styles.activeNavLink}` : `${styles.navItemContainer} ${styles.inactiveNavLink}`
+                        }
+                        onClick={() => setIsMobileMenuOpen(false)}
+                    >
                         <Blog className={styles.navLogo} />
                         <p className={styles.navText}>Blog</p>
-                    </div>
-                </NavLink>
-                <NavLink
-                    to="/contact-us"
-                    className={({ isActive }) =>
-                        isActive ? `${styles.navItemContainer} ${styles.activeNavLink}` : `${styles.navItemContainer} ${styles.inactiveNavLink}`
-                    }
-                >
-                    <div className={styles.navItemContainer}>
+                    </NavLink>
+                    <NavLink
+                        to="/contact-us"
+                        className={({ isActive }) =>
+                            isActive ? `${styles.navItemContainer} ${styles.activeNavLink}` : `${styles.navItemContainer} ${styles.inactiveNavLink}`
+                        }
+                        onClick={() => setIsMobileMenuOpen(false)}
+                    >
                         <ContactUs className={styles.navLogo} />
                         <p className={styles.navText}>Contact Us</p>
-                    </div>
-                </NavLink>
-                <NavLink
-                    to="/franchises"
-                    className={({ isActive }) =>
-                        isActive ? `${styles.navItemContainer} ${styles.activeNavLink}` : `${styles.navItemContainer} ${styles.inactiveNavLink}`
-                    }
-                >
-                    <div className={styles.navItemContainer}>
+                    </NavLink>
+                    <NavLink
+                        to="/franchises"
+                        className={({ isActive }) =>
+                            isActive ? `${styles.navItemContainer} ${styles.activeNavLink}` : `${styles.navItemContainer} ${styles.inactiveNavLink}`
+                        }
+                        onClick={() => setIsMobileMenuOpen(false)}
+                    >
                         <Franchises className={styles.navLogo} />
                         <p className={styles.navText}>Franchises</p>
-                    </div>
-                </NavLink>
-                <NavLink
-                    to="/wishlist"
-                    className={({ isActive }) =>
-                        isActive ? `${styles.navItemContainer} ${styles.activeNavLink}` : `${styles.navItemContainer} ${styles.inactiveNavLink}`
-                    }
-                >
-                    <div className={styles.navItemContainer}>
+                    </NavLink>
+                    <NavLink
+                        to="/wishlist"
+                        className={({ isActive }) =>
+                            isActive ? `${styles.navItemContainer} ${styles.activeNavLink}` : `${styles.navItemContainer} ${styles.inactiveNavLink}`
+                        }
+                        onClick={() => setIsMobileMenuOpen(false)}
+                    >
                         <WishList className={styles.navLogo} />
                         <p className={styles.navText}>WishLists</p>
-                    </div>
-                </NavLink>
-            </div>
+                    </NavLink>
+                </div>
+            )}
         </div>
     );
 }
