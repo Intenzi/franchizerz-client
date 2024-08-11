@@ -21,10 +21,10 @@ export default function NavBar() {
     const [searchQuery, setSearchQuery] = useState("");
     const [isDropdownVisible, setIsDropdownVisible] = useState(false);
     const [isCategoryDropdownVisible, setIsCategoryDropdownVisible] = useState(false);
+    const [selectedCategory, setSelectedCategory] = useState("All");
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [isProfileMenuOpen, setIsProfileMenuOpen] = useState(false);
     const [isMobile, setIsMobile] = useState(window.innerWidth < 1160);
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     useEffect(() => {
         const handleResize = () => setIsMobile(window.innerWidth < 1160);
@@ -44,9 +44,13 @@ export default function NavBar() {
         setIsCategoryDropdownVisible(!isCategoryDropdownVisible);
     };
 
+    const handleCategorySelect = (category) => {
+        setSelectedCategory(category);
+        setIsCategoryDropdownVisible(false);
+    };
+
     const handleMobileMenuToggle = () => {
         setIsMobileMenuOpen(!isMobileMenuOpen);
-        setIsMenuOpen(!isMenuOpen);
     };
 
     return (
@@ -63,21 +67,21 @@ export default function NavBar() {
                 <div className={styles.searchBar}>
                     <div className={styles.searchCategory} onClick={handleCategoryDropdownToggle}>
                         <button className={styles.categoryBtn}>
-                            <p>All</p>
+                            <p>{selectedCategory}</p>
                             <ArrowDown className={styles.arrowdownLogo} />
                         </button>
                         {isCategoryDropdownVisible && (
                             <div className={styles.categoryDropdownModal}>
-                                <div className={styles.categoryDropdownItem}>
+                                <div className={styles.categoryDropdownItem} onClick={() => handleCategorySelect("Express")}>
                                     <p>Express</p>
                                 </div>
-                                <div className={styles.categoryDropdownItem}>
+                                <div className={styles.categoryDropdownItem} onClick={() => handleCategorySelect("Gold")}>
                                     <p>Gold</p>
                                 </div>
-                                <div className={styles.categoryDropdownItem}>
+                                <div className={styles.categoryDropdownItem} onClick={() => handleCategorySelect("Platinum")}>
                                     <p>Platinum</p>
                                 </div>
-                                <div className={styles.categoryDropdownItem}>
+                                <div className={styles.categoryDropdownItem} onClick={() => handleCategorySelect("All")}>
                                     <p>All</p>
                                 </div>
                             </div>
@@ -117,7 +121,7 @@ export default function NavBar() {
                         onClick={handleMobileMenuToggle}
                         className={styles.hamburgerIcon}
                     >
-                        {isMenuOpen ? <CloseIcon /> : <MenuIcon />}
+                        <MenuIcon style={{ color: '#0096ff' }}/>
                     </IconButton>
                 )}
             </div>

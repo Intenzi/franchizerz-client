@@ -4,7 +4,7 @@
     display: flex;
     flex-direction: column;
     height: 820px;
-    width: 100vw;
+    width: 96vw;
     border-radius: 10px;
     align-items: center;
     margin-top: 100px;
@@ -16,7 +16,7 @@
     
 }
 .subContainer{
-    width: 100%;
+    width: 96vw;
     justify-content: center;
 }
 .headText{
@@ -40,12 +40,11 @@
     overflow-x: scroll;
     scroll-behavior: smooth;
     margin-top: 430px;
-    width: 87vw;
+    width: 84vw;
     height: 800px;
     align-items: center;
     z-index: 2;
     padding-right: 100px;
-    padding-left: 10px;
   }
 .imageContainer::-webkit-scrollbar {
     display: none; /* For Chrome, Safari, and Opera */

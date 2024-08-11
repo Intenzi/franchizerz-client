@@ -3,6 +3,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    position: relative;
  }
 
  .logoTitle{
@@ -73,6 +74,7 @@
     padding: 0 15px;
     height: 40px;
     overflow: hidden;
+    z-index: 1;
 }
 
 
@@ -140,11 +142,13 @@
 .activeNavLink {
   animation: borderMovement 0.2s ease forwards;
   text-decoration: none;
+  z-index: 1;
 }
 
 .inactiveNavLink {
   border: none;
   text-decoration: none;
+  z-index: 1;
 }
 .profileContainer {
   position: relative;
@@ -235,7 +239,9 @@
 }
 .hamburgerIcon{
   margin-right: 50px;
+  color: #0096ff;
 }
+
 .mobileMenu{
   background: linear-gradient(to right, #055187,#0096ff);
   display: flex;
@@ -245,6 +251,7 @@
   padding-left: 10px;
   padding-right: 10px;
   padding-top: 10px;
+  z-index: 500;
 }
 @media screen and (max-width: 876px) {
   .searchBar{
@@ -287,5 +294,8 @@
   }
   .profileContainer{
     transform: scale(0.75);
+  }
+  .dropdownModal{
+    z-index: 1000;
   }
 }
