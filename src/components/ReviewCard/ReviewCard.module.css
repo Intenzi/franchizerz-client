@@ -84,12 +84,11 @@
 .reviewCardSlider {
 	display: flex;
 	flex-direction: row;
-	justify-content: center;
 	align-items: center;
 	overflow-x: scroll;
 	width: 80vw;
 	margin-top: 50px;
-	padding-left: 640px;
+	padding-left: 20px;
 }
 .reviewCardSlider::-webkit-scrollbar {
 	display: none;
@@ -125,12 +124,12 @@
 	margin-bottom: 10px;
 }
 .subMainContainer {
-	width: 90vw;
+	width: 95vw;
 	height: 400px;
 	border-radius: 10px;
 	display: flex;
 	flex-direction: row;
-	justify-content: center;
+	justify-content: space-around;
 }
 .mainContainer {
 	display: flex;
