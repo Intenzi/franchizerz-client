@@ -172,7 +172,7 @@ export default function NavBar() {
                         </div>
                     </NavLink>
                     <NavLink
-                        to="/franchises"
+                        to="/partner-with-us"
                         className={({ isActive }) =>
                             isActive ? `${styles.navItemContainer} ${styles.activeNavLink}` : `${styles.navItemContainer} ${styles.inactiveNavLink}`
                         }

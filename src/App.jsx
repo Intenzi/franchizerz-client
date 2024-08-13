@@ -11,6 +11,7 @@ import SignUp from './components/SignUp/SignUp'
 import SignIn from './components/SignIn/SignIn'
 import NewsSection from "./components/Blog/NewsSection"
 import NavBar from "./components/NewNavBar/NavBar"
+import PartnerWithUs from "./components/PartnerWithUs/PartnerWithUs"
 
 const App = () => {
 	const match = useMatch("/franchise/:id")
@@ -31,6 +32,7 @@ const App = () => {
 				<Route path="/contact-us" element={<ContactForm/>} />
 				<Route path="/sign-up" element={<SignUp />} />
 				<Route path="/sign-in" element={<SignIn />} />
+				<Route path="/partner-with-us" element={<PartnerWithUs />} />
 			</Routes>
 			<Footer />
 		</>
