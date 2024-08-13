@@ -1,0 +1,301 @@
+ .topBar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+ }
+
+ .logoTitle{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 50px;
+    justify-content: center;
+    width: 300px;
+    height: 60px;
+ }
+ .logo{
+    transform: scale(0.70);
+ }
+ .title{
+    transform: scale(0.80);
+    position: relative;
+    right: 30px;
+    top: 4px;
+ }
+ .bottomBar{
+    background: linear-gradient(to right, #055187,#0096ff);
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 10px;
+ }
+ .searchBar {
+    border: 3px solid transparent;
+    background-image: linear-gradient(white, white), linear-gradient(to right, #055187, #0096ff);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    border-radius: 200px;
+    width: 50vw;
+    height: 40px;
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 15vw;
+  }
+  .categoryBtn{
+    display: flex;
+    flex-direction: row;
+    height: 40px;
+    position: relative;
+    bottom: 5px;
+  }
+  .arrowdownLogo{
+    fill: #0096ff;
+  }
+  .profileContainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .navLogo{
+    height: 25px;
+  }
+  .navItemContainer {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    height: 40px;
+    overflow: hidden;
+    z-index: 1;
+}
+
+
+
+  .navText{
+    text-decoration: none;
+    color:white;
+    position: relative;
+    top: 10px;
+    margin-left: 10px;
+  }
+  .searchIcon{
+    fill: #0096ff;
+    transform: scale(1.3);
+  }
+  .searchInput {
+    width: calc(100% - 40px); /* Adjust width to fit within the container */
+    border: none !important; /* Remove border */
+    outline: none !important; /* Remove outline */
+    box-shadow: none !important; /* Remove box-shadow if any */
+    background: transparent; /* Ensure background is transparent */
+    padding: 0; /* Adjust padding if needed */
+    font-size: 16px; /* Adjust font size as needed */
+}
+  
+@keyframes borderMovement {
+  0% {
+    border-left: 2px solid transparent;
+    border-top: 2px solid transparent;
+    border-right: 2px solid transparent;
+    border-bottom: 2px solid transparent;
+    border-radius: 200px;
+  }
+  25% {
+    
+    border-left: 2px solid transparent;
+    border-top: 2px solid transparent;
+    border-right: 2px solid transparent;
+    border-bottom: 2px solid white;
+    border-radius: 200px;
+  }
+  50% {
+    border-left: 2px solid transparent;
+    border-top: 2px solid transparent;
+    border-right: 2px solid white;
+    border-bottom: 2px solid white;
+    border-radius: 200px;
+  }
+  75% {
+    border-left: 2px solid transparent;
+    border-top: 2px solid white;
+    border-right: 2px solid white;
+    border-bottom: 2px solid white;
+    border-radius: 200px;
+  }
+  100% {
+    border-left: 2px solid white;
+    border-top: 2px solid white;
+    border-right: 2px solid white;
+    border-bottom: 2px solid white;
+    border-radius: 200px;
+  }
+}
+
+.activeNavLink {
+  animation: borderMovement 0.2s ease forwards;
+  text-decoration: none;
+  z-index: 1;
+}
+
+.inactiveNavLink {
+  border: none;
+  text-decoration: none;
+  z-index: 1;
+}
+.profileContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+.dropdownModal {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  z-index: 1000;
+}
+
+.dropdownLink {
+  text-decoration: none;
+  color: black;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.dropdownLink:hover {
+  background-color: #0096ff;
+  border-radius: 10px;
+  color: white;
+}
+
+.dropdownLink:last-child {
+  border-bottom: none;
+}
+
+/* Active and inactive styles */
+.activeNavLink {
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
+  border: 2px solid white;
+  padding-right: 10px;
+  border-radius: 50px;
+}
+
+.inactiveNavLink {
+  text-decoration: none;
+}
+.dropdownIcon {
+  margin-right: 10px;
+}
+.searchCategory {
+  position: relative;
+}
+
+.categoryDropdownModal {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  width: 150px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+}
+
+.categoryDropdownItem {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.categoryDropdownItem:hover {
+  background:linear-gradient(45deg,rgb(6, 152, 249),rgb(1, 38, 57));
+  color: white;
+  border-radius: 10px;
+}
+.hamburgerIcon{
+  margin-right: 50px;
+  color: #0096ff;
+}
+
+.mobileMenu{
+  background: linear-gradient(to right, #055187,#0096ff);
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: space-between;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  z-index: 500;
+}
+@media screen and (max-width: 876px) {
+  .searchBar{
+    margin-left: 0;
+  }
+}
+@media screen and (max-width: 700px) {
+  .logoTitle{
+    transform: scale(0.7);
+    position: relative;
+    right: 50px;
+  }
+  .topBar{
+    justify-content: space-between;
+  }
+  .searchBar{
+    margin-left: -10vw;
+
+  }
+}
+@media screen and (max-width: 876px) {
+  .topBar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .searchBar{
+    position: relative;
+    margin-left: -3vw;
+  }
+}
+@media screen and (max-width: 630px) {
+  .searchBar{
+    margin-left: -30vw;
+    transform: scale(0.75);
+  }
+  .logoTitle{
+    transform: scale(0.5);
+    margin-left: -4vw;
+  }
+  .profileContainer{
+    transform: scale(0.75);
+  }
+  .dropdownModal{
+    z-index: 1000;
+  }
+}

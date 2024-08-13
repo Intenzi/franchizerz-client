@@ -1,41 +1,57 @@
-import styles from "../ReviewCard/ReviewCard.module.css"
-import ReviewCard from "../ReviewCard/ReviewCard"
-import ArrowLogo from "../../images/arrow.svg"
-import StarRatings from "react-star-ratings"
+import { useRef } from "react";
+import styles from "../ReviewCard/ReviewCard.module.css";
+import ReviewCard from "../ReviewCard/ReviewCard";
+import { IconButton } from "@mui/material";
+import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 
 const Reviews = ({ reviews }) => {
-	//sample objects for customer reviews
-	//function to return average rating value.
-	var averageRating = (review) => {
-		let sum = 0
-		for (let i = 0; i < review.length; i++) {
-			sum += review[i].rating
-		}
-		let r = sum / review.length
-		return r
-	}
+  const reviewsContainerRef = useRef(null);
 
-	return (
-		<div className={styles.mainContainer}>
-			<div className={styles.subMainContainer}>
-				<div className={styles.headerContainer}>
-					<p className={styles.mainHeadText}>User Reviews</p>
-				</div>
-				<div className={styles.reviewCardSlider}>
-					{reviews.map((review, index) => (
-						<ReviewCard
-							ratings={review.rating}
-							customerName={review.customerName}
-							key={index}
-							date={review.datePosted}
-							reviewHead={review.reviewHeading}
-							reviewText={review.reviewParagraph}
-						/>
-					))}
-				</div>
-			</div>
-		</div>
-	)
-}
+  const scrollLeft = () => {
+    reviewsContainerRef.current.scrollBy({
+      top: 0,
+      left: -300, // Adjust the value as per your requirement
+      behavior: "smooth",
+    });
+  };
 
-export default Reviews
+  const scrollRight = () => {
+    reviewsContainerRef.current.scrollBy({
+      top: 0,
+      left: 300, // Adjust the value as per your requirement
+      behavior: "smooth",
+    });
+  };
+
+  return (
+    <div className={styles.mainContainer}>
+      <div className={styles.headerContainer}>
+          <p className={styles.mainHeadText}>User Reviews</p>
+      </div>
+      <div className={styles.subMainContainer}>
+      <IconButton onClick={scrollLeft} sx={{ color: '#0096ff' }}>
+        <ArrowBackIosIcon />
+      </IconButton>
+        <div className={styles.reviewCardSlider} ref={reviewsContainerRef}>
+          {reviews.map((review, index) => (
+            <ReviewCard
+              ratings={review.rating}
+              customerName={review.customerName}
+              key={index}
+              date={review.datePosted}
+              reviewHead={review.reviewHeading}
+              reviewText={review.reviewParagraph}
+            />
+          ))}
+        </div>
+        <IconButton onClick={scrollRight} sx={{ color: '#0096ff' }}>
+        <ArrowForwardIosIcon />
+      </IconButton>
+      </div>
+      
+    </div>
+  );
+};
+
+export default Reviews;

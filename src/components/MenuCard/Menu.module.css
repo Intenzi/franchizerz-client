@@ -4,10 +4,9 @@
     display: flex;
     flex-direction: column;
     height: 820px;
-    width: 90vw;
+    width: 96vw;
     border-radius: 10px;
     align-items: center;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
     margin-top: 100px;
     position: relative;
     left: 50%;
@@ -16,30 +15,44 @@
 
     
 }
+.subContainer{
+    width: 96vw;
+    justify-content: center;
+}
 .headText{
-    color: black;
-    font-size: 45px;
+    color: white;
+    font-size: 35px;
     font-family: "Lora", serif;
     font-weight: 500;
-    width: 78vw;
-    border-radius: 8px;
+    width: 450px;
+    border-radius: 50px;
     margin-bottom: 100px;
+    margin-top: 20px;
     text-align: center;
-    margin-top: 30px;
+    background-color: #0096ff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
 }
-.imageContainer{
+.imageWrapper{
+    flex:0 0 auto;
+}
+.imageContainer {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
     margin-top: 430px;
-    width: 75vw;
+    width: 84vw;
+    height: 800px;
+    align-items: center;
     z-index: 2;
-    
+    padding-right: 100px;
+  }
+.imageContainer::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari, and Opera */
 }
 .menuImage{
     height: 600px;
     width: 300px;
-    margin-left: 20px;
+    margin-left: 50px;
     margin-right: 20px;
     transition: transform 0.3s ease-in-out,box-shadow 0.3s ease-in-out;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
@@ -49,6 +62,7 @@
     z-index: 10;
     transform: scale(1.2);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+    border:10px solid white;
 }
 .logo{
     height: 50px;
@@ -72,7 +86,6 @@
     align-items: center;
     justify-content: center;
     padding: 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
     border-radius: 10%;
     position: relative;
     top: 200px;
@@ -80,7 +93,7 @@
 .arrowIcon {
     width: 50px;
     height: 50px;
-    fill: rgb(17, 17, 17);
+    fill: #0096ff;
     padding: 0;
     margin: 0;
 }
@@ -212,3 +225,22 @@
         right:150px;
     }
 }
+
+
+.navBtn:disabled .arrowIcon {
+    fill: lightgrey;
+}
+.modalNavBtn:hover .modalArrowIcon {
+    fill: white;
+}
+.modalNavBtn:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.modalNavBtn:disabled {
+    background-color: grey;
+    cursor: not-allowed;
+}
+.modalNavBtn:disabled .modalArrowIcon {
+    fill: lightgrey;
+}
+
