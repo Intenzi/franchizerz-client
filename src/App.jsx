@@ -5,14 +5,14 @@ import "./App.css"
 import Franchise from "./components/Franchise/Franchise"
 import HomePage from "./components/HomePage/HomePage"
 import "bootstrap/dist/css/bootstrap.min.css"
-import Navbar from "./components/Navbar/Navbar"
 import { data } from "./data/db_new"
 import ContactForm from "./components/Contact/ContactForm"
 import SignUp from './components/SignUp/SignUp'
 import SignIn from './components/SignIn/SignIn'
 import NewsSection from "./components/Blog/NewsSection"
 import Main from "./components/About/Main"
-
+import NavBar from "./components/NewNavBar/NavBar"
+import PartnerWithUs from "./components/PartnerWithUs/PartnerWithUs"
 
 const App = () => {
 	const match = useMatch("/franchise/:id")
@@ -22,7 +22,7 @@ const App = () => {
 
 	return (
 		<>
-			<Navbar />
+			<NavBar />
 			<Routes>
 				<Route
 					path="/franchise/:id"
@@ -35,6 +35,7 @@ const App = () => {
 				<Route path="/sign-up" element={<SignUp />} />
 
 				<Route path="/sign-in" element={<SignIn />} />
+				<Route path="/partner-with-us" element={<PartnerWithUs />} />
 			</Routes>
 			<Footer />
 		</>
