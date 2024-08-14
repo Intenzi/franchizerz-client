@@ -74,7 +74,7 @@
     padding: 0 15px;
     height: 40px;
     overflow: hidden;
-    z-index: 1;
+    z-index: 999;
 }
 
 
@@ -142,13 +142,13 @@
 .activeNavLink {
   animation: borderMovement 0.2s ease forwards;
   text-decoration: none;
-  z-index: 1;
+  z-index: 999;
 }
 
 .inactiveNavLink {
   border: none;
   text-decoration: none;
-  z-index: 1;
+  z-index: 999;
 }
 .profileContainer {
   position: relative;
@@ -283,10 +283,12 @@
     margin-left: -3vw;
   }
 }
+
 @media screen and (max-width: 630px) {
   .searchBar{
     margin-left: -30vw;
     transform: scale(0.75);
+    z-index: 1000;
   }
   .logoTitle{
     transform: scale(0.5);
@@ -294,8 +296,6 @@
   }
   .profileContainer{
     transform: scale(0.75);
-  }
-  .dropdownModal{
     z-index: 1000;
   }
 }

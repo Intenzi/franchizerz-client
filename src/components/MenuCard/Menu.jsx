@@ -15,7 +15,7 @@ const Menu = ({ menuPhotos }) => {
   const handleNext = () => {
     if (imageContainerRef.current) {
       imageContainerRef.current.scrollBy({
-        left: 300, // Adjust this value based on your image width
+        left: 300,
         behavior: 'smooth',
       });
     }
@@ -24,30 +24,20 @@ const Menu = ({ menuPhotos }) => {
   const handlePrev = () => {
     if (imageContainerRef.current) {
       imageContainerRef.current.scrollBy({
-        left: -300, // Adjust this value based on your image width
+        left: -300,
         behavior: 'smooth',
       });
     }
   };
 
   const handleImageClick = (index) => {
+    console.log('Image clicked:', index); // Debug log
     setSelectedImage(index);
   };
 
   const handleCloseModal = () => {
+    console.log('Closing modal'); // Debug log
     setSelectedImage(null);
-  };
-
-  const handleModalNext = () => {
-    if (selectedImage !== null && selectedImage + 1 < images.length) {
-      setSelectedImage(selectedImage + 1);
-    }
-  };
-
-  const handleModalPrev = () => {
-    if (selectedImage !== null && selectedImage > 0) {
-      setSelectedImage(selectedImage - 1);
-    }
   };
 
   return (
@@ -67,9 +57,7 @@ const Menu = ({ menuPhotos }) => {
                   src={image.url}
                   alt={image.alt}
                   className={s.menuImage}
-                  onClick={() => {
-                    handleImageClick(index);
-                  }}
+                  onClick={() => handleImageClick(index)}
                 />
               </div>
             ))}
@@ -82,7 +70,11 @@ const Menu = ({ menuPhotos }) => {
       {selectedImage !== null && (
         <div className={s.modalOverlay} onClick={handleCloseModal}>
           <div className={s.modalContent} onClick={(e) => e.stopPropagation()}>
-            <button onClick={handleModalPrev} className={s.modalNavBtn} disabled={selectedImage === 0}>
+            <button
+              onClick={() => setSelectedImage(selectedImage - 1)}
+              className={s.modalNavBtn}
+              disabled={selectedImage === 0}
+            >
               <ArrowLeft className={s.modalArrowIcon} />
             </button>
             <img
@@ -90,7 +82,11 @@ const Menu = ({ menuPhotos }) => {
               alt={images[selectedImage].alt}
               className={s.modalImage}
             />
-            <button onClick={handleModalNext} className={s.modalNavBtn} disabled={selectedImage + 1 >= images.length}>
+            <button
+              onClick={() => setSelectedImage(selectedImage + 1)}
+              className={s.modalNavBtn}
+              disabled={selectedImage + 1 >= images.length}
+            >
               <ArrowRight className={s.modalArrowIcon} />
             </button>
           </div>
