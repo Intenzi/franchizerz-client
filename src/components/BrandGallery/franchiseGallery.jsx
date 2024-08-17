@@ -69,16 +69,16 @@ const FranchiseGallery = ({ galleryPhotos }) => {
       {selectedImage !== null && (
         <div className={s.modalOverlay} onClick={handleCloseModal}>
           <div className={s.modalContent} onClick={(e) => e.stopPropagation()}>
-            <button onClick={handleModalNext} className={s.modalNavBtn} disabled={selectedImage + 1 >= images.length}>
-              <ArrowRight className={s.modalArrowIcon} />
+            <button onClick={handleModalPrev} className={s.modalNavBtn} disabled={selectedImage === 0}>
+              <ArrowLeft className={s.modalArrowIcon} />
             </button>
             <img
               src={images[selectedImage].url}
               alt={images[selectedImage].alt}
               className={s.modalImage}
             />
-            <button onClick={handleModalPrev} className={s.modalNavBtn} disabled={selectedImage === 0} >
-              <ArrowLeft className={s.modalArrowIcon} />
+            <button  onClick={handleModalNext} className={s.modalNavBtn} disabled={selectedImage + 1 >= images.length}>
+              <ArrowRight className={s.modalArrowIcon} />
             </button>
           </div>
         </div>
