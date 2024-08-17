@@ -11,7 +11,7 @@
     position: relative;
     left: 50%;
     transform: translateX(-50%);
-    margin-bottom: 100px;
+    margin-bottom: 10vw;
 
     
 }
@@ -89,6 +89,7 @@
     border-radius: 10%;
     position: relative;
     top: 200px;
+    border-radius: 100%;
 }
 .arrowIcon {
     width: 50px;
@@ -142,14 +143,14 @@
     cursor: pointer;
     height: 60px;
     width: 60px;
+    border-radius: 100px;
     display: flex;
     border-radius: 5px;
     align-items: center;
     justify-content: center;
     position: absolute;
-    background-color: rgb(250, 251, 251,0.5);
+    background-color: rgba(250, 251, 251, 0.5);
 }
-
 .modalNavBtn:focus {
     outline: none;
 }
@@ -202,6 +203,10 @@
         top:750px;
         left:150px;
     }
+    .menuImage{
+        width: 40vw;
+        height: 500px;
+    }
     
     .modalContent button:last-child {
         position:absolute;
@@ -210,6 +215,15 @@
     }
 }
 @media(max-width:480px){
+    .headText{
+        width: 90vw;
+        margin-bottom: 20px;
+        font-size: 25px;
+    }
+    .menuImage{
+        width: 50vw;
+        height: 400px;
+    }
     .modalImage{
         transform: scale(0.5);
     }
@@ -223,6 +237,11 @@
         position:absolute;
         top:700px;
         right:150px;
+    }
+}
+@media(max-width:375px){
+    .menuImage{
+        margin-left: 20px;
     }
 }
 

@@ -179,7 +179,7 @@ export default function NavBar() {
                     >
                         <div className={styles.navItemContainer}>
                             <Franchises className={styles.navLogo} />
-                            <p className={styles.navText}>Franchises</p>
+                            <p className={styles.navText}>Partner With Us</p>
                         </div>
                     </NavLink>
                     <NavLink
@@ -245,7 +245,7 @@ export default function NavBar() {
                         onClick={() => setIsMobileMenuOpen(false)}
                     >
                         <Franchises className={styles.navLogo} />
-                        <p className={styles.navText}>Franchises</p>
+                        <p className={styles.navText}>Partner With Us</p>
                     </NavLink>
                     <NavLink
                         to="/wishlist"

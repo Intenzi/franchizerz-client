@@ -138,7 +138,7 @@
 	width: 100vw;
 	justify-content: center;
 	margin-top: 200px;
-	margin-bottom: 200px;
+	margin-bottom: 10vw;
 }
 
 .navigationButtons {
@@ -149,4 +149,39 @@
 .arrowIcon{
 	fill: #0096ff;
 }
-
+@media (max-width:580px){
+	.mainHeadText{
+		width: 70vw;
+	}
+	.card1{
+		transform: scale(0.95);
+	}
+}
+@media (max-width:420px){
+	.mainHeadText{
+		font-size: 25px;
+	}
+	.subMainContainer{
+		height: 300px;
+	}
+	.headerContainer{
+		margin-bottom: 1px;
+		margin-right: 10px;
+	}
+	.card1{
+		transform: scale(0.75);
+	}
+}
+@media(max-width:370px){
+	.reviewCardSlider{
+		padding-left: 0;
+	}
+}
+@media(max-width:345px){
+	.card1{
+		transform: scale(0.5);
+		margin-left: -30px;
+	}
+	
+	
+}
