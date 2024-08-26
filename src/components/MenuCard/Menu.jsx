@@ -2,6 +2,7 @@ import { useState, useRef } from 'react';
 import s from './Menu.module.css';
 import ArrowLeft from '../../images/arrowLeft.svg';
 import ArrowRight from '../../images/arrowRight.svg';
+import CloseIcon from "../../images/closeIcon.svg";
 
 const Menu = ({ menuPhotos }) => {
   const [selectedImage, setSelectedImage] = useState(null);
@@ -53,46 +54,47 @@ const Menu = ({ menuPhotos }) => {
   return (
     <>
       <div className={s.mainContainer}>
-        <div>
+        <div className={s.headTextContainer}>
           <p className={s.headText}>Menu</p>
         </div>
         <div className={s.subContainer}>
           <button onClick={handlePrev} className={s.navBtn}>
-            <ArrowLeft className={s.arrowIcon} />
+            <ArrowLeft alt="Previous" className={s.arrowIcon} />
           </button>
-          <div className={s.imageContainer} ref={imageContainerRef}>
+          <div id="imageContainer" className={s.imageContainer}>
             {images.map((image, index) => (
               <div key={index} className={s.imageWrapper}>
                 <img
                   src={image.url}
                   alt={image.alt}
                   className={s.menuImage}
-                  onClick={() => {
-                    handleImageClick(index);
-                  }}
+                  onClick={() => handleImageClick(index)}
                 />
               </div>
             ))}
           </div>
           <button onClick={handleNext} className={s.navBtn}>
-            <ArrowRight className={s.arrowIcon} />
+            <ArrowRight alt="Next" className={s.arrowIcon} />
           </button>
         </div>
       </div>
+
+      {/* Modal */}
       {selectedImage !== null && (
-        <div className={s.modalOverlay} onClick={handleCloseModal}>
-          <div className={s.modalContent} onClick={(e) => e.stopPropagation()}>
-            <button onClick={handleModalPrev} className={s.modalNavBtn} disabled={selectedImage === 0}>
-              <ArrowLeft className={s.modalArrowIcon} />
+        <div className={s.modalOverlay}>
+          <div className={s.modal}>
+            <button className={s.modalCloseBtn} onClick={handleCloseModal}>
+              <CloseIcon className={s.modalCloseIcon} alt="Close" />
             </button>
-            <img
-              src={images[selectedImage].url}
-              alt={images[selectedImage].alt}
-              className={s.modalImage}
-            />
-            <button onClick={handleModalNext} className={s.modalNavBtn} disabled={selectedImage + 1 >= images.length}>
-              <ArrowRight className={s.modalArrowIcon} />
-            </button>
+            <div className={s.modalContent}>
+              <button className={s.modalNavBtn} onClick={handleModalPrev} disabled={selectedImage === 0}>
+                <ArrowLeft alt="Previous" className={s.modalArrowIcon} />
+              </button>
+              <img src={images[selectedImage].url} alt={images[selectedImage].alt} className={s.modalImage} />
+              <button className={s.modalNavBtn} onClick={handleModalNext} disabled={selectedImage === images.length - 1}>
+                <ArrowRight alt="Next" className={s.modalArrowIcon} />
+              </button>
+            </div>
           </div>
         </div>
       )}
