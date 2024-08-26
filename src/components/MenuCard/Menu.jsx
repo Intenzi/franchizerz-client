@@ -6,7 +6,6 @@ import CloseIcon from "../../images/closeIcon.svg";
 
 const Menu = ({ menuPhotos }) => {
   const [selectedImage, setSelectedImage] = useState(null);
-  const imageContainerRef = useRef(null);
 
   const images = menuPhotos.map(photo => ({
     url: photo.url,
@@ -14,21 +13,13 @@ const Menu = ({ menuPhotos }) => {
   }));
 
   const handleNext = () => {
-    if (imageContainerRef.current) {
-      imageContainerRef.current.scrollBy({
-        left: 300, // Adjust this value based on your image width
-        behavior: 'smooth',
-      });
-    }
+    const container = document.getElementById('imageContainer2');
+    container.scrollBy({ left: 300, behavior: 'smooth' });
   };
 
   const handlePrev = () => {
-    if (imageContainerRef.current) {
-      imageContainerRef.current.scrollBy({
-        left: -300, // Adjust this value based on your image width
-        behavior: 'smooth',
-      });
-    }
+    const container = document.getElementById('imageContainer2');
+    container.scrollBy({ left: -300, behavior: 'smooth' });
   };
 
   const handleImageClick = (index) => {
@@ -61,7 +52,7 @@ const Menu = ({ menuPhotos }) => {
           <button onClick={handlePrev} className={s.navBtn}>
             <ArrowLeft alt="Previous" className={s.arrowIcon} />
           </button>
-          <div id="imageContainer" className={s.imageContainer}>
+          <div id="imageContainer2" className={s.imageContainer}>
             {images.map((image, index) => (
               <div key={index} className={s.imageWrapper}>
                 <img
