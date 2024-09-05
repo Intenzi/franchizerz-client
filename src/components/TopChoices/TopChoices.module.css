@@ -13,6 +13,7 @@
     right: 20vw;
     width: 60vw;
     height: 5px;
+    border-radius: 20px;
 }
 .headTop{
     position: relative;
@@ -20,6 +21,7 @@
     left: 20vw;
     width: 60vw;
     height: 5px;
+    border-radius: 20px;
 }
 .headText {
     position: relative;
@@ -100,7 +102,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-
+    transition: transform 0.4s ease; 
 }
 
 .image {
@@ -119,11 +121,16 @@
     color: white;
     font-size: 0.7rem;
     position: relative;
-    bottom: 1vw;
+    bottom: 1.5vw;
 }
-.card:hover{
-    transform: scale(1.1);
-    transition: all 0.4s;
+.card:hover {
+    transform: scale(1.1); 
+    transition: transform 0.4s ease; 
+}
+
+.fadeIn {
+    opacity: 0;
+    animation: fadeIn 0.8s ease-in-out forwards;
 }
 @media (max-width: 768px) {
     .image{
@@ -132,24 +139,19 @@
         border-radius: 5px;
     }
     .category{
-        bottom: 2vw;
+        bottom: 3.5vw;
     }
     .headText{
         font-size: 7vw;
     }
 }
-.fadeIn {
-    opacity: 0;
-    animation: fadeIn 0.8s ease-in-out forwards;
-}
+
 
 @keyframes fadeIn {
     from {
         opacity: 0;
-        transform: scale(0.9);
     }
     to {
         opacity: 1;
-        transform: scale(1);
     }
 }

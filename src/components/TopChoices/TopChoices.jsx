@@ -3,14 +3,14 @@ import s from './TopChoices.module.css';
 
 const TopChoices = () => {
     const allData = [
-        { id: 1, name: 'Mcdonalds', category: 'Food Beverage', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTegzijE1pMn3LH66I6gA4-E9EDXYv9-3gM-Q&s' },
-        { id: 2, name: 'Mcdonalds', category: 'Food Beverage', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTegzijE1pMn3LH66I6gA4-E9EDXYv9-3gM-Q&s' },
-        { id: 3, name: 'Mcdonalds', category: 'Food Beverage', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTegzijE1pMn3LH66I6gA4-E9EDXYv9-3gM-Q&s' },
-        { id: 4, name: 'Mcdonalds', category: 'Food Beverage', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTegzijE1pMn3LH66I6gA4-E9EDXYv9-3gM-Q&s' },
-        { id: 5, name: 'Mcdonalds', category: 'Food Beverage', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTegzijE1pMn3LH66I6gA4-E9EDXYv9-3gM-Q&s' },
-        { id: 6, name: 'Mcdonalds', category: 'Food Beverage', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTegzijE1pMn3LH66I6gA4-E9EDXYv9-3gM-Q&s' },
-        { id: 7, name: 'Mcdonalds', category: 'Food Beverage', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTegzijE1pMn3LH66I6gA4-E9EDXYv9-3gM-Q&s' },
-        { id: 8, name: 'Mcdonalds', category: 'Food Beverage', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTegzijE1pMn3LH66I6gA4-E9EDXYv9-3gM-Q&s' },
+        { id: 1, name: 'Mcdonalds', category: 'Food Beverage', image: './img/857d89ea-b84b-4a23-96e4-d653c66298d2 1.jpg' },
+        { id: 2, name: 'Mcdonalds', category: 'Food Beverage', image: './img/Keto Restaurants with Low Carb Options - No Bun Please 1.jpg' },
+        { id: 3, name: 'Mcdonalds', category: 'Food Beverage', image: './img/Fortis Hiranandani Hospital, India 1.jpg' },
+        { id: 4, name: 'Mcdonalds', category: 'Food Beverage', image: './img/857d89ea-b84b-4a23-96e4-d653c66298d2 1.jpg' },
+        { id: 5, name: 'Mcdonalds', category: 'Food Beverage', image: './img/Fortis Hiranandani Hospital, India 1.jpg' },
+        { id: 6, name: 'Mcdonalds', category: 'Food Beverage', image: './img/Keto Restaurants with Low Carb Options - No Bun Please 1.jpg' },
+        { id: 7, name: 'Mcdonalds', category: 'Food Beverage', image: './img/857d89ea-b84b-4a23-96e4-d653c66298d2 1.jpg' },
+        { id: 8, name: 'Mcdonalds', category: 'Food Beverage', image: './img/Fortis Hiranandani Hospital, India 1.jpg' },
     ];
 
     const [visibleItems, setVisibleItems] = useState([]);

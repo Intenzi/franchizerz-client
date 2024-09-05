@@ -134,9 +134,9 @@
   }
   
   .hr {
-	width: 90%;
-	border: 0;
-	border-bottom: 1px solid #ccc;
+	width: 100vw;
+	height: 4px;
+	background-color: white;
 	margin: 10px auto;
   }
   
