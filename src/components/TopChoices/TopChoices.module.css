@@ -1,0 +1,155 @@
+.headContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.headBottom{
+    position: relative;
+    background-color: white;
+    bottom: 20px;
+    right: 20vw;
+    width: 60vw;
+    height: 5px;
+}
+.headTop{
+    position: relative;
+    background-color: white;
+    left: 20vw;
+    width: 60vw;
+    height: 5px;
+}
+.headText {
+    position: relative;
+    color: white;
+    font-size: 2em;
+    font-weight: bold;
+}
+.mainContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    z-index: 10;
+    background-color: black;
+    padding: 20px;
+    width: 100%;
+}
+.load {
+    border: 2px solid rgba(0, 102, 255, 1);
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 50px;
+    font-size: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.load:hover {
+    background-color: rgba(0, 102, 255, 1);
+}
+
+.spinner {
+    width: 15px;
+    height: 15px;
+    border: 3px solid rgba(0, 102, 255, 1);
+    border-top: 3px solid white;
+    border-radius: 50%;
+    margin-right: 10px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.load:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+.gridContainer {
+    display: grid;
+    gap: 10px;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    transition: all 0.6s;
+}
+
+.gridContainer {
+    grid-template-columns: repeat(3, 1fr); /* Desktop: 3 columns */
+}
+
+@media (max-width: 768px) {
+    .gridContainer {
+        grid-template-columns: repeat(2, 1fr); /* Mobile: 2 columns */
+    }
+}
+
+.card {
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.image {
+    width: 18vw;
+    height: 18vw;
+    border-radius: 30px;
+}
+
+.name {
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin-top: 0.3vw;
+}
+.category{
+    color: white;
+    font-size: 0.7rem;
+    position: relative;
+    bottom: 1vw;
+}
+.card:hover{
+    transform: scale(1.1);
+    transition: all 0.4s;
+}
+@media (max-width: 768px) {
+    .image{
+        width: 24vw;
+        height: 24vw;
+        border-radius: 5px;
+    }
+    .category{
+        bottom: 2vw;
+    }
+    .headText{
+        font-size: 7vw;
+    }
+}
+.fadeIn {
+    opacity: 0;
+    animation: fadeIn 0.8s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
