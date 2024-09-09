@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-import s from './TopChoices.module.css';
+import s from './TrendingChoices.module.css';
 
-const TopChoices = () => {
+const TrendingChoices = () => {
     const allData = [
         { id: 1, name: 'Mcdonalds', category: 'Food Beverage', image: './img/857d89ea-b84b-4a23-96e4-d653c66298d2 1.jpg' },
         { id: 2, name: 'Mcdonalds', category: 'Food Beverage', image: './img/Keto Restaurants with Low Carb Options - No Bun Please 1.jpg' },
@@ -74,7 +74,7 @@ const TopChoices = () => {
         >
             <div className={s.headContainer}>
                 <div className={s.headTop}></div>
-                <p className={s.headText}>TOP CHOICES</p>
+                <p className={s.headText}>TRENDING CHOICES</p>
                 <div className={s.headBottom}></div>
             </div>
             <div className={s.subContainer}>
@@ -105,4 +105,4 @@ const TopChoices = () => {
     );
 };
 
-export default TopChoices;
+export default TrendingChoices;

@@ -20,7 +20,7 @@ const App = () => {
 		: null
 
 	return (
-		<>
+		<div style={{backgroundColor:'black'}}>
 			<NavBar />
 			<Routes>
 				<Route
@@ -35,7 +35,7 @@ const App = () => {
 				<Route path="/partner-with-us" element={<PartnerWithUs />} />
 			</Routes>
 			<Footer />
-		</>
+		</div>
 	)
 }
 

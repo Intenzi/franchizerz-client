@@ -9,8 +9,8 @@
     position: relative;
     background-color: white;
     bottom: 20px;
-    right: 20vw;
-    width: 60vw;
+    right: 17vw;
+    width: 65vw;
     height: 5px;
     border-radius: 20px;
 }
@@ -18,8 +18,8 @@
 .headTop {
     position: relative;
     background-color: white;
-    left: 20vw;
-    width: 60vw;
+    left: 17vw;
+    width: 65vw;
     height: 5px;
     border-radius: 20px;
 }
