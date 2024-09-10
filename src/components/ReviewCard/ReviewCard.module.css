@@ -205,3 +205,8 @@
 		margin-right: -30px;
 	}
 }
+@media (max-width:380px){
+	.headText{
+		font-size: 6vw;
+	}
+}
