@@ -118,6 +118,9 @@
         width: calc(100% / 2 - 20px); /* Adjust to fit 2 in a row with some space */
         margin: 0 10px; /* Add margin between the cards */
     }
+    .image{
+        width: 70vw;
+    }
 }
 @media (max-width:390px){
     .navButton{
@@ -136,5 +139,8 @@
     }
     .headText{
         font-size: 5vw;
+    }
+    .image{
+        width: 50vw;
     }
 }
