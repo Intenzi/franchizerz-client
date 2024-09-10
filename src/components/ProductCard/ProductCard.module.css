@@ -1,86 +1,93 @@
 .sliderContainer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-  }
-  .headText{
-    color: black;
-    font-size: 3vw;
-    /* margin-top: 2vw; */
-    margin-right: 50vw;
-  }
-  .sliderContent {
-    display: flex;
-    flex-direction: row;
-    overflow: hidden;
-    height: 30vw;
-    width: 85vw;
-  }
-  
-  .sliderItem {
-    flex: 0 0 auto;
-    width: 18vw;
-    height: 20.5vw;
-    margin-right: 50px;
-    transition: transform 0.5s ease-in-out;
-    border-radius: 30px;
-    background-color: white;
-   
-  }
-  .sliderItem:hover{
-    background-color: white;
-    box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(255, 255, 255, 0.5);
-     border:1px solid rgb(158, 155, 155);
-  }
-  
-  .brandImage {
-   width: 17vw;
-   height: 13vw;
-   border-radius: 20px;  
-   margin-left: 0.4vw; 
-   margin-top: 0.8vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.headText{
+  color: black;
+  font-size: 3vw;
+  /* margin-top: 2vw; */
+  margin-right: 50vw;
+}
+.sliderContent {
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  height: 30vw;
+  width: 85vw;
+}
 
-  }
-  
-  
-  .navigationButtons {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    margin-top: 20px;
-  }
-  
-  button {
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-  }
-  .itemName{
-    font-weight: bold;
-    margin-top: 1vw;
-    margin-left: 1vw;
-    font-size: 1vw;
-    color: black;
-  }
-  .itemDesc{
-    font-size: 1vw;
-    color: rgb(71, 69, 69);
-    margin-top: 1vw;
-    margin-left: 1vw;
-  }
-  .prevButton{
-    border: 1px solid black;
-    margin-top: -25vw;
-    margin-left: 2vw;
-    /* background-color: #3d9bde; */
-    background-color: #ffffff;
-  }
-  .nextButton{
-    border: 1px solid black;
-    margin-top: -25vw;
-   margin-right: 2vw;
-    /* background-color: #3d9bde; */
-    background-color: #ffffff;
-  }
-  
+.sliderItem {
+  flex: 0 0 auto;
+  width: 18vw;
+  height: 23.5vw;
+  margin-right: 50px;
+  transition: transform 0.5s ease-in-out;
+  border-radius: 15px;
+  background-color: white;
+  border: 1px solid #e3dabb; /* Premium gold color for border */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+.sliderItem:hover {
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), 0 6px 15px rgba(255, 255, 255, 0.5);
+  border: 2px solid #d4af37; /* Keeps premium border color on hover */
+}
+
+.prevButton, .nextButton {
+  border: 2px solid #d4af37; /* Premium border color for navigation buttons */
+  background-color: #ffffff; /* Ensure buttons have a clean background */
+}
+
+
+.brandImage {
+ width: 15vw;
+ height: 11vw;
+ border-radius: 10px;  
+ margin-left: 1.3vw; 
+ margin-top: 0.9vw;
+
+}
+
+
+.navigationButtons {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.itemName{
+  font-weight: bold;
+  margin-top: 1vw;
+  margin-left: 1vw;
+  font-size: 1vw;
+  color: black;
+}
+.itemDesc{
+  font-size: 1vw;
+  color: rgb(71, 69, 69);
+  margin-top: 1vw;
+  margin-left: 1vw;
+}
+.prevButton{
+  border: 1px solid black;
+  margin-top: -25vw;
+  margin-left: 2vw;
+  /* background-color: #3d9bde; */
+  background-color: #ffffff;
+}
+.nextButton{
+  border: 1px solid black;
+  margin-top: -25vw;
+ margin-right: 2vw;
+  /* background-color: #3d9bde; */
+  background-color: #ffffff;
+}

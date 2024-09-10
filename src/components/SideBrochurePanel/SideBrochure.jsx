@@ -22,7 +22,7 @@ const SideBrochure = ({ name }) => {
 
   return (
     <div className={styles.sideContainer}>
-      <p className={styles.sideText}>
+      {/* <p className={styles.sideText}>
         <FormatQuoteIcon
           style={{
             fontSize: '2rem',
@@ -34,12 +34,12 @@ const SideBrochure = ({ name }) => {
           Join the legacy of one of the world's most beloved brands. With {name}, you invest in a globally recognized name synonymous with quality, consistency, and customer satisfaction. Let's build a successful future together!
         </em>
         <FormatQuoteIcon style={{ fontSize: '2rem', marginLeft: '0.5rem' }} />
-      </p>
+      </p> */}
       <div className={styles.container}>
-        <h2 className={styles.heading}>Download Brochure</h2>
+        {/* <h2 className={styles.heading}>Download Brochure</h2>
         <p className={styles.description}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        </p>
+        </p> */}
 
         <button className={styles.downloadButton} onClick={handleDownload}>
           <FaFilePdf className={styles.downloadIcon} /> Download Brochure

@@ -1,0 +1,38 @@
+.bottomBar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #f8f9fa;
+    padding: 10px 0;
+    border-top: 1px solid #e9ecef;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 999;
+  }
+  
+  .bottomBarIcon {
+    font-size: 24px;
+    color: #333;
+  }
+  
+  .bottomBarLabel {
+    margin-top: 5px;
+    font-size: 12px;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .bottomBar {
+      padding: 5px 0;
+    }
+  
+    .bottomBarIcon {
+      font-size: 20px;
+    }
+  
+    .bottomBarLabel {
+      font-size: 10px;
+    }
+  }
+  

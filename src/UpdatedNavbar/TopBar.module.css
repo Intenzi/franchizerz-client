@@ -1,0 +1,105 @@
+
+/* TopBar.module.css */
+.topBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: white;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  
+  .logoTitle {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo {
+    margin-right: 10px;
+  }
+  
+  .title {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .searchBar {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    max-width: 500px;
+  }
+  
+  .searchCategory {
+    position: relative;
+  }
+  
+  .categoryBtn {
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  
+  .arrowdownLogo {
+    margin-left: 5px;
+  }
+  
+  .categoryDropdownModal {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+  
+  .categoryDropdownItem {
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .categoryDropdownItem:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .searchInput {
+    flex-grow: 1;
+    border: 1px solid #d9d9d9;
+    padding: 5px;
+  }
+  
+  .searchIconContainer {
+    padding: 5px;
+    background-color: #0096ff;
+    cursor: pointer;
+  }
+  
+  .searchIcon {
+    fill: white;
+  }
+  
+  .profileContainer {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .dropdownModal {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+  
+  .dropdownLink {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+  }
