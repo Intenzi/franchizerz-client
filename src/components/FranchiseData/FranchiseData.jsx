@@ -14,14 +14,14 @@ const FranchiseData = ({ franchise }) => {
 	} = franchise
 
 	return (
-		<section data-theme="light" className="product-section pico">
+		<section data-theme="light" className="product-section pico mb-4">
 			<img
-				src={img}
-				style={{ width: "20%", height: "20%" }}
+				src="/image.png"
+				// style={{ width: "20%", height: "20%" }}
 				alt="Product Image"
 				className="product-image"
 			/>
-			<div className="product-content">
+			<div className="product-content ">
 				<h2>{name}</h2>
 				<p>Success Rating: ⭐4.5/5</p>
 				<p>
@@ -52,8 +52,11 @@ const FranchiseData = ({ franchise }) => {
 					<strong>Growth: </strong>
 					{growth}
 				</p>
+				<div className="mt-[50px]">
+				<SideBrochure name={name} className='downloadBrochure '/>
+				</div>
 			</div>
-			<SideBrochure name={name} className='downloadBrochure'/>
+			
 		</section>
 	)
 }

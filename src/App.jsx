@@ -13,7 +13,8 @@ import NewsSection from "./components/Blog/NewsSection"
 import Main from "./components/About/Main"
 import NavBar from "./components/NewNavBar/NavBar"
 import PartnerWithUs from "./components/PartnerWithUs/PartnerWithUs"
-
+// import Navbaar from "./components/header/Navbaar"
+import Newnav from "./components/newnav/Newnav"
 const App = () => {
 	const match = useMatch("/franchise/:id")
 	const franchise = match
@@ -21,22 +22,23 @@ const App = () => {
 		: null
 
 	return (
-		<div style={{backgroundColor:'black'}}>
-			<NavBar />
-			<Routes>
-				<Route
-					path="/franchise/:id"
-					element={<Franchise franchise={franchise} />}
-				/>
-				<Route path="/" element={<HomePage />} />
-				<Route path="/blog" element={<NewsSection />} />
-				<Route path="/contact-us" element={<ContactForm/>} />
-				<Route path="/about-us" element={<Main/>} />
-				<Route path="/sign-up" element={<SignUp />} />
-
-				<Route path="/sign-in" element={<SignIn />} />
-				<Route path="/partner-with-us" element={<PartnerWithUs />} />
-			</Routes>
+		<>
+			{/* <NavBar /> */}
+			<Newnav />
+			<div >
+				<Routes>
+					<Route
+						path="/franchise/:id"
+						element={<Franchise franchise={franchise} />}
+					/>
+					<Route path="/" element={<HomePage />} />
+					<Route path="/blog" element={<NewsSection />} />
+					<Route path="/contact-us" element={<ContactForm />} />
+					<Route path="/sign-up" element={<SignUp />} />
+					<Route path="/sign-in" element={<SignIn />} />
+					<Route path="/partner-with-us" element={<PartnerWithUs />} />
+				</Routes>
+			</div>
 			<Footer />
 		</div>
 	)

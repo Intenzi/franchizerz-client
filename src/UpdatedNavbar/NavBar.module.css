@@ -1,0 +1,44 @@
+/* NavBar.module.css */
+
+/* General styles */
+.topBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.bottomBar {
+    display: flex;
+    justify-content: space-between;
+}
+
+.navItemContainer {
+    display: flex;
+    align-items: center;
+}
+
+/* Mobile styles */
+.hamburgerIcon {
+    display: none;
+}
+
+.mobileMenu {
+    display: none;
+}
+
+/* Mobile view */
+@media (max-width: 1160px) {
+    .hamburgerIcon {
+        display: inline;
+    }
+
+    .bottomBar {
+        display: none;
+    }
+
+    .mobileMenu {
+        display: flex;
+        flex-direction: column;
+    }
+}

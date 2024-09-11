@@ -1,0 +1,169 @@
+/* Header styles */
+header {
+    background-color: #eff1f4;
+    width: 100%;
+    height: 70px;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+}
+
+/* Navigation bar styling */
+header nav {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 20px;
+    justify-content: space-between;
+}
+
+/* Logo container and styling */
+.navlogo {
+    display: flex;
+    align-items: center;
+}
+
+.logoContainer {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logoImage {
+    width: 50px; /* Adjusted size for the logo image */
+}
+
+.logoTitle {
+    width: 140px; /* Adjusted size for the logo title */
+    margin-left: 10px; /* Space between the logo image and title */
+}
+
+/* Search bar styling */
+.nav_searchbaar {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    max-width: 500px;
+    margin: 0 20px;
+    position: relative;
+}
+
+.searchInput {
+    width: 100%;
+    height: 38px;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    padding-left: 10px;
+    font-size: 14px;
+}
+
+.search_icon {
+    background-color: #febd69;
+    height: 38px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.searchIcon {
+    color: #000;
+}
+
+/* Extra search results dropdown styling */
+.extrasearch {
+    position: absolute;
+    background-color: #fff;
+    color: #000;
+    top: 60px;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+    max-height: 400px;
+    overflow-y: auto; /* Make sure extrasearch is scrollable */
+}
+
+.extrasearch div {
+    padding: 10px;
+}
+
+/* Profile menu styling */
+.menu {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    min-width: 150px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    z-index: 100;
+    overflow: visible;
+}
+
+/* Right section styling (avatar and menu) */
+.right {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.avatar {
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+.logoutIcon {
+    font-size: 16px;
+    margin-right: 3px;
+}
+
+/* Adjustments for screens smaller than 800px */
+@media (max-width: 800px) {
+    header nav {
+        padding: 0 10px;
+    }
+    .nav_searchbaar {
+        margin: 0;
+    }
+    .searchInput {
+        width: calc(100% - 50px); /* Adjust for search icon */
+    }
+}
+
+/* Adjustments for screens smaller than 568px */
+@media (max-width: 568px) {
+    header nav {
+        padding: 0 10px;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .logoImage {
+        width: 45px; /* Adjusted for smaller screens */
+    }
+    .logoTitle {
+        width: 120px; /* Adjusted for smaller screens */
+        margin-left: 5px; /* Adjust spacing for smaller screens */
+    }
+    .nav_searchbaar {
+        width: calc(100% - 120px); /* Adjust for logo and user icon */
+        margin: 0;
+    }
+    .searchInput {
+        width: 100%;
+    }
+    .search_icon {
+        width: 24px; /* Adjust width for smaller screens */
+    }
+    .avatar {
+        margin-left: 10px;
+        width: 31px; /* Set width for user profile */
+        height: 32px; /* Set height for user profile */
+    }
+}
