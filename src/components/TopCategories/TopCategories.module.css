@@ -1,0 +1,125 @@
+.mainContainer{
+    background-color: black;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    z-index: 10;
+}
+.headContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.headBottom {
+    position: relative;
+    background-color: white;
+    bottom: 20px;
+    right: 20vw;
+    width: 65vw;
+    height: 5px;
+    border-radius: 20px;
+}
+
+.headTop {
+    position: relative;
+    background-color: white;
+    left: 19vw;
+    width: 63vw;
+    height: 5px;
+    border-radius: 20px;
+}
+.top{
+    position: relative;
+    top: 4vw;
+    z-index: 20;
+    width: 100%;
+    height: 7vw;
+    background-color: black;
+    border-radius: 100%;
+}
+.bottom{
+    position: relative;
+    bottom: 4vw;
+    z-index: 20;
+    width: 100%;
+    height: 7vw;
+    background-color: black;
+    border-radius: 100%;
+}
+.headText {
+    position: relative;
+    color: white;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+
+.imagesContainer {
+    display: flex;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    padding: 10px;
+    gap: 0;
+}
+
+.imagesContainer::-webkit-scrollbar {
+    display: none; /* Hide scrollbar */
+}
+
+.imageWrapper {
+    position: relative;
+    flex: 0 0 25%; /* Ensure 4 images fit in one view */
+    box-sizing: border-box;
+    transition: transform 0.3s;
+}
+
+.imageWrapper:hover {
+    transform: scale(1.1);
+}
+
+.categoryImage {
+    width: 100%;
+    height: 30vw;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.categoryName {
+    position: absolute;
+    top: 0; /* Align to the top */
+    left: 0;
+    right: 0;
+    bottom: 0; /* Align to the bottom */
+    text-align: center;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black background */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1em;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease-in-out;
+}
+
+.imageWrapper:hover .categoryName {
+    opacity: 1; /* Show on hover */
+}
+@media (max-width:500px){
+    .top{
+        top: 7vw;
+    }
+    .bottom{
+        bottom: 7vw;
+    }
+    .imageWrapper:hover{
+        transform: scale(1);
+    }
+    .headText{
+        font-size: 5vw;
+    }
+}

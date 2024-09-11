@@ -13,42 +13,24 @@ const ReviewCard = ({
 	likes,
 	dislikes,
 	ratings,
+	index,
 }) => {
 	return (
-		<div className={styles.cardHolder}>
-			<div className={styles.card1}>
+		<div className={index%2===0?styles.cardHolder:styles.cardHolder2}>
+			<div className={index%2===0?styles.card1:styles.card2}>
+				<div className={styles.textContainer}>
+					<p className={styles.reviewHead}>{reviewHead}</p>
+					<p className={styles.reviewPara}>{reviewText}</p>
+				</div>
+				<div className={styles.nameContainer}>
+					<p className={styles.name}>- {customerName}</p>
+				</div>
 				<div className={styles.imageContainer}>
 					<img
 						src={blankProfile}
 						alt="Profile"
 						className={styles.image}
 					/>
-				</div>
-				<div className={styles.nameContainer}>
-					<p className={styles.name}>{customerName}</p>
-				</div>
-				<div className={styles.ratingContainer}>
-					<StarRatings
-						rating={ratings}
-						starRatedColor="gold"
-						numberOfStars={5}
-						name="rating"
-						starDimension="15px"
-						starSpacing="2px"
-					/>
-				</div>
-				<div className={styles.textContainer}>
-					<p className={styles.dateCont}>Posted on {date}</p>
-					<p className={styles.reviewHead}>{reviewHead}</p>
-					<p className={styles.reviewPara}>{reviewText}</p>
-				</div>
-				<div>
-					<button className={styles.likbtn}>
-						<LikeLogo className={styles.lklogo} fill="black" />
-					</button>
-					<button className={styles.likbtn}>
-						<DislikeLogo className={styles.lklogo} fill="black" />
-					</button>
 				</div>
 			</div>
 		</div>
