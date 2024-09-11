@@ -10,6 +10,7 @@ import ContactForm from "./components/Contact/ContactForm"
 import SignUp from './components/SignUp/SignUp'
 import SignIn from './components/SignIn/SignIn'
 import NewsSection from "./components/Blog/NewsSection"
+import Main from "./components/About/Main"
 import NavBar from "./components/NewNavBar/NavBar"
 import PartnerWithUs from "./components/PartnerWithUs/PartnerWithUs"
 // import Navbaar from "./components/header/Navbaar"
@@ -39,7 +40,7 @@ const App = () => {
 				</Routes>
 			</div>
 			<Footer />
-		</>
+		</div>
 	)
 }
 

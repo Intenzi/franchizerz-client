@@ -26,11 +26,13 @@ const Reviews = ({ reviews }) => {
 
   return (
     <div className={styles.mainContainer}>
-      <div className={styles.headerContainer}>
-          <p className={styles.mainHeadText}>User Reviews</p>
-      </div>
+       <div className={styles.headContainer}>
+          <div className={styles.headTop}></div>
+          <p className={styles.headText}>Hear from our users</p>
+          <div className={styles.headBottom}></div>
+        </div>
       <div className={styles.subMainContainer}>
-      <IconButton onClick={scrollLeft} sx={{ color: '#0096ff' }}>
+      <IconButton onClick={scrollLeft} sx={{ color: '#ffffff' }}>
         <ArrowBackIosIcon />
       </IconButton>
         <div className={styles.reviewCardSlider} ref={reviewsContainerRef}>
@@ -39,13 +41,14 @@ const Reviews = ({ reviews }) => {
               ratings={review.rating}
               customerName={review.customerName}
               key={index}
+              index={index}
               date={review.datePosted}
               reviewHead={review.reviewHeading}
               reviewText={review.reviewParagraph}
             />
           ))}
         </div>
-        <IconButton onClick={scrollRight} sx={{ color: '#0096ff' }}>
+        <IconButton onClick={scrollRight} sx={{ color: '#ffffff' }}>
         <ArrowForwardIosIcon />
       </IconButton>
       </div>

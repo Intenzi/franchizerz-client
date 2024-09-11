@@ -1,0 +1,81 @@
+.legalAffairs {
+    text-align: center;
+    padding: 40px;
+    background-color: #f5f5f5; /* Light gray background */
+  }
+  
+  .title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  
+  .carouselContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  
+  .carousel {
+    display: flex;
+    gap: 40px; /* Space between cards */
+  }
+  
+  .card {
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 30px; /* Increased padding */
+    width: 400px; /* Adjusted width */
+    height: 50vh; /* 50% of viewport height */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  }
+  
+  .icon {
+    font-size: 4rem; /* Larger icon */
+    color: #137494; /* Blue icon */
+    margin-bottom: 20px; /* Increased margin */
+  }
+  
+  .indexContainer {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .index {
+    display: inline-block;
+    width: 60px;
+    height: 10px;
+    background-color: #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 0 5px; /* Space between indicators */
+  }
+  
+  .activeIndex {
+    background-color: #137494; /* Light blue */
+  }
+  
+  @media (max-width: 768px) {
+    .carouselContainer {
+      gap: 20px; /* Adjust gap for smaller screens */
+    }
+  
+    .card {
+      width: 90%; /* Responsive width for smaller screens */
+      height: 50vh; /* Maintain 50% of viewport height */
+    }
+  }
+  
