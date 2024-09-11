@@ -46,7 +46,7 @@ const Newnav = () => {
 						<HomeIcon className="navLogo" />
 						<p className="navText">Home</p>
 					</NavLink>
-					<NavLink to="/about-us" className="navItem">
+					<NavLink to="about-us" className="navItem">
 						<InfoIcon className="navLogo" />
 						<p className="navText">About Us</p>
 					</NavLink>
