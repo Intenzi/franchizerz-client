@@ -48,10 +48,18 @@
 
 .nav.prev {
 	left: 2%; /* Adjust left position */
+	width: fit-content;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
 }
 
 .nav.next {
 	right: 2%; /* Adjust right position */
+	width: fit-content;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
 }
 
 @media (max-width: 768px) {

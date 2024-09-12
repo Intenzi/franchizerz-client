@@ -22,6 +22,7 @@ const TopCategories = () => {
             scrollInterval = setInterval(() => {
                 if (carousel) {
                     carousel.scrollLeft += 1.5;
+
                     if (carousel.scrollLeft >= carousel.scrollWidth / 2) {
                         carousel.scrollLeft = 0;
                     }
