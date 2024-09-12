@@ -8,7 +8,7 @@
 .headBottom {
     position: relative;
     background-color: white;
-    bottom: 20px;
+    bottom: 3px;
     right: 20vw;
     width: 60vw;
     height: 5px;
@@ -35,6 +35,7 @@
     display: flex;
     flex-direction: column;
     width: 100vw;
+   
     align-items: center;
     justify-content: center;
     margin-bottom: 20px;
@@ -46,7 +47,7 @@
 
 .subContainer {
     display: flex;
-    width: 100%;
+    width: 100vw;
     margin-top: 20px;
     margin-bottom: 30px;
     justify-content: center;
@@ -54,8 +55,9 @@
 }
 
 .carousel {
-    width: 95%;
+    width: 95vw;
     overflow: hidden;
+    padding-bottom: 30px;
 }
 
 .carouselTrack {
@@ -94,7 +96,6 @@
     color: white;
     font-size: 0.7rem;
     position: relative;
-    bottom: 2vw;
 }
 
 .card:hover {
@@ -110,6 +111,7 @@
     font-size: 1.5rem;
     display: flex;
     align-items: center;
+    width: 3%;
 }
 
 /* Responsive styles */
@@ -142,5 +144,8 @@
     }
     .image{
         width: 50vw;
+    }
+    .card{
+        transform: scale(0.75);
     }
 }

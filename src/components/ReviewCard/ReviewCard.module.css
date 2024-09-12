@@ -108,7 +108,7 @@
 	flex-direction: row;
 	align-items: center;
 	overflow-x: scroll;
-	width: 80vw;
+	width: 80%;
 	height: auto;
 	padding-left: 20px;
 }
@@ -147,7 +147,7 @@
 .headBottom{
     position: relative;
     background-color: white;
-    bottom: 20px;
+    bottom: 5px;
     right: 20vw;
     width: 68vw;
     height: 5px;
@@ -166,7 +166,7 @@
     font-weight: bold;
 }
 .subMainContainer {
-	width: 95vw;
+	width: 100vw;
 	height: 600px;
 	border-radius: 10px;
 	display: flex;
@@ -192,6 +192,9 @@
 }
 .arrowIcon{
 	fill: white;
+}
+.iconsa{
+	width: 10%;
 }
 @media (max-width:480px){
 	.cardHolder{

@@ -32,7 +32,7 @@ const Reviews = ({ reviews }) => {
           <div className={styles.headBottom}></div>
         </div>
       <div className={styles.subMainContainer}>
-      <IconButton onClick={scrollLeft} sx={{ color: '#ffffff' }}>
+      <IconButton className={styles.iconsa} onClick={scrollLeft} sx={{ color: '#ffffff' }}>
         <ArrowBackIosIcon />
       </IconButton>
         <div className={styles.reviewCardSlider} ref={reviewsContainerRef}>
@@ -48,7 +48,7 @@ const Reviews = ({ reviews }) => {
             />
           ))}
         </div>
-        <IconButton onClick={scrollRight} sx={{ color: '#ffffff' }}>
+        <IconButton className={styles.iconsa} onClick={scrollRight} sx={{ color: '#ffffff' }}>
         <ArrowForwardIosIcon />
       </IconButton>
       </div>
