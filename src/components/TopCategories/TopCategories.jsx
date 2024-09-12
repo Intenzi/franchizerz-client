@@ -21,12 +21,12 @@ const TopCategories = () => {
         if (!isHovered) {
             scrollInterval = setInterval(() => {
                 if (carousel) {
-                    carousel.scrollLeft += 1;
+                    carousel.scrollLeft += 3;
                     if (carousel.scrollLeft >= carousel.scrollWidth / 2) {
                         carousel.scrollLeft = 0;
                     }
                 }
-            }, 20); 
+            }, 25); 
         }
 
         return () => clearInterval(scrollInterval);

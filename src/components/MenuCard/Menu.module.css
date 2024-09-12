@@ -82,7 +82,7 @@
 .headBottom{
     position: relative;
     background-color: white;
-    bottom: 20px;
+    bottom: 5px;
     right: 25vw;
     width: 60vw;
     height: 5px;
@@ -111,7 +111,7 @@
   .imageContainer {
     display: flex;
     flex-direction: row;
-    width: 80vw;
+    width: 80%;
     height: 25rem;
     overflow-x: auto;
     scrollbar-width: none;
@@ -129,6 +129,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    width: 100vw;
   }
   
   .imageWrapper {
@@ -148,6 +149,9 @@
     transition: all ease-in-out 0.2s;
     border: 2px solid white;
     border-radius: 30px;
+  }
+  .navBtn{
+    width: 5%;
   }
   
   /* Media Queries for Responsiveness */
