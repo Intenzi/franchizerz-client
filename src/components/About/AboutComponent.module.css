@@ -29,6 +29,8 @@
 .aboutImg {
     width: 20rem;
     height: 20rem;
+    position: relative;
+    bottom: 80px;
 }
 
 .aboutImg img {
