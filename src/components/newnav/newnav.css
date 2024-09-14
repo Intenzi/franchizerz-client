@@ -1,20 +1,34 @@
 /* Assuming the height of your navbar is around 50px */
-body {
-    margin-top: 60px; /* Add a top margin to the body equal to the navbar's height */
+/* Add padding-top to main-content to ensure space for the navbar */
+.main-content {
+    /* padding-top: 60px; Adjust based on your navbar height */
 }
 
-/* You can also apply this directly to the main content container */
-.main-content {
-    padding-top: 60px; /* Adjust the padding based on the navbar height */
+/* Ensure body margin-top is removed or adjusted */
+body {
+    margin: 0; /* Remove or adjust if needed */
+    font-family: 'Arial', sans-serif; /* Global font style */
 }
+
+/* Adjust your .new_nav styles if necessary */
 .new_nav {
     width: 100%;
-    background-color: #2c3e50; /* Dark background for better contrast */
-    position: fixed; /* Fix the navbar at the top */
+    background-color: #2c3e50; /* Dark background for contrast */
+    position: sticky;
     top: 0; /* Position it at the top */
     left: 0;
     z-index: 1000; /* Ensure it stays on top of other elements */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+.profile_container {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.userIcon {
+  margin-right: 5px;
+  color: white; /* Adjust color as needed */
 }
 
 .nav_data {
@@ -43,7 +57,7 @@ body {
 .logoTitle {
     color: #ffffff; /* White text for clear contrast */
     margin-left: 10px;
-    font-size: 20px; /* Adjusted font size */
+    font-size: 15px; /* Adjusted font size */
 }
 
 .left_data {
@@ -57,41 +71,36 @@ body {
 .navItem {
     display: flex;
     align-items: center;
+    justify-content: center; /* Center the nav item text */
     text-decoration: none;
     color: #ecf0f1; /* Light grey text for clear contrast */
-    font-weight: 500;
-    font-size: 14px;
+    font-weight: 600; /* Increase font weight */
+    font-size: 16px; /* Increase font size */
     padding: 10px;
     border-radius: 5px;
-    position: relative; /* Needed for the underline effect */
-    transition: color 0.3s ease-in-out; /* Smooth color transition */
-    margin: 0; /* Ensure there's no extra margin */
-    padding-bottom: 5px; /* Reduce bottom padding */
+    position: relative; /* Needed for the hover effect */
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out; /* Smooth transition */
+    margin: 0;
 }
 
-.navText {
-    margin-top: 19px;
-}
-
-.navLogo {
-    margin-right: 5px;
-    font-size: 18px; /* Larger icon for better visibility */
-}
-
-/* Underline effect on hover */
-.navItem::after {
+.navItem::before {
     content: '';
     position: absolute;
+    top: 0;
     left: 0;
-    bottom: 0;
-    height: 2px;
-    width: 0;
-    background-color: black; /* Black underline */
-    transition: width 0.3s ease-in-out;
+    width: 100%;
+    height: 50%;
+    background-color: rgb(147, 207, 226); /* The color of the top rectangular part */
+    z-index: -1; /* Ensure the background is behind the text */
+    border-radius: 0 0 20px 20px; /* Keep the top part rectangular */
+    transition: height 0.3s ease-in-out; /* Smooth hover transition */
+    opacity: 0; /* Initially hidden */
 }
 
-.navItem:hover::after {
-    width: 100%;
+/* On hover, reveal the rectangular top and curved bottom */
+.navItem:hover::before {
+    height: 100%;
+    opacity: 1;
 }
 
 .navItem:hover {
@@ -143,18 +152,109 @@ body {
 
     .navItem {
         justify-content: flex-start;
-        /* padding: 10px; Reduce padding for smaller screens */
         width: 100%;
         text-align: center;
         font-size: 13px; /* Slightly smaller text */
-        margin-bottom: -25px; /* Remove margin */
+        margin-bottom: 8px; /* Remove margin */
     }
 
-    .navItem::after {
+    .navItem::before {
+        display: none; /* Hide the top rectangular part on small screens */
+    }
+
+    .navItem:hover::after {
         height: 1px; /* Thinner underline */
+        background-color: black; /* Underline color */
     }
 
     .navLogo {
         font-size: 16px; /* Slightly smaller icon */
+    }
+}
+
+/* Login Form Styling */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f2f2f2; /* Light background for the page */
+    padding: 20px;
+}
+
+.login-form {
+    background-color: #fff; /* White background for the form */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+    max-width: 400px;
+    width: 100%;
+}
+
+.login-form h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.login-form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #2c3e50; /* Dark background for the button */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-form button:hover {
+    background-color: #34495e; /* Slightly lighter on hover */
+}
+
+.login-form .forgot-password {
+    text-align: right;
+    margin-top: 10px;
+}
+
+.login-form .forgot-password a {
+    color: #2c3e50;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.login-form .forgot-password a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Login Form */
+@media (max-width: 768px) {
+    .login-form {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .login-form {
+        padding: 15px;
+    }
+
+    .login-form h2 {
+        font-size: 20px;
+    }
+
+    .login-form button {
+        font-size: 14px;
     }
 }
