@@ -1,0 +1,116 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 10px 40px; /* Increased padding for more space from the start */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .brand {
+    display: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .links {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .leftLinks,
+  .rightLinks {
+    display: flex;
+  }
+  
+  .link {
+    color: black;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 500;
+  }
+  
+  .link:hover {
+    text-decoration: underline;
+  }
+  
+  .talkToLawyer {
+    border: 1px solid blue;
+    color: blue;
+    padding: 1px 10px; /* Adjusted padding for better spacing */
+    border-radius: 5px;
+  }
+  
+  .talkToLawyer:hover {
+    background-color: rgba(0, 0, 255, 0.1);
+  }
+  
+  .lawyersCA {
+    background-color: blue;
+    color: white;
+    padding: 1px 10px; /* Adjusted padding for better spacing */
+    border-radius: 5px;
+  }
+  
+  .lawyersCA:hover {
+    background-color: darkblue;
+  }
+  
+  .hamburger {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 4px 20px;
+      position: relative;
+    }
+  
+    .brand {
+      display: block;
+      align-self: center;
+      margin-bottom: 10px;
+    }
+  
+    .hamburger {
+      display: block;
+    }
+  
+    .links {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+    }
+  
+    .links.active {
+      display: flex;
+    }
+  
+    .leftLinks,
+    .rightLinks {
+      flex-direction: column;
+      width: 100%;
+    }
+  
+    .link {
+      margin: 10px 0;
+    }
+  
+    .talkToLawyer,
+    .lawyersCA {
+      width: 100%;
+      text-align: center;
+      margin: 10px 0;
+    }
+  }
+  

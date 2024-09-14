@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.footer {
+  background-color: #4b4848;
+  padding-top: 50px;
+  color: white;
+}
+
+.container {
+  width: 85%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footerContent {
+  width: 33.3%;
+  padding: 20px;
+}
+
+.footerContent h3 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.footerContent p {
+  margin: 7px 0;
+}
+
+.list {
+  padding: 0;
+  list-style: none;
+}
+
+.list li {
+  margin-bottom: 10px;
+}
+
+.list li a {
+  color: white;
+  text-decoration: none;
+}
+
+.list li a:hover {
+  text-decoration: underline;
+}
+
+.socialIcons {
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin-right: 190px;
+}
+
+.socialIcons li {
+  margin: 0 10px;
+}
+
+.socialIcons li a {
+  color: white;
+  font-size: 25px;
+}
+
+.socialIcons li a:hover {
+  color: #f6f1ec;
+}
+
+.bottomBar {
+  background: #343434;
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 50px;
+}
+
+.bottomBar p {
+  margin: 0;
+  font-size: 16px;
+  color: #f9f5f1;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footerContent {
+    width: 100%;
+    padding: 10px 0;
+  }
+  .socialIcons{
+    margin-right: 12px;
+  }
+}

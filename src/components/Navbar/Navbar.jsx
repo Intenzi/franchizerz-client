@@ -56,8 +56,8 @@ const Navbar = () => {
 							</Link>
 						</li>
 						<li>
-							<Link to="/franchise/2">
-								<HandshakeIcon /> Partners
+							<Link to="/franchise/about-us">
+								<HandshakeIcon /> About-Us
 							</Link>
 						</li>
 						<li>
