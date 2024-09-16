@@ -7,6 +7,7 @@ import TrendingChoices from "../TrendingChoices/TrendingChoices"
 
 
 
+
 const HomePage = () => (
 	<>
 		
