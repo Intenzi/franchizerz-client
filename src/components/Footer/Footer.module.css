@@ -9,9 +9,7 @@
 	background: rgba(0, 102, 255, 1);
 	color: #fff;
 	padding: 10px 0 10px;
-	border-top-left-radius: 60px;
-	border-top-right-radius: 60px;
-
+	padding-top: 40px;
 	font-size: 15px;
 	line-height: 24px;
 }
@@ -92,6 +90,7 @@
 	justify-content: space-between;
 	border-bottom: 1px solid #ccc;
 	margin-bottom: 20px; /* Reduced margin */
+	height: 50px;
 }
 
 .icon {
@@ -107,6 +106,7 @@
 	color: #ccc;
 	border: 0;
 	outline: none;
+	display: flex;
 }
 
 .button {
@@ -114,6 +114,7 @@
 	border: 0;
 	outline: none;
 	cursor: pointer;
+	width: fit-content;
 }
 
 .socialIcons .icon {
