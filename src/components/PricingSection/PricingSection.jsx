@@ -20,7 +20,7 @@ const Card = ({ title, features, btnText, btnClassName, sale }) => {
                   </li>
                 ))}
               </ul>
-              <button className={`${styles.btn} ${btnClassName}`}>
+              <button className={`${styles.btn} ${btnClassName}`} >
                 {btnText}
               </button>
             </div>
@@ -33,7 +33,6 @@ const Card = ({ title, features, btnText, btnClassName, sale }) => {
 
 Card.propTypes = {
   title: PropTypes.string.isRequired,
-  price: PropTypes.string.isRequired,
   features: PropTypes.arrayOf(
     PropTypes.shape({
       text: PropTypes.string.isRequired,
@@ -79,25 +78,22 @@ const PricingSection = () => {
           <div className={styles.pricingBox}>
             <Card
               title="Express"
-              price="123"
               features={featuresBase}
               btnText="Choose"
-              btnClassName="bg-[#F8F4FF] text-lg font-bold text-[var(--two-color)] hover:bg-[var(--first-color)] hover:text-[var(--white-color)]"
+              btnClassName={styles.btnExpress}
             />
             <Card
               title="Platinum"
-              price="123"
               features={featuresPro}
               btnText="Choose"
-              btnClassName="bg-[var(--two-color)] text-[var(--white-color)] text-xl font-bold hover:bg-[var(--gray-color)] hover:text-[var(--first-color)]"
+              btnClassName={styles.btnPlatinum}
               sale
             />
             <Card
               title="Gold"
-              price="123"
               features={featuresEnterprise}
               btnText="Choose"
-              btnClassName="bg-[#F8F4FF] text-lg font-bold text-[var(--two-color)] hover:bg-[var(--first-color)] hover:text-[var(--white-color)]"
+              btnClassName={styles.btnGold}
             />
           </div>
         </div>
