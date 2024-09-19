@@ -1,0 +1,131 @@
+/* Main Container with Black Background */
+.brandPage {
+    padding: 30px;
+    background-color: black; /* Black background to match website theme */
+    text-align: center;
+  }
+  
+  /* Heading Styling with a more attractive look */
+  .heading {
+    font-size: 2.8rem;
+    font-weight: bold;
+    margin-bottom: 40px;
+    color: #ffffff; /* Bright color to pop on black background */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Add underline effect to heading */
+  .heading::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: #ff6600; /* Orange underline for emphasis */
+    margin-top: 10px;
+    border-radius: 5px;
+  }
+  
+  /* Grid Layout for the Brands */
+  .gridContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+    gap: 40px; /* Good spacing between the cards */
+    justify-items: center;
+    width: 100%;
+    max-width: 1400px; /* Constrain grid width for a balanced layout */
+    margin: 0 auto;
+  }
+  
+  /* Individual Brand Cards - White Background */
+  .brandCard {
+    background-color: #f0f0f0; /* Light shade to contrast black */
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1); /* Soft white shadow */
+    padding: 20px;
+    width: 100%;
+    max-width: 350px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    color: #333; /* Dark text for better contrast on light background */
+  }
+  
+  .brandCard:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.3);
+  }
+  
+  /* Brand Image */
+  .brandImage {
+    width: 100%;
+    height: 220px; /* Maintain the size */
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+  }
+  
+  /* Brand Name Styling */
+  .brandName {
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+    text-transform: capitalize;
+    color: #040404; /* Bright yellow for visibility on black */
+    transition: color 0.3s ease-in-out;
+    position: relative;
+  }
+  
+  /* Add underline effect to the brand name on hover */
+  .brandName::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background-color: #ff6600; /* Orange underline */
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    transition: width 0.3s ease-in-out;
+  }
+  
+  .brandName:hover::after {
+    width: 100%;
+  }
+  
+  /* Brand Location */
+  .brandLocation {
+    font-size: 1rem;
+    color: #0e97dc; /* Light gray for better readability on black background */
+  }
+  
+  /* Responsive Layouts */
+  
+  /* For Tablets - 2 Brands Per Row */
+  @media (max-width: 768px) {
+    .gridContainer {
+      grid-template-columns: repeat(2, 1fr); /* 2 cards per row for tablets */
+      gap: 30px; /* Adjust gap for smaller screens */
+    }
+  
+    .brandCard {
+      max-width: 320px;
+    }
+  }
+  
+  /* For Mobile Devices - 1 Brand Per Row */
+  @media (max-width: 500px) {
+    .gridContainer {
+      grid-template-columns: 1fr; /* 1 card per row for mobile */
+      gap: 20px;
+    }
+  
+    .brandCard {
+      max-width: 100%; /* Full width for mobile */
+    }
+  
+    .brandImage {
+      height: 180px; /* Slightly smaller image for mobile */
+    }
+  }
+  

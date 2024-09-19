@@ -2,13 +2,13 @@ import React, { useState, useEffect, useRef } from "react"
 import { Link } from "react-router-dom"
 import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/bs"
 import "./styles/Carousel.css"
-import slides from "./TemplateData.json"
+// import slides from "./TemplateData.json"
 import dominos from '../../assets/dominos.jpeg';
-// const slides = [
-// 	{ id: 1, url: "1.jpeg" },
-// 	{ id: 2, url: "2.jpeg" },
-// 	{ id: 3, url: "3.jpeg" },
-// ]
+const slides = [
+	{ id: 1, url: "src/images/image.png" },
+	{ id: 2, url: "src/assets/dominos.jpeg" },
+	{ id: 3, url: "src/images/feature-2.avif" },
+]
 
 const Carousel = () => {
 	const [currentIndex, setCurrentIndex] = useState(0)
@@ -72,7 +72,7 @@ const Carousel = () => {
 					<Link key={slide.id} to={`/franchise/${currentIndex + 1}`}>
 						<img
 							key={slide.id}
-							src={dominos}
+							src={slide.url}
 							className={`slide ${
 								index === currentIndex ? "active" : ""
 							}`}
