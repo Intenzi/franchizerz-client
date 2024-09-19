@@ -5,9 +5,11 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 html {
   font-family: "Montserrat", sans-serif;
 }
+
 body {
   font-family: Arial, sans-serif;
 }
@@ -15,21 +17,26 @@ body {
 /* Values Section */
 .values {
   padding: 50px 0;
-  background: linear-gradient(to bottom, #0066cc, #93caf1);
+  background: #000; /* Black background */
+  color: #fff; /* White text color for contrast */
 }
+
 .tit h1 {
   text-align: center;
   padding-top: 50px;
   font-size: 42px;
+  color: #fff; /* White text color */
 }
+
 .tit h1::after {
   content: "";
   height: 4px;
   width: 230px;
-  background-color: #000;
+  background-color: #fff; /* White underline */
   display: block;
   margin: auto;
 }
+
 .section {
   width: 85%;
   display: flex;
@@ -38,6 +45,7 @@ body {
   margin: 75px auto;
   text-align: center;
 }
+
 .card {
   width: 30%; /* Decreased width */
   height: 370px; /* Increased height */
@@ -47,20 +55,21 @@ body {
   flex-direction: column;
   margin: 0px 20px;
   padding: 20px 20px;
-  background-color: #efefef;
+  background-color: #333; /* Dark background for cards */
   border-radius: 10px;
   cursor: pointer;
   position: relative; /* Added for absolute positioning */
+  color: #fff; /* White text color */
 }
 
 .card:hover {
-  background-color: #b8d4de;
+  background-color: #444; /* Slightly lighter on hover */
   transform: scale(1.02);
 }
 
 .card h2 {
   font-size: 28px;
-  color: #c94f4f;
+  color: #c94f4f; /* Red color for headings */
   margin-bottom: 20px;
 }
 
@@ -68,7 +77,7 @@ body {
   font-size: 17px;
   margin-bottom: 30px;
   line-height: 1.5;
-  color: #5e5e5e;
+  color: #ddd; /* Light gray text color for paragraph */
   flex-grow: 1; /* Allow p tag to grow */
 }
 
@@ -87,7 +96,7 @@ body {
 }
 
 .button:hover {
-  background-color: #c94f4f;
+  background-color: #c94f4f; /* Red color on hover */
   transition: 0.4s ease;
 }
 

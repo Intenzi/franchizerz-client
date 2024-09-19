@@ -14,7 +14,7 @@ body {
 
 .values {
   padding: 50px 0;
-  /* background: linear-gradient(to top, #0066cc, #93caf1); */
+  background-color: #000; /* Changed background to black */
 }
 .section {
   width: 85%;
@@ -44,10 +44,12 @@ h2 {
   font-size: 40px;
   font-weight: 600;
   margin-bottom: 20px;
+  color: white;
 }
 p {
   font-size: 18px;
   line-height: 1.5;
+  color: white;
 }
 
 .rowReverse {

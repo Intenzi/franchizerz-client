@@ -2,11 +2,14 @@
 .team {
     padding: 30px 0;
     text-align: center;
+    background-color: #000; /* Black background for the section */
+    color: #fff; /* White text color for contrast */
 }
 
 .team h1 {
     font-size: 2.5rem;
     margin-bottom: 20px;
+    color: #fff; /* White text color */
 }
 
 .teamCards {
@@ -18,7 +21,7 @@
 }
 
 .card {
-    background-color: white;
+    background-color: #1e1e1e; /* Dark background for cards */
     border-radius: 6px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
     overflow: hidden;
@@ -30,7 +33,7 @@
 
 .card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.7); /* Slightly darker shadow on hover */
 }
 
 .cardImg {
@@ -41,7 +44,7 @@
 .cardImg img {
     width: 100%;
     height: 100%;
-    object-fit: fill;
+    object-fit: cover; /* Changed from fill to cover to maintain aspect ratio */
 }
 
 .cardInfo {
@@ -51,17 +54,18 @@
 .cardName {
     font-size: 2rem;
     margin: 10px 0;
+    color: #fff; /* White text color */
 }
 
 .cardRole {
     font-size: 1rem;
-    color: #888;
+    color: #bbb; /* Light gray text color for roles */
     margin: 5px 0;
 }
 
 .cardEmail {
     font-size: 1rem;
-    color: #555;
+    color: #ddd; /* Light gray text color for email */
 }
 
 .button {
