@@ -8,7 +8,8 @@ import FranchizerzWhy from "../FranchizerzWhy/FranchizerzWhy"
 
 import FeedbackCard from "../Feedback/Feedback"
 
-const Franchise = ({ franchise }) => (
+const Franchise = ({ franchise }) =>  {
+	return (
 	<>
 		<div style={{ backgroundColor: "black", margin: "0", padding: "0" }}>
 			<FranchiseData franchise={franchise} />
@@ -18,10 +19,13 @@ const Franchise = ({ franchise }) => (
 			<Menu menuPhotos={franchise.menuPhotos} />
 			<FranchiseGallery galleryPhotos={franchise.brandGalleryPhotos} />
 
-			<Reviews reviews={franchise.reviews} />
-			<FeedbackCard />
+		<Reviews reviews={franchise.reviews} />
 		</div>
+
+		<FeedbackCard/>
+  
 	</>
 )
+}
 
 export default Franchise
