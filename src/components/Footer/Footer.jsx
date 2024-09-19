@@ -34,7 +34,7 @@ const Footer = () => {
                     <h3>Newsletter <div className={styles.underline}><span></span></div></h3>
                     <form action="" className={styles.form}>
                         <FontAwesomeIcon icon={faEnvelope} className={styles.icon} />
-                        <input type="email" placeholder="Enter your email-id" required className={styles.input} />
+                        <input type="email" placeholder="Enter email-id" required className={styles.input} />
                         <button type="submit" className={styles.button}><FontAwesomeIcon icon={faArrowRight} /></button>
                     </form>
                     <div className={styles.socialIcons}>

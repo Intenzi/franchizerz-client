@@ -1,19 +1,19 @@
 [
 	{
 		"id": 1,
-		"image": "https://imagetolink.com/ib/cmakxdENDC.jpg",
+		"image": "/starbucks.jpg",
 		"title": "Subway",
 		"price": 335
 	},
 	{
 		"id": 2,
-		"image": "https://imagetolink.com/ib/dI4KyZYf4R.jpg",
+		"image": "mcdonalds.jpeg",
 		"title": "MC Donalds",
 		"price": 450
 	},
 	{
 		"id": 3,
-		"image": "https://imagetolink.com/ib/7dWpv1zFUL.jpg",
+		"image": "image-12.jpg",
 		"title": "Wow Momos",
 		"price": 200
 	}

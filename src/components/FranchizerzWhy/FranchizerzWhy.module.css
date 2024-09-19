@@ -1,13 +1,146 @@
+
 /* Main Container */
+
+/* .container {
+  background-color: black;
+  padding: 50px;
+  color: white;
+  text-align: center;
+  height: 70vw;
+}
+.headBottom {
+  position: relative;
+  background-color: white;
+
+  bottom: 15px;
+  right: 17vw;
+  width: 70vw;
+  height: 5px;
+  border-radius: 20px;
+}
+
+.headTop {
+  position: relative;
+  background-color: white;
+  left: 35vw;
+  width: 63vw;
+  height: 5px;
+  border-radius: 20px;
+}
+
+.heading {
+  font-size: 2.5rem;
+ 
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  width: 100%;
+  height: 75%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+.featureCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  padding: 20px;
+  font-size: 1rem;
+
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: center;
+}
+
+.featureCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.icon {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.featureCard p {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+
+.card1, .card3 {
+  height: 50%;
+  background-color:  #d1d5db;
+  margin-bottom: 1vw; 
+
+}
+
+.card2, .card4 {
+  height: 137%;
+  background-color: #3b82f6;
+
+}
+
+
+.card5 , .card7 {
+  height: 130%;
+  margin-top: -64%;
+  background-color: #3b82f6;
+}
+.card6, .card8{
+  height: 50%;
+  margin-top: 47%;
+  background-color: #d1d5db;
+}
+
+
+
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .featureCard {
+    height: auto;
+  }
+}
+
+
+@media (max-width: 500px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .featureCard {
+    height: auto;
+  }
+} */
+
+
+
 .container {
   background-color: black;
   padding: 50px;
   color: white;
   text-align: center;
+
   min-height: 100vh; /* Ensures full-height container */
 }
 
 /* Header Styling */
+  height: 50vw;
+}
+
 .headBottom {
   position: relative;
   background-color: white;
@@ -30,11 +163,17 @@
 .heading {
   font-size: 2rem;
   color: white;
+
   /* text-transform: uppercase; */
   letter-spacing: 2px;
 }
 
 /* Grid Layout */
+
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -43,6 +182,10 @@
   max-width: 100%;
   margin: 0 auto;
   height: auto; /* Adjusts grid height to content */
+
+  height: 75%;
+  max-width: 100%;
+  margin: 0 auto;
 }
 
 /* Individual feature card styles */
@@ -78,6 +221,13 @@
 .card1, .card3 {
   height: 10vw;
   background-color: #d1d5db;
+
+/* Card specific positioning with alternating heights */
+.card1, .card3 {
+  height: 10vw;
+  background-color: #d1d5db;
+  /* margin-bottom: 1vw; */
+
 }
 
 .card2, .card4 {
@@ -87,6 +237,8 @@
 
 .card5, .card7 {
   height: 30vw;
+
+  margin-top: -20vw;
   background-color: #3b82f6;
 }
 
@@ -128,6 +280,47 @@
 @media (max-width: 500px) {
   .grid {
     grid-template-columns: repeat(2, 1fr); /* Two cards per row */
+
+/* Responsive styles for tablet */
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    display: grid;
+    gap: 15px;
+    width: 100%;
+    height: 75%;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .card1, .card3, .card5, .card7 {
+    height: 80%;
+  }
+
+  .card2, .card4, .card6, .card8 {
+    height: 80%;
+  }
+
+  .headTop {
+    position: relative;
+    background-color: white;
+    left: 35vw;
+    width: 55vw;
+    height: 5px;
+    border-radius: 20px;
+  }
+}
+
+/*  */
+/*  */
+
+
+
+/* Responsive styles for mobile */
+@media (max-width: 500px) {
+  .grid {
+    grid-template-columns: 1fr 1fr; /* Two columns for mobile */
     gap: 10px;
   }
 
@@ -172,4 +365,17 @@
     margin-top: -20vw;
 
 }
+    height: auto;
+  }
+
+  .card1, .card3 {
+    height: 60%;
+  }
+ .card5, .card6, .card7, .card8 {
+    visibility: hidden;
+  }
+
+  .card2, .card4  {
+    height: 40%;
+  }
 }
