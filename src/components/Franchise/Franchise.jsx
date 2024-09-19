@@ -10,20 +10,17 @@ import FeedbackCard from "../Feedback/Feedback"
 
 const Franchise = ({ franchise }) => (
 	<>
-	<div style={{ backgroundColor: "black", margin: "0", padding: "0" }}>
-		
-		<FranchiseData franchise={franchise} />
-		<AboutTheBrand/>
-		<FranchizerzWhy />
-		<PricingSection />
-		<Menu menuPhotos={franchise.menuPhotos}/>
-		<FranchiseGallery galleryPhotos={franchise.brandGalleryPhotos}/>
+		<div style={{ backgroundColor: "black", margin: "0", padding: "0" }}>
+			<FranchiseData franchise={franchise} />
+			<AboutTheBrand />
+			<FranchizerzWhy />
+			<PricingSection />
+			<Menu menuPhotos={franchise.menuPhotos} />
+			<FranchiseGallery galleryPhotos={franchise.brandGalleryPhotos} />
 
-		<Reviews reviews={franchise.reviews} />
+			<Reviews reviews={franchise.reviews} />
+			<FeedbackCard />
 		</div>
-
-		<FeedbackCard/>
-  </div>
 	</>
 )
 

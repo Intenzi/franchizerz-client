@@ -4,14 +4,14 @@ import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/bs"
 import "./styles/Carousel.css"
 
 // import slides from "./TemplateData.json"
-import dominos from '../../assets/dominos.jpeg';
-const slides = [
-	{ id: 1, url: "src/images/image.png" },
-	{ id: 2, url: "src/assets/dominos.jpeg" },
-	{ id: 3, url: "src/images/feature-2.avif" },
-]
+// import dominos from '../../assets/dominos.jpeg';
+// const slides = [
+// 	{ id: 1, url: "src/images/image.png" },
+// 	{ id: 2, url: "src/assets/dominos.jpeg" },
+// 	{ id: 3, url: "src/images/feature-2.avif" },
+// ]
 import slides from "./TemplateData.json"
-import dominos from '../../assets/dominos.jpeg';
+import dominos from "../../assets/dominos.jpeg"
 // const slides = [
 // 	{ id: 1, url: "1.jpeg" },
 // 	{ id: 2, url: "2.jpeg" },
@@ -80,7 +80,6 @@ const Carousel = () => {
 					<Link key={slide.id} to={`/franchise/${currentIndex + 1}`}>
 						<img
 							key={slide.id}
-
 							src={slide.url}
 							src={dominos}
 							className={`slide ${
