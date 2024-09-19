@@ -73,8 +73,10 @@ const PricingSection = () => {
     <div className={styles.main} style={{ backgroundImage: `url(${import.meta.env.BASE_URL + '/img/bg-mask.svg'})` }}>
       <section className={styles.pricing} id="pricing">
         <div className={styles.container}> 
+        <div className={styles.headTop}></div>     
           <h2 className={styles.title}>Franchise Models</h2>
-          <p className={styles.description}>The Right Plan for Your Business</p>
+          {/* <p className={styles.description}>The Right Plan for Your Business</p> */}
+          <div className={styles.headBottom}></div>
           <div className={styles.pricingBox}>
             <Card
               title="Express"

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/bs"
 import "./styles/Carousel.css"
 import slides from "./TemplateData.json"
-
+import dominos from '../../assets/dominos.jpeg';
 // const slides = [
 // 	{ id: 1, url: "1.jpeg" },
 // 	{ id: 2, url: "2.jpeg" },
@@ -72,7 +72,7 @@ const Carousel = () => {
 					<Link key={slide.id} to={`/franchise/${currentIndex + 1}`}>
 						<img
 							key={slide.id}
-							src={slide.image}
+							src={dominos}
 							className={`slide ${
 								index === currentIndex ? "active" : ""
 							}`}
