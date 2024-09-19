@@ -125,6 +125,8 @@
   }
 } */
 
+
+
 .container {
 	background-color: black;
 	padding: 50px;
@@ -135,9 +137,6 @@
 }
 
 /* Header Styling */
-/* height: 50vw;
-} */
-
 .headBottom {
 	position: relative;
 	background-color: white;
@@ -171,18 +170,19 @@
   letter-spacing: 2px;
 } */
 
+/* Grid Layout */
 .grid {
-	display: grid;
-	grid-template-columns: repeat(4, 1fr);
-	gap: 15px;
-	width: 100%;
-	max-width: 100%;
-	margin: 0 auto;
-	height: auto; /* Adjusts grid height to content */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  height: auto; /* Adjusts grid height to content */
 
-	height: 75%;
-	max-width: 100%;
-	margin: 0 auto;
+  height: 75%;
+  max-width: 100%;
+  margin: 0 auto;
 }
 
 /* Individual feature card styles */
