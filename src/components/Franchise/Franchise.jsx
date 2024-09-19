@@ -1,21 +1,24 @@
 import FranchiseData from "../FranchiseData/FranchiseData"
-import WhyFranchizerz from "../WhyFranchizerz/WhyFranchizerz"
 import Reviews from "../Reviews/Reviews"
 import Menu from "../MenuCard/Menu"
 import FranchiseGallery from "../BrandGallery/franchiseGallery"
 import PricingSection from "../PricingSection/PricingSection"
 import AboutTheBrand from "../AboutTheBrand/AboutTheBrand"
+import FranchizerzWhy from "../FranchizerzWhy/FranchizerzWhy"
 import FeedbackCard from "../Feedback/Feedback"
 
 const Franchise = ({ franchise }) => (
 	<>
+	<div style={{ backgroundColor: "black", margin: "0", padding: "0" }}>
+		
 		<FranchiseData franchise={franchise} />
-		<WhyFranchizerz />
-		<PricingSection />
 		<AboutTheBrand/>
+		<FranchizerzWhy />
+		<PricingSection />
 		<Menu menuPhotos={franchise.menuPhotos}/>
 		<FranchiseGallery galleryPhotos={franchise.brandGalleryPhotos}/>
 		<FeedbackCard/>
+  </div>
 	</>
 )
 

@@ -2,11 +2,11 @@
 
 :root {
   --header-height: 3rem;
-  --first-color: #181059;
+  --first-color: #0cdef6;
   --two-color: #8645ff;
   --greay-color: #b6b6b6;
   --yellow-color: #edbb01;
-  --white-color: #fcf8f8;
+  /* --white-color: #fcf8f8; */
   --black-color: #000000;
   --body-font: "Inter", sans-serif;
   --big-font-size: 2rem;
@@ -32,14 +32,18 @@
 *:focus {
   outline: 0;
 }
+.main{
+  background-color: #000000 !important;
+}
 
 body {
   margin: 0;
   padding: 0;
-  color: var(--first-color);
+  color: var(--first-color) ;
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
-  background: var(--white-color);
+  background: var(--black-color);
+  /* background-color: #000000 !important; */
   font-weight: 400;
 }
 
@@ -85,7 +89,7 @@ img {
 }
 
 body {
-  background: #f6f5fa;
+  background: black;
 }
 
 section {
@@ -161,10 +165,31 @@ input[type="checkbox"] {
   transition: transform 700ms 400ms ease-out;
 }
 
+.headBottom {
+  position: relative;
+  background-color: white;
+  bottom: 15px;
+  top:0.3vw;
+  right: 17vw;
+  width: 55vw;
+  height: 5px;
+  border-radius: 20px;
+}
+
+.headTop {
+  position: relative;
+  background-color: white;
+  left: 30vw;
+  bottom: 0.5vw;
+  width: 63vw;
+  height: 5px;
+  border-radius: 20px;
+}
+
 .cardFront {
   width: 100%;
   height: 100%;
-  background-color: rgba(255, 255, 255, 1);
+  background-color: rgb(0, 0, 0);
   position: absolute;
   border-radius: 6px;
   left: 0;
@@ -189,12 +214,13 @@ input[type="checkbox"] {
   font-weight: 700;
   margin-bottom: 11px;
   margin-top: 0;
+  color: aliceblue;
 }
 
 .sale {
   font-size: 12px;
   float: right;
-  background: #ffffff;
+  background: #0b0b0b;
   border-radius: 4px;
   padding: 5px 8px;
   color: var(--two-color);
@@ -202,12 +228,13 @@ input[type="checkbox"] {
 
 .description {
   font-size: 30px;
-  opacity: 0.68;
+  opacity: 0.80;
   margin-bottom: 20px;
+  color: white;
 }
 
 .cardFront {
-  background: #ffffff;
+  background: #030303;
   border-radius: 24px;
   padding: 24px;
 }
@@ -261,7 +288,7 @@ input[type="checkbox"] {
   list-style: none;
 }
 .btn {
-  background: #f8f4ff;
+  background: #000000;
   border-radius: 8px;
   border: none;
   display: block;
@@ -280,7 +307,7 @@ input[type="checkbox"] {
 
 /* Card Styles */
 .card3dPart:nth-child(1) .cardFront {
-  background: var(--gray-color); /* Silver background */
+  background: var(--yellow-color); /* Silver background */
   color: black;
 }
 
