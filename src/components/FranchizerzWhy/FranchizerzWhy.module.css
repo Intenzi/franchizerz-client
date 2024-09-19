@@ -248,29 +248,23 @@
 		background-color: #d1d5db;
 	}
 
-	/* Responsive Styles for Tablet */
-	@media (max-width: 768px) {
-		.grid {
-			grid-template-columns: repeat(2, 1fr); /* Two cards per row */
-			gap: 15px;
-		}
+/* Responsive Styles for Tablet */
+@media (max-width: 1110px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr); /* Two cards per row */
+    gap: 15px;
+  }
 
-		/* Adjust card heights for better responsiveness */
-		.card1,
-		.card4,
-		.card5,
-		.card8 {
-			height: 35vw;
-			background-color: #d1d5db;
-		}
+  /* Adjust card heights for better responsiveness */
+  .card1, .card4, .card5, .card8 {
+    height: 35vw;
+	background-color: #d1d5db;
+  }
 
-		.card2,
-		.card3,
-		.card6,
-		.card7 {
-			height: 35vw;
-			background-color: #3b82f6;
-		}
+  .card2, .card3, .card6, .card7 {
+    height: 35vw;
+	background-color: #3b82f6;
+  }
 
 		.headTop {
 			width: 55vw;
@@ -340,30 +334,26 @@
 			height: auto; /* Automatic height for mobile */
 		}
 
-		/* Ensuring all cards are visible with adjusted heights */
-		.card1,
-		.card4 {
-			height: auto;
-			background-color: #d1d5db;
-		}
+  /* Ensuring all cards are visible with adjusted heights */
+  .card1, .card4 {
+    height: auto;
+    background-color: #d1d5db;
+  }
 
-		.card2,
-		.card3 {
-			height: auto;
-			background-color: #3b82f6;
-		}
+  .card5, .card8 {
+    height: auto;
+    background-color: #d1d5db;
+  }
 
-		.card6,
-		.card7 {
-			height: auto;
-			background-color: #3b82f6;
-		}
+  .card2, .card3 {
+    height: auto;
+    background-color: #3b82f6;
+  }
 
-		.card5,
-		.card8 {
-			height: auto;
-			background-color: #d1d5db;
-		}
+  .card6, .card7 {
+    height: auto;
+    background-color: #3b82f6;
+  }
 
 		/* Adjust header bars for smaller screens */
 		.headTop {
@@ -371,32 +361,14 @@
 			left: 30vw;
 		}
 
-		.headBottom {
-			width: 50vw;
-			right: 25vw;
-		}
-	}
-	@media (min-width: 768px) {
-		.card5,
-		.card7 {
-			margin-top: -20vw;
-		}
-		height: auto;
-	}
+  .headBottom {
+    width: 50vw;
+    right: 25vw;
+  }
+}
 
-	.card1,
-	.card3 {
-		height: 60%;
-	}
-	.card5,
-	.card6,
-	.card7,
-	.card8 {
-		visibility: hidden;
-	}
-
-	.card2,
-	.card4 {
-		height: 40%;
-	}
+@media (min-width: 1110px) {
+  .card5, .card7{
+    margin-top: -20vw;
+  }
 }
