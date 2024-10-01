@@ -17,17 +17,23 @@ const TopChoices = () => {
 
     const [currentIndex, setCurrentIndex] = useState(0);
     const [itemsToLoad, setItemsToLoad] = useState(3);
+    const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth <= 450);
     const autoSlideInterval = useRef(null);
+    const touchScrolling = useRef(false); // To track if the user is touch-scrolling
 
     const startAutoSlide = () => {
-        autoSlideInterval.current = setInterval(() => {
-            setCurrentIndex((prevIndex) => {
-                if (prevIndex >= allData.length - itemsToLoad) {
-                    return 0;
+        if (!isSmallScreen) {
+            autoSlideInterval.current = setInterval(() => {
+                if (!touchScrolling.current) {
+                    setCurrentIndex((prevIndex) => {
+                        if (prevIndex >= allData.length - itemsToLoad) {
+                            return 0;
+                        }
+                        return prevIndex + itemsToLoad;
+                    });
                 }
-                return prevIndex + itemsToLoad;
-            });
-        }, 4000);
+            }, 4000);
+        }
     };
 
     const stopAutoSlide = () => {
@@ -39,7 +45,8 @@ const TopChoices = () => {
     useEffect(() => {
         const updateItemsToLoad = () => {
             const screenWidth = window.innerWidth;
-            setItemsToLoad(screenWidth <= 768 ? 2 : 3);
+            setItemsToLoad(screenWidth <= 768 ? 3 : 4);
+            setIsSmallScreen(screenWidth <= 450);
         };
 
         updateItemsToLoad();
@@ -54,7 +61,17 @@ const TopChoices = () => {
         return () => {
             stopAutoSlide();
         };
-    }, [itemsToLoad]);
+    }, [itemsToLoad, isSmallScreen]);
+
+    const handleTouchStart = () => {
+        touchScrolling.current = true;
+        stopAutoSlide(); // Stop auto-slide when touch scroll starts
+    };
+
+    const handleTouchEnd = () => {
+        touchScrolling.current = false;
+        startAutoSlide(); // Restart auto-slide after a delay when touch ends
+    };
 
     const slideLeft = () => {
         setCurrentIndex((prevIndex) => Math.max(prevIndex - itemsToLoad, 0));
@@ -69,8 +86,10 @@ const TopChoices = () => {
     return (
         <div
             className={s.mainContainer}
-            onMouseEnter={stopAutoSlide}
-            onMouseLeave={startAutoSlide}
+            onMouseEnter={isSmallScreen ? null : stopAutoSlide}
+            onMouseLeave={isSmallScreen ? null : startAutoSlide}
+            onTouchStart={handleTouchStart}
+            onTouchEnd={handleTouchEnd}
         >
             <div className={s.headContainer}>
                 <div className={s.headTop}></div>
@@ -78,9 +97,11 @@ const TopChoices = () => {
                 <div className={s.headBottom}></div>
             </div>
             <div className={s.subContainer}>
-                <button className={s.navButton} onClick={slideLeft}>
-                    <ArrowBackIosIcon />
-                </button>
+                {!isSmallScreen && (
+                    <button className={s.navButton} onClick={slideLeft}>
+                        <ArrowBackIosIcon />
+                    </button>
+                )}
                 <div className={s.carousel}>
                     <div
                         className={s.carouselTrack}
@@ -97,9 +118,11 @@ const TopChoices = () => {
                         ))}
                     </div>
                 </div>
-                <button className={s.navButton} onClick={slideRight}>
-                    <ArrowForwardIosIcon />
-                </button>
+                {!isSmallScreen && (
+                    <button className={s.navButton} onClick={slideRight}>
+                        <ArrowForwardIosIcon />
+                    </button>
+                )}
             </div>
         </div>
     );
