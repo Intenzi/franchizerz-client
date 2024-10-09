@@ -74,7 +74,6 @@ const Carousel = () => {
 						<img
 							key={slide.id}
 							src={slide.url}
-							
 							className={`slide ${
 								index === currentIndex ? "active" : ""
 							}`}
