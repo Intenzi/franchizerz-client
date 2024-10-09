@@ -67,7 +67,7 @@
 }
 
 .card {
-    width: calc(100% / 3 - 20px); /* Adjust to fit 3 in a row with some space */
+    width: calc(100% / 4 - 20px); /* Adjust to fit 3 in a row with some space */
     flex-shrink: 0;
     text-align: center;
     display:  flex;
@@ -80,7 +80,7 @@
 }
 
 .image {
-    width: 60%; /* Full width for the image */
+    width: 80%; /* Full width for the image */
     height: auto;
     border-radius: 10px;
 }
@@ -117,35 +117,58 @@
 /* Responsive styles */
 @media (max-width: 768px) {
     .card {
-        width: calc(100% / 2 - 20px); /* Adjust to fit 2 in a row with some space */
+        width: calc(100% / 3 - 20px); /* Adjust to fit 2 in a row with some space */
         margin: 0 10px; /* Add margin between the cards */
     }
     .image{
         width: 70vw;
     }
 }
-@media (max-width:390px){
-    .navButton{
-        z-index: 1000;
-        border-radius: 50px;
-        height: 10px;
-        width: 10px;
-        color: white;
+/* Responsive styles for 450px and below */
+/* Responsive styles for 450px and below */
+@media (max-width: 450px) {
+    .navButton {
+        display: none; /* Hide navigation buttons */
+    }
+
+    .carousel {
+        width: 95vw; /* Ensure the carousel width takes up more space */
+        overflow-x: auto; /* Enable horizontal scrolling */
+        scroll-snap-type: x mandatory; /* Add smooth snapping to cards */
+        -webkit-overflow-scrolling: touch; /* Enable smooth scrolling for touch devices */
+        scrollbar-width: none; /* For Firefox */
+        -ms-overflow-style: none;
+    }
+    .carousel::-webkit-scrollbar {
+        display: none; /* For Chrome, Safari, and WebKit browsers */
+    }
+
+    .carouselTrack {
+        display: flex;
+        width: auto; /* Let the track width be determined by its content */
+        margin-left: 20px;
+    }
+
+    .card {
+        width: calc(100% / 3 - 10px); /* Fit 3 cards in a row */
+        margin: 5px; /* Adjust margin between cards */
+        scroll-snap-align: center; /* Ensure cards snap to center when scrolling */
+    }
+
+    .image {
+        width: 60vw; /* Increase image size for better visibility */
+        height: auto;
+    }
+
+    .subContainer {
         display: flex;
         justify-content: center;
-    }
-    .subContainer{
-        display: flex;
-        flex-direction: row;
         align-items: center;
+        padding-right: 10px;
     }
     .headText{
         font-size: 5vw;
     }
-    .image{
-        width: 50vw;
-    }
-    .card{
-        transform: scale(0.75);
-    }
 }
+
+
