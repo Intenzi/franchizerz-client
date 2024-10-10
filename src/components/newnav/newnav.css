@@ -1,26 +1,20 @@
 /* Assuming the height of your navbar is around 50px */
 body {
-	margin-top: 0px; /* Add a top margin to the body equal to the navbar's height */
+	margin-top: 60px; /* Add a top margin to the body equal to the navbar's height */
 }
 
 /* You can also apply this directly to the main content container */
 .main-content {
 	padding-top: 60px; /* Adjust the padding based on the navbar height */
 }
-
 .new_nav {
 	width: 100%;
-	background-color: transparent !important; /* Transparent background */
+	background-color: #2c3e50; /* Dark background for better contrast */
 	position: fixed; /* Fix the navbar at the top */
 	top: 0; /* Position it at the top */
 	left: 0;
 	z-index: 1000; /* Ensure it stays on top of other elements */
-	transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
-}
-
-.nav_scrolled {
-	background-color:#ffffff !important; /* White background when scrolled */
-	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a shadow when scrolled */
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
 }
 
 .nav_data {
@@ -47,14 +41,9 @@ body {
 }
 
 .logoTitle {
-	color: #ffffff; /* White text for the initial transparent state */
+	color: #ffffff; /* White text for clear contrast */
 	margin-left: 10px;
 	font-size: 20px; /* Adjusted font size */
-	transition: color 0.3s ease;
-}
-
-.nav_scrolled .logoTitle {
-	color: #000000; /* Black text when scrolled */
 }
 
 .left_data {
@@ -69,7 +58,7 @@ body {
 	display: flex;
 	align-items: center;
 	text-decoration: none;
-	color: #ffffff; /* White text for the initial transparent state */
+	color: #ecf0f1; /* Light grey text for clear contrast */
 	font-weight: 500;
 	font-size: 14px;
 	padding: 10px;
@@ -83,12 +72,6 @@ body {
 .navLogo {
 	margin-right: 5px;
 	font-size: 18px; /* Larger icon for better visibility */
-	color: #ffffff; /* White icon initially */
-}
-
-.nav_scrolled .navItem,
-.nav_scrolled .navLogo {
-	color: #000000; /* Black text and icons when scrolled */
 }
 
 /* Underline effect on hover */
@@ -99,12 +82,8 @@ body {
 	bottom: 0;
 	height: 2px;
 	width: 0;
-	background-color: #ffffff; /* White underline initially */
-	transition: width 0.3s ease-in-out, background-color 0.3s ease;
-}
-
-.nav_scrolled .navItem::after {
-	background-color: #000000; /* Black underline when scrolled */
+	background-color: black; /* Black underline */
+	transition: width 0.3s ease-in-out;
 }
 
 .navItem:hover::after {
@@ -112,7 +91,7 @@ body {
 }
 
 .navItem:hover {
-	color: #000000; /* Change text color to black on hover */
+	color: black; /* Change text color to black on hover */
 }
 
 .right_data {
@@ -130,13 +109,9 @@ body {
 .hamburger div {
 	width: 25px;
 	height: 3px;
-	background-color: #ffffff; /* White for contrast initially */
+	background-color: #ecf0f1; /* Light grey for contrast */
 	margin: 4px 0;
 	transition: 0.4s;
-}
-
-.nav_scrolled .hamburger div {
-	background-color: #000000; /* Black hamburger when scrolled */
 }
 
 /* Media Query for smaller screens */
@@ -149,21 +124,15 @@ body {
 		display: flex; /* Show hamburger on small screens */
 	}
 
-	.logoTitle {
-		color: #ffffff; /* White text for the initial transparent state */
-		margin-left: 10px;
-		width: 170px;
-		font-size: 20px; /* Adjusted font size */
-	}
-
-	.logoImage {
-		width: 35px;
-	}
-
 	.new_nav.active .left_data {
 		display: flex;
 		flex-direction: column;
-		background-color: rgba(255, 255, 255, 0.9); /* White semi-transparent background */
+		background-color: rgba(
+			44,
+			62,
+			80,
+			0.9
+		); /* Slightly darker semi-transparent background */
 		backdrop-filter: blur(10px); /* Blur effect for background */
 		position: absolute;
 		top: 50px;
@@ -175,6 +144,7 @@ body {
 
 	.navItem {
 		justify-content: flex-start;
+		/* padding: 10px; Reduce padding for smaller screens */
 		width: 100%;
 		text-align: center;
 		font-size: 13px; /* Slightly smaller text */
@@ -187,10 +157,5 @@ body {
 
 	.navLogo {
 		font-size: 16px; /* Slightly smaller icon */
-		color: #ffffff; /* White icon initially */
-	}
-
-	.nav_scrolled .navLogo {
-		color: #000000; /* Black icon when scrolled */
 	}
 }
