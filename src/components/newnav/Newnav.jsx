@@ -61,7 +61,7 @@ const Newnav = () => {
 				<div className={`left_data ${menuOpen ? "open" : ""}`}>
 					<NavLink to="/" className="navItem">
 						<HomeIcon className="navLogo" />
-						<p className="navText">Home</p>
+						<p className="navText ">Home</p>
 					</NavLink>
 					<NavLink to="about-us" className="navItem">
 						<InfoIcon className="navLogo" />
