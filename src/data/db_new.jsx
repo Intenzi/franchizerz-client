@@ -98,9 +98,15 @@ export const data = [
 	},
 	{
 		id: 2,
-		name: "Lassi Story",
-		img: "https://wallpapercave.com/wp/wp11260474.png",
+		name: "LassiStory",
+		img: "/img/LassiStory.jpeg",
 		cost: "Rs. 15,00,000",
+		description: 
+		`<p>Lassi Story is a well known growing cafe chain in India, opened their first out-let in Lucknow(UP) early 2017. We understand the needs and taste of customers and prepare food keeping all healthy factors in mind. </p>
+		<br></br>
+		 <p>Lassi Story is a new concept gourmet sandwich delivery/takeaway cafe venue that offers high quality European style sandwiches made fresh with a focus on hygienic preparation and also offers a cool ambience.</p>
+		<br></br>	
+		<p>Proffering health in every pack, Mr. Sandwich proffers the most scrumptious Lassi paired along with diverse sauces and beverages like coffee or shakes, with a diverse range of taste and pizzas, thus displaying a complete array of offerings under one roof.</p>`,
 		outlets: "More than 100 top cities of India",
 		requirements: "100 sq ft area, etc.",
 		avgsales: "Rs. 3,00,000",
@@ -158,28 +164,30 @@ export const data = [
 			},
 		],
 		menuPhotos: [
-			{ url: "/img/df1d76ca-a6c3-4906-9253-7c41944cadb7 1.jpg", description: "Subfway Sandwich" },
-			{ url: "/img/Check out this Plain Bagel from Starbucks_ 1.jpg", description: "Subway Sandwich" },
-			{ url: "/img/Starbucks Pink Drink Recipe 1.jpg", description: "Subway Sandwich" },
-			{ url: "/img/77f17162-4b39-4311-9536-4dbf54d576e3 1.jpg", description: "Subway Sandwich" },
-			{ url: "/img/Starbucks Pink Drink Recipe 1.jpg", description: "Subway Sandwich" },
-			{ url: "/img/df1d76ca-a6c3-4906-9253-7c41944cadb7 1.jpg", description: "Subfway Sandwich" },
-			{ url: "/img/Check out this Plain Bagel from Starbucks_ 1.jpg", description: "Subway Sandwich" },
-			{ url: "/img/Starbucks Pink Drink Recipe 1.jpg", description: "Subway Sandwich" },
-			{ url: "/img/77f17162-4b39-4311-9536-4dbf54d576e3 1.jpg", description: "Subway Sandwich" },
-			{ url: "/img/Starbucks Pink Drink Recipe 1.jpg", description: "Subway Sandwich" },
+			{ url: "/img/LassiStory/MenuPhotos/11.jpeg", description: "Subfway Sandwich" },
+			{ url: "/img/LassiStory/MenuPhotos/13.jpeg", description: "Subfway Sandwich" },
+			{ url: "/img/LassiStory/MenuPhotos/14.jpeg", description: "Subfway Sandwich" },
+			{ url: "/img/LassiStory/MenuPhotos/15.jpeg", description: "Subfway Sandwich" },
+			{ url: "/img/LassiStory/MenuPhotos/16.jpeg", description: "Subfway Sandwich" },
+			{ url: "/img/LassiStory/MenuPhotos/18.jpeg", description: "Subfway Sandwich" },
+			{ url: "/img/LassiStory/MenuPhotos/19.jpeg", description: "Subfway Sandwich" },
+			{ url: "/img/LassiStory/MenuPhotos/110.jpeg", description: "Subfway Sandwich" },
+			{ url: "/img/LassiStory/MenuPhotos/111.jpeg", description: "Subfway Sandwich" },
+			{ url: "/img/LassiStory/MenuPhotos/12.jpeg", description: "Subfway Sandwich" },
+			{ url: "/img/LassiStory/MenuPhotos/17.jpeg", description: "Subfway Sandwich" },
+
 		],
 		brandGalleryPhotos: [
-			{ url: "/img/aesthetic 1.jpg", description: "Subway Sandwich" },
-			{ url: "/img/b7f2a9d2-823f-4a51-a820-9fcb2c55859a 1.png", description: "Subway Sandwich" },
-			{ url: "/img/Starbucks Just Launched Its New Rewards Program and People Are Already Pissed - E! Online 1.png", description: "Subway Sandwich" },
-			{ url: "/img/Visiting Starbucks Reserve in  SODO • Pacific Northwest Fulfilled 1.jpg", description: "Subway Sandwich" },
-			{ url: "/img/Starbucks Just Launched Its New Rewards Program and People Are Already Pissed - E! Online 1.png", description: "Subway Sandwich" },
-			{ url: "/img/14 Prettiest Starbucks Outlets In Japan For Caffeine Lovers To Chill At In Between Sightseeing 1.png", description: "Subway Sandwich" },
-			{ url: "/img/Starbucks (1) 1.jpg", description: "Subway Sandwich" },
-			{ url: "/img/Starbucks Just Launched Its New Rewards Program and People Are Already Pissed - E! Online 1.png", description: "Subway Sandwich" },
-			{ url: "/img/Starbucks Autumn Edition _ peopleofdesign 1.jpg", description: "Subway Sandwich" },
-			{ url: "/img/Starbucks Coffee Drink - Free photo on Pixabay 1.jpg", description: "Subway Sandwich" },
+			{ url: "/img/LassiStory/BrandGallery/01.jpeg", description: "Subway Sandwich" },
+			{ url: "/img/LassiStory/BrandGallery/02.jpeg", description: "Subway Sandwich" },
+			{ url: "/img/LassiStory/BrandGallery/03.jpeg", description: "Subway Sandwich" },
+			{ url: "/img/LassiStory/BrandGallery/04.jpeg", description: "Subway Sandwich" },
+			{ url: "/img/LassiStory/BrandGallery/05.jpeg", description: "Subway Sandwich" },
+			{ url: "/img/LassiStory/BrandGallery/06.jpeg", description: "Subway Sandwich" },
+			{ url: "/img/LassiStory/BrandGallery/07.jpeg", description: "Subway Sandwich" },
+			{ url: "/img/LassiStory/BrandGallery/08.jpeg", description: "Subway Sandwich" },
+			{ url: "/img/LassiStory/BrandGallery/09.jpeg", description: "Subway Sandwich" },
+		
 		],
 	},
 	{

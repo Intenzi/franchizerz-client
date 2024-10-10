@@ -56,25 +56,34 @@ const PricingSection = ({ baseFeatures, proFeatures, enterpriseFeatures , baseTi
           <h2 className={styles.title}>Franchise Models</h2>
           <div className={styles.headBottom}></div>
           <div className={styles.pricingBox}>
-            <Card
-              title={baseTitle}
-              features={baseFeatures}
-              btnText="Choose"
-              btnClassName={styles.btnExpress}
-            />
-            <Card
-              title={proTitle}
-              features={proFeatures}
-              btnText="Choose"
-              btnClassName={styles.btnPlatinum}
-              sale
-            />
-            <Card
-              title={enterpriseTitle}
-              features={enterpriseFeatures}
-              btnText="Choose"
-              btnClassName={styles.btnGold}
-            />
+            {/* Render Base Card only if baseTitle and baseFeatures are provided */}
+            {baseFeatures && baseTitle && (
+              <Card
+                title={baseTitle}
+                features={baseFeatures}
+                btnText="Choose"
+                btnClassName={styles.btnExpress}
+              />
+            )}
+            {/* Render Pro Card only if proTitle and proFeatures are provided */}
+            {proFeatures && proTitle && (
+              <Card
+                title={proTitle}
+                features={proFeatures}
+                btnText="Choose"
+                btnClassName={styles.btnPlatinum}
+                sale
+              />
+            )}
+            {/* Render Enterprise Card only if enterpriseTitle and enterpriseFeatures are provided */}
+            {enterpriseFeatures && enterpriseTitle && (
+              <Card
+                title={enterpriseTitle}
+                features={enterpriseFeatures}
+                btnText="Choose"
+                btnClassName={styles.btnGold}
+              />
+            )}
           </div>
         </div>
       </section>
