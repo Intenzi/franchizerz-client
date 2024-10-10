@@ -32,7 +32,7 @@ export const data = [
 				datePosted: "2024-06-24",
 				reviewHeading: "Good Value for Money",
 				reviewParagraph:
-					"Partnering with Mr. Sandwich has been an incredibly rewarding experience. From the very beginning, the team provided immense support, making the setup process seamless and hassle-free. The brand itself is strong, with a diverse menu that consistently attracts a wide range of customers. Whether it's the pizzas, burgers, or the famous momos, every item is crafted to perfection, ensuring repeat business and satisfied customer.The guidance on marketing, inventory management, and day-to-day operations has been invaluable, allowing us to focus on delivering great service and food. I highly recommend Mr. Sandwich to anyone looking for a franchise opportunity in the food industry. It’s been a fantastic journey with great potential for growth",
+					"Partnering with Mr. Sandwich has been an incredibly rewarding experience. From the very beginning, the team provided immense support, making the setup process seamless and hassle-free. The brand itself is strong, with a diverse menu that consistently attracts a wide range of customers. ",
 				rating: 4.0,
 			},
 			{
@@ -48,7 +48,7 @@ export const data = [
 				datePosted: "2024-06-24",
 				reviewHeading: "Good Value for Money",
 				reviewParagraph:
-					"Partnering with Mr. Sandwich has been an incredibly rewarding experience. From the very beginning, the team provided immense support, making the setup process seamless and hassle-free. The brand itself is strong, with a diverse menu that consistently attracts a wide range of customers. Whether it's the pizzas, burgers, or the famous momos, every item is crafted to perfection, ensuring repeat business and satisfied customer.The guidance on marketing, inventory management, and day-to-day operations has been invaluable, allowing us to focus on delivering great service and food. I highly recommend Mr. Sandwich to anyone looking for a franchise opportunity in the food industry. It’s been a fantastic journey with great potential for growth",
+					"Partnering with Mr. Sandwich has been an incredibly rewarding experience. From the very beginning, the team provided immense support, making the setup process seamless and hassle-free. The brand itself is strong, with a diverse menu that consistently attracts a wide range of customers. ",
 				rating: 4.0,
 			},
 			{
@@ -64,7 +64,7 @@ export const data = [
 				datePosted: "2024-06-24",
 				reviewHeading: "Good Value for Money",
 				reviewParagraph:
-					"Partnering with Mr. Sandwich has been an incredibly rewarding experience. From the very beginning, the team provided immense support, making the setup process seamless and hassle-free. The brand itself is strong, with a diverse menu that consistently attracts a wide range of customers. Whether it's the pizzas, burgers, or the famous momos, every item is crafted to perfection, ensuring repeat business and satisfied customer.The guidance on marketing, inventory management, and day-to-day operations has been invaluable, allowing us to focus on delivering great service and food. I highly recommend Mr. Sandwich to anyone looking for a franchise opportunity in the food industry. It’s been a fantastic journey with great potential for growth",
+					"Partnering with Mr. Sandwich has been an incredibly rewarding experience. From the very beginning, the team provided immense support, making the setup process seamless and hassle-free. The brand itself is strong, with a diverse menu that consistently attracts a wide range of customers. Whether it's the pizzas, burgers, or the famous momos, every item is crafted to perfection, ensuring repeat business and satisfied customer.",
 				rating: 4.0,
 			},
 		],
