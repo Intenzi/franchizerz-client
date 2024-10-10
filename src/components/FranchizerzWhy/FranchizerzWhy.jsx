@@ -1,18 +1,7 @@
 import styles from "./FranchizerzWhy.module.css";
 import { FaCube } from "react-icons/fa";
 
-const WhyFranchizerz = () => {
-  const features = [
-    "Working with a well-established brand",
-    "Nationwide aggressive campaigns",
-    "Readymade technology and operating system",
-    "R&D support of our organization",
-    "Serving more than 1 lakh customers per month",
-    "Marketing Support",
-    "Low Cost Packaging",
-    "Fast Growing Outlets",
-  ];
-
+const FranchizerzWhy = ({features}) => {
   return (
     <div className={styles.container}>
      <div className={styles.headTop}></div>
@@ -33,4 +22,4 @@ const WhyFranchizerz = () => {
   );
 };
 
-export default WhyFranchizerz;
+export default FranchizerzWhy;

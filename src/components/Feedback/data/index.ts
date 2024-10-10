@@ -1,26 +1,55 @@
-export const testimonials = [
+export const testimonials = {
+  MrSandwich: [
     {
       testimonial:
-        "I thought it was impossible to make a website as beautiful as our product, but Saurabh proved me wrong.",
-      name: "Sara Lee",
+        "There support and quality is amazing...Company helps at every level...Owner himself is very humble.Process is easy and they support at every step.They are open for any changes and flexible with their decisions",
+      name: "Rajat Gupta ",
       designation: "CFO",
-      company: "Acme Co",
-      image: "https://randomuser.me/api/portraits/women/4.jpg",
+      company: "Khanna punjab",
+      image: "https://randomuser.me/api/portraits/men/4.jpg",
     },
     {
       testimonial:
-        "I've never met a web developer who truly cares about their clients' success like Saurabh does.",
-      name: "Chris Brown",
+        "Partnering with Mr. Sandwich has been an incredibly rewarding experience. From the very beginning, the team provided immense support, making the setup process seamless and hassle-free. The brand itself is strong, with a diverse menu that consistently attracts a wide range of customers. Whether it's the pizzas, burgers, or the famous momos, every item is crafted to perfection, ensuring repeat business and satisfied customers.The guidance on marketing, inventory management, and day-to-day operations has been invaluable, allowing us to focus on delivering great service and food. I highly recommend Mr. Sandwich to anyone looking for a franchise opportunity in the food industry. It’s been a fantastic journey with great potential for growth",
+      name: "Shivam(Gorakhpur, Uttar Pradesh)",
       designation: "COO",
       company: "DEF Corp",
       image: "https://randomuser.me/api/portraits/men/5.jpg",
     },
     {
       testimonial:
-        "After Saurabh optimized our website, our traffic increased by 50%. We can't thank them enough!",
-      name: "Lisa Wang",
-      designation: "CTO",
-      company: "456 Enterprises",
-      image: "https://randomuser.me/api/portraits/women/6.jpg",
+        "There support and quality is amazing...Company helps at every level...Owner himself is very humble.Process is easy and they support at every step.They are open for any changes and flexible with their decisions",
+      name: "Rajat Gupta ",
+      designation: "CFO",
+      company: "Khanna punjab",
+      image: "https://randomuser.me/api/portraits/men/4.jpg",
     },
-  ];
+    {
+      testimonial:
+        "Partnering with Mr. Sandwich has been an incredibly rewarding experience. From the very beginning, the team provided immense support, making the setup process seamless and hassle-free. The brand itself is strong, with a diverse menu that consistently attracts a wide range of customers. Whether it's the pizzas, burgers, or the famous momos, every item is crafted to perfection, ensuring repeat business and satisfied customers.The guidance on marketing, inventory management, and day-to-day operations has been invaluable, allowing us to focus on delivering great service and food. I highly recommend Mr. Sandwich to anyone looking for a franchise opportunity in the food industry. It’s been a fantastic journey with great potential for growth",
+      name: "Shivam(Gorakhpur, Uttar Pradesh)",
+      designation: "COO",
+      company: "DEF Corp",
+      image: "https://randomuser.me/api/portraits/men/5.jpg",
+    },
+    
+
+  ],
+  LassiStory: [
+    {
+      testimonial: "I thought it was impossible to make a website as beautiful as our product, but Saurabh proved me wrong.",
+      name: "Sara Lee",
+      designation: "CFO",
+      company: "Acme Co",
+      image: "https://randomuser.me/api/portraits/women/4.jpg",
+    },
+    {
+      testimonial: "Saurabh really cares about our success.",
+      name: "Chris Brown",
+      designation: "COO",
+      company: "DEF Corp",
+      image: "https://randomuser.me/api/portraits/men/5.jpg",
+    },
+  ],
+};
+
