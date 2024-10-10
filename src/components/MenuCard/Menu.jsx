@@ -14,14 +14,38 @@ const Menu = ({ menuPhotos }) => {
 
   const handleNext = () => {
     const container = document.getElementById('imageContainer2');
-    container.scrollBy({ left: 300, behavior: 'smooth' });
+    const image = container.querySelector('img');
+    const imageWidth = image.offsetWidth; // Get the exact width of the image
+    const containerPadding = parseInt(window.getComputedStyle(container).paddingLeft); // Account for any padding
+    const screenWidth = window.innerWidth; // Get screen width
+  
+    // Check if the screen width is below the mobile threshold (e.g., 556px)
+    if (screenWidth <= 556) {
+      // Scroll the exact width of one image on mobile, including padding
+      container.scrollBy({ left: imageWidth + containerPadding, behavior: 'smooth' });
+    } else {
+      // Default scroll amount on larger screens (e.g., 300px)
+      container.scrollBy({ left: 300, behavior: 'smooth' });
+    }
   };
-
+  
   const handlePrev = () => {
     const container = document.getElementById('imageContainer2');
-    container.scrollBy({ left: -300, behavior: 'smooth' });
+    const image = container.querySelector('img');
+    const imageWidth = image.offsetWidth; // Get the exact width of the image
+    const containerPadding = parseInt(window.getComputedStyle(container).paddingLeft); // Account for any padding
+    const screenWidth = window.innerWidth; // Get screen width
+  
+    // Check if the screen width is below the mobile threshold (e.g., 556px)
+    if (screenWidth <= 556) {
+      // Scroll back the exact width of one image on mobile, including padding
+      container.scrollBy({ left: -(imageWidth + containerPadding), behavior: 'smooth' });
+    } else {
+      // Default scroll amount on larger screens (e.g., 300px)
+      container.scrollBy({ left: -300, behavior: 'smooth' });
+    }
   };
-
+  
   const handleImageClick = (index) => {
     setSelectedImage(index);
   };

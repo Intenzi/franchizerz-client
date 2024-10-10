@@ -67,46 +67,33 @@
   .icon {
 	font-size: 1.5rem;
 	margin-bottom: 10px;
-
-
-
-
-  }
-  
+  }  
   .featureCard p {
 	margin: 0;
 	font-size: 1.2rem;
   }
-  
-  /* Card Specific Positioning with Alternating Heights */
   .card1, .card3 {
 	height: 10vw;
 	background-color: #d1d5db;
-  }
-  
+  }  
   .card2, .card4 {
 	height: 30vw;
 	background-color: #3b82f6;
   }
-  
   .card5, .card7 {
 	height: 30vw;
 	background-color: #3b82f6;
   }
-  
   .card6, .card8 {
 	height: 10vw;
 	background-color: #d1d5db;
   }
-  
-  /* Responsive Styles for Tablet */
+
   @media (max-width: 768px) {
 	.grid {
 	  grid-template-columns: repeat(2, 1fr); /* Two cards per row */
 	  gap: 15px;
 	}
-  
-	/* Adjust card heights for better responsiveness */
 	.card1, .card3, .card5, .card7 {
 	  height: 35vw;
 	}
