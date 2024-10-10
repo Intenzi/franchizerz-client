@@ -7,7 +7,7 @@
 .footer {
 	width: 100%;
 	background: rgba(0, 102, 255, 1);
-	color: #000000;
+	color: #fff;
 	padding: 10px 0 10px;
 	padding-top: 40px;
 	font-size: 15px;
@@ -57,7 +57,7 @@
 
 .col p a {
 	text-decoration: none; /* Remove underline by default */
-	color: #000000; /* Set text color to white */
+	color: #fff; /* Set text color to white */
 	position: relative;
 	display: inline-block; /* Ensure links are inline-block for better padding control */
 	padding-bottom: 2px; /* Adjust padding for better spacing */
@@ -67,7 +67,7 @@
 	content: '';
 	width: 0;
 	height: 2px;
-	background: #030303; /* Underline color */
+	background: #fff; /* Underline color */
 	position: absolute;
 	left: 0;
 	bottom: 0; /* Ensure the underline is at the bottom of the link */
@@ -80,7 +80,7 @@
 
 .emailId {
 	width: fit-content;
-	border-bottom: 1px solid #000000;
+	border-bottom: 1px solid #ccc;
 	margin: 10px 0; /* Reduced margin */
 }
 
@@ -88,7 +88,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	border-bottom: 1px solid #080808;
+	border-bottom: 1px solid #ccc;
 	margin-bottom: 20px; /* Reduced margin */
 	height: 50px;
 }
@@ -103,7 +103,7 @@
 .input {
 	width: 100%;
 	background: transparent;
-	color: #0a0a0a;
+	color: #ccc;
 	border: 0;
 	outline: none;
 	display: flex;
@@ -124,7 +124,7 @@
 	text-align: center;
 	line-height: 35px;
 	font-size: 20px;
-	color: #090909;
+	color: #fff;
 	margin-right: 10px;
 	cursor: pointer;
 	transition: background 0.3s ease;
@@ -137,7 +137,7 @@
 .hr {
 	width: 100vw;
 	height: 4px;
-	background-color: rgb(9, 9, 9);
+	background-color: white;
 	margin: 10px auto;
 }
 

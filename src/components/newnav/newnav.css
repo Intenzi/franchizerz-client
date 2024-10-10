@@ -1,20 +1,26 @@
 /* Assuming the height of your navbar is around 50px */
 body {
-	margin-top: 60px; /* Add a top margin to the body equal to the navbar's height */
+	margin-top: 0px; /* Add a top margin to the body equal to the navbar's height */
 }
 
 /* You can also apply this directly to the main content container */
 .main-content {
 	padding-top: 60px; /* Adjust the padding based on the navbar height */
 }
+
 .new_nav {
 	width: 100%;
-	background-color: #ffffff; /* White background */
+	background-color: transparent !important; /* Transparent background */
 	position: fixed; /* Fix the navbar at the top */
 	top: 0; /* Position it at the top */
 	left: 0;
 	z-index: 1000; /* Ensure it stays on top of other elements */
-	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+	transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+.nav_scrolled {
+	background-color:#ffffff !important; /* White background when scrolled */
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a shadow when scrolled */
 }
 
 .nav_data {
@@ -41,9 +47,14 @@ body {
 }
 
 .logoTitle {
-	color: #000000; /* Black text for logo */
+	color: #ffffff; /* White text for the initial transparent state */
 	margin-left: 10px;
 	font-size: 20px; /* Adjusted font size */
+	transition: color 0.3s ease;
+}
+
+.nav_scrolled .logoTitle {
+	color: #000000; /* Black text when scrolled */
 }
 
 .left_data {
@@ -58,7 +69,7 @@ body {
 	display: flex;
 	align-items: center;
 	text-decoration: none;
-	color: #000000; /* Black text */
+	color: #ffffff; /* White text for the initial transparent state */
 	font-weight: 500;
 	font-size: 14px;
 	padding: 10px;
@@ -72,7 +83,12 @@ body {
 .navLogo {
 	margin-right: 5px;
 	font-size: 18px; /* Larger icon for better visibility */
-	color: #000000; /* Black icon */
+	color: #ffffff; /* White icon initially */
+}
+
+.nav_scrolled .navItem,
+.nav_scrolled .navLogo {
+	color: #000000; /* Black text and icons when scrolled */
 }
 
 /* Underline effect on hover */
@@ -83,8 +99,12 @@ body {
 	bottom: 0;
 	height: 2px;
 	width: 0;
-	background-color: #000000; /* Black underline */
-	transition: width 0.3s ease-in-out;
+	background-color: #ffffff; /* White underline initially */
+	transition: width 0.3s ease-in-out, background-color 0.3s ease;
+}
+
+.nav_scrolled .navItem::after {
+	background-color: #000000; /* Black underline when scrolled */
 }
 
 .navItem:hover::after {
@@ -92,7 +112,7 @@ body {
 }
 
 .navItem:hover {
-	color: #000000; /* Text remains black on hover */
+	color: #000000; /* Change text color to black on hover */
 }
 
 .right_data {
@@ -110,9 +130,13 @@ body {
 .hamburger div {
 	width: 25px;
 	height: 3px;
-	background-color: #000000; /* Black color for hamburger lines */
+	background-color: #ffffff; /* White for contrast initially */
 	margin: 4px 0;
 	transition: 0.4s;
+}
+
+.nav_scrolled .hamburger div {
+	background-color: #000000; /* Black hamburger when scrolled */
 }
 
 /* Media Query for smaller screens */
@@ -124,21 +148,22 @@ body {
 	.hamburger {
 		display: flex; /* Show hamburger on small screens */
 	}
+
 	.logoTitle {
-		color: #000000; /* Black text */
+		color: #ffffff; /* White text for the initial transparent state */
 		margin-left: 10px;
 		width: 170px;
 		font-size: 20px; /* Adjusted font size */
 	}
+
 	.logoImage {
 		width: 35px;
 	}
+
 	.new_nav.active .left_data {
 		display: flex;
 		flex-direction: column;
-		background-color: rgba(
-			255, 255, 255, 0.9
-		); /* White semi-transparent background */
+		background-color: rgba(255, 255, 255, 0.9); /* White semi-transparent background */
 		backdrop-filter: blur(10px); /* Blur effect for background */
 		position: absolute;
 		top: 50px;
@@ -162,6 +187,10 @@ body {
 
 	.navLogo {
 		font-size: 16px; /* Slightly smaller icon */
-		color: #000000; /* Black icon */
+		color: #ffffff; /* White icon initially */
+	}
+
+	.nav_scrolled .navLogo {
+		color: #000000; /* Black icon when scrolled */
 	}
 }
