@@ -1,11 +1,9 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import { NavLink } from "react-router-dom"
 import HomeIcon from "@mui/icons-material/Home"
 import InfoIcon from "@mui/icons-material/Info"
 import BlogIcon from "@mui/icons-material/Article"
 import ContactMailIcon from "@mui/icons-material/ContactMail"
-import WorkIcon from "@mui/icons-material/Work"
-import FavoriteIcon from "@mui/icons-material/Favorite"
 import Avatar from "@mui/material/Avatar"
 import Menu from "@mui/material/Menu"
 import MenuItem from "@mui/material/MenuItem"
@@ -19,6 +17,25 @@ import "./newnav.css" // CSS for styling
 const Newnav = () => {
 	const [anchorEl, setAnchorEl] = useState(null)
 	const [menuOpen, setMenuOpen] = useState(false)
+	const [scrolled, setScrolled] = useState(false) // State to track scrolling
+
+	// Function to handle scrolling and toggle navbar class
+	const handleScroll = () => {
+		if (window.scrollY > 50) {
+			setScrolled(true)
+		} else {
+			setScrolled(false)
+		}
+	}
+
+	useEffect(() => {
+		// Add event listener to window scroll
+		window.addEventListener("scroll", handleScroll)
+		// Cleanup the event listener when the component unmounts
+		return () => {
+			window.removeEventListener("scroll", handleScroll)
+		}
+	}, [])
 
 	const handleMenuClick = (event) => {
 		setAnchorEl(event.currentTarget)
@@ -33,11 +50,11 @@ const Newnav = () => {
 	}
 
 	return (
-		<div className={`new_nav ${menuOpen ? "active" : ""}`}>
+		<div className={`new_nav ${menuOpen ? "active" : ""} ${scrolled ? "nav_scrolled" : ""}`}>
 			<div className="nav_data">
 				<div className="navlogo">
 					<NavLink to="/" className="logoContainer">
-						<FranchizerzLogo className="logoImage text-white" />
+						<FranchizerzLogo className="logoImage" />
 						<FranchizerzTitle className="logoTitle" />
 					</NavLink>
 				</div>
@@ -57,14 +74,6 @@ const Newnav = () => {
 					<NavLink to="/contact-us" className="navItem">
 						<ContactMailIcon className="navLogo" />
 						<p className="navText">Contact Us</p>
-					</NavLink>
-					<NavLink to="/franchises" className="navItem">
-						<WorkIcon className="navLogo" />
-						<p className="navText">Franchises</p>
-					</NavLink>
-					<NavLink to="/wishlist" className="navItem">
-						<FavoriteIcon className="navLogo" />
-						<p className="navText">WishLists</p>
 					</NavLink>
 				</div>
 				<div className="right_data">
