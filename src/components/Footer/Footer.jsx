@@ -13,26 +13,22 @@ const Footer = () => {
                 </div>
                 <div className={styles.col}>
                     <h3>Office <div className={styles.underline}><span></span></div></h3>
-                    <p>IIPl Road ,Ludhiana Punjab</p>
-                    {/* <p>Ludhiana Punjab</p> */}
+                    <p>IIPl Road</p>
+                    <p>Ludhiana Punjab</p>
                     <p>PIN 22122, India</p>
-                    <p className={styles.emailId}>franchizerz@gmail.com</p>
-                    {/* <h4>+91132232242</h4> */}
+                    <p className={styles.emailId}>saurabh@franchizerz.com</p>
+                    <h4>+91132232242</h4>
                 </div>
                 <div className={styles.col}>
-                    <h3>Quick Links <div className={styles.underline}><span></span></div></h3>
+                    <h3>Links <div className={styles.underline}><span></span></div></h3>
+                    {/* <ul className={styles.linkList}> */}
                     <p><a href="/">Home</a></p>
-                    <p><a href="/about">About Us</a></p>
-                    <p><a href="/blogs">Blogs</a></p>
-                </div>
-                <div className={styles.col}>
-                    <h3>Connect with Us <div className={styles.underline}><span></span></div></h3>
+                    <p><a href="/">About Us</a></p>
+                    <p><a href="/">Services</a></p>
+                    <p><a href="/">Features</a></p>
                     <p><a href="/contact-us">Contact Us</a></p>
-                    <p><a href="mailto:franchizerz@gmail.com">franchizerz@gmail.com</a></p>
-                </div>
-                <div className={styles.col}>
-                    <h3>Register Your Brand <div className={styles.underline}><span></span></div></h3>
-                    <p>Mail us on <a href="mailto:franchizerz@gmail.com">franchizerz@gmail.com</a></p>
+                    
+                    {/* </ul> */}
                 </div>
                 <div className={styles.col}>
                     <h3>Newsletter <div className={styles.underline}><span></span></div></h3>
