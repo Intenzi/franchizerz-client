@@ -13,7 +13,7 @@ const Footer = () => {
                 </div>
                 <div className={styles.col}>
                     <h3>Office <div className={styles.underline}><span></span></div></h3>
-                    <p>Samrala road,Ludhiana Punjab</p>
+                    <p>Samrala Road,Ludhiana Punjab</p>
                     {/* <p>Ludhiana Punjab</p> */}
                     <p>PIN 22122, India</p>
                     <p className={styles.emailId}>franchizerz@gmail.com</p>

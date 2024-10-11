@@ -12,7 +12,7 @@ import FranchizerzLogo from "../../assets/logo_1.svg"
 import FranchizerzTitle from "../../assets/logo.svg"
 import CloseIcon from "@mui/icons-material/Close" // Import Close Icon
 
-import "./newnav.css" // CSS for styling
+import styles from "./newnav.module.css" // Import CSS module
 
 const Newnav = () => {
 	const [anchorEl, setAnchorEl] = useState(null)
@@ -50,39 +50,39 @@ const Newnav = () => {
 	}
 
 	return (
-		<div className={`new_nav ${menuOpen ? "active" : ""} ${scrolled ? "nav_scrolled" : ""}`}>
-			<div className="nav_data">
-				<div className="navlogo">
-					<NavLink to="/" className="logoContainer">
-						<FranchizerzLogo className="logoImage" />
-						<FranchizerzTitle className="logoTitle" />
+		<div className={`${styles.new_nav} ${menuOpen ? styles.active : ""} ${scrolled ? styles.nav_scrolled : ""}`}>
+			<div className={styles.nav_data}>
+				<div className={styles.navlogo}>
+					<NavLink to="/" className={styles.logoContainer}>
+						<FranchizerzLogo className={styles.logoImage} />
+						<FranchizerzTitle className={styles.logoTitle} />
 					</NavLink>
 				</div>
-				<div className={`left_data ${menuOpen ? "open" : ""}`}>
-					<NavLink to="/" className="navItem">
-						<HomeIcon className="navLogo" />
-						<p className="navText ">Home</p>
+				<div className={`${styles.left_data} ${menuOpen ? styles.open : ""}`}>
+					<NavLink to="/" className={styles.navItem}>
+						<HomeIcon className={styles.navLogo} />
+						<p className={styles.navText}>Home</p>
 					</NavLink>
-					<NavLink to="about-us" className="navItem">
-						<InfoIcon className="navLogo" />
-						<p className="navText">About Us</p>
+					<NavLink to="/about-us" className={styles.navItem}>
+						<InfoIcon className={styles.navLogo} />
+						<p className={styles.navText}>About Us</p>
 					</NavLink>
-					<NavLink to="/blog" className="navItem">
-						<BlogIcon className="navLogo" />
-						<p className="navText">Blog</p>
+					<NavLink to="/blog" className={styles.navItem}>
+						<BlogIcon className={styles.navLogo} />
+						<p className={styles.navText}>Blog</p>
 					</NavLink>
-					<NavLink to="/contact-us" className="navItem">
-						<ContactMailIcon className="navLogo" />
-						<p className="navText">Contact Us</p>
+					<NavLink to="/contact-us" className={styles.navItem}>
+						<ContactMailIcon className={styles.navLogo} />
+						<p className={styles.navText}>Contact Us</p>
 					</NavLink>
 				</div>
-				<div className="right_data">
-					<Avatar className="avatar" onClick={handleMenuClick} />
+				<div className={styles.right_data}>
+					<Avatar className={styles.avatar} onClick={handleMenuClick} />
 					<Menu
 						anchorEl={anchorEl}
 						open={Boolean(anchorEl)}
 						onClose={handleMenuClose}
-						className="menu"
+						className={styles.menu}
 						anchorOrigin={{
 							vertical: "bottom",
 							horizontal: "right",
@@ -95,11 +95,11 @@ const Newnav = () => {
 						<MenuItem onClick={handleMenuClose}>Sign Up</MenuItem>
 						<MenuItem onClick={handleMenuClose}>Login</MenuItem>
 						<MenuItem onClick={handleMenuClose}>
-							<LogoutIcon className="logoutIcon" />
+							<LogoutIcon className={styles.logoutIcon} />
 							Logout
 						</MenuItem>
 					</Menu>
-					<div className="hamburger" onClick={toggleMenu}>
+					<div className={styles.hamburger} onClick={toggleMenu}>
 						{menuOpen ? (
 							<CloseIcon style={{ color: "#ecf0f1" }} /> // Show Close Icon if menu is open
 						) : (
