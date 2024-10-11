@@ -12,7 +12,7 @@ import FranchizerzLogo from "../../assets/logo_1.svg"
 import FranchizerzTitle from "../../assets/logo.svg"
 import CloseIcon from "@mui/icons-material/Close" // Import Close Icon
 
-import styles from "./newnav.module.css" // Import CSS module
+import styles from "./newnav.module.css" 
 
 const Newnav = () => {
 	const [anchorEl, setAnchorEl] = useState(null)

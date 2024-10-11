@@ -1,6 +1,6 @@
 /* Assuming the height of your navbar is around 50px */
 body {
-	margin-top: 60px; /* Add a top margin to the body equal to the navbar's height */
+	margin-top: 59px; /* Add a top margin to the body equal to the navbar's height */
 }
 
 /* You can also apply this directly to the main content container */
