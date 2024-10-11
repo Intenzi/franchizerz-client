@@ -1,0 +1,163 @@
+/* Main Container */
+.container {
+	background-color: black;
+	padding: 50px;
+	color: white;
+	text-align: center;
+	min-height: 100vh; /* Ensures full-height container */
+  }
+  
+  /* Header Styling */
+  .headBottom {
+	position: relative;
+	background-color: white;
+	bottom: 15px;
+	right: 17vw;
+	width: 70vw;
+	height: 5px;
+	border-radius: 20px;
+  }
+  
+  .headTop {
+	position: relative;
+	background-color: white;
+	left: 35vw;
+	width: 63vw;
+	height: 5px;
+	border-radius: 20px;
+  }
+  
+  .heading {
+	font-size: 2rem;
+	color: white;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+  }
+  
+  /* Grid Layout */
+  .grid {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 15px;
+	width: 100%;
+	max-width: 100%;
+	margin: 0 auto;
+	height: auto; /* Adjusts grid height to content */
+  }
+  
+  /* Individual feature card styles */
+  .featureCard {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	padding: 20px;
+	font-size: 1rem;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+	transition: transform 0.3s, box-shadow 0.3s;
+	text-align: center;
+  }
+  
+  .featureCard:hover {
+	transform: translateY(-10px);
+	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  }
+  
+  .icon {
+	font-size: 1.5rem;
+	margin-bottom: 10px;
+  }  
+  .featureCard p {
+	margin: 0;
+	font-size: 1.2rem;
+  }
+  .card1, .card3 {
+	height: 10vw;
+	background-color: #d1d5db;
+  }  
+  .card2, .card4 {
+	height: 30vw;
+	background-color: #3b82f6;
+  }
+  .card5, .card7 {
+	height: 30vw;
+	background-color: #3b82f6;
+  }
+  .card6, .card8 {
+	height: 10vw;
+	background-color: #d1d5db;
+  }
+
+  @media (max-width: 768px) {
+	.grid {
+	  grid-template-columns: repeat(2, 1fr); /* Two cards per row */
+	  gap: 15px;
+	}
+	.card1, .card3, .card5, .card7 {
+	  height: 35vw;
+	}
+  
+	.card2, .card4, .card6, .card8 {
+	  height: 35vw;
+	}
+  
+	.headTop {
+	  width: 55vw;
+	  left: 25vw;
+	}
+  
+	.headBottom {
+	  width: 60vw;
+	  right: 15vw;
+	}
+  }
+  
+  /* Responsive Styles for Mobile */
+  @media (max-width: 500px) {
+	.grid {
+	  grid-template-columns: repeat(2, 1fr); /* Two cards per row */
+	  gap: 10px;
+	}
+  
+	.featureCard {
+	  height: auto; /* Automatic height for mobile */
+	}
+  
+	/* Ensuring all cards are visible with adjusted heights */
+	.card1, .card3 {
+	  height: auto;
+	  background-color: #d1d5db;
+	}
+  
+	.card2, .card4 {
+	  height: auto;
+	  background-color: #3b82f6;
+	}
+  
+	.card5, .card7 {
+	  height: auto;
+	  background-color: #3b82f6;
+	}
+  
+	.card6, .card8 {
+	  height: auto;
+	  background-color: #d1d5db;
+	}
+  
+	/* Adjust header bars for smaller screens */
+	.headTop {
+	  width: 40vw;
+	  left: 30vw;
+	}
+  
+	.headBottom {
+	  width: 50vw;
+	  right: 25vw;
+	}
+  }
+  @media (min-width: 768px) {
+	.card5, .card7{
+	  margin-top: -20vw;
+	}
+  }  

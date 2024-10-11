@@ -2,11 +2,11 @@
 
 :root {
   --header-height: 3rem;
-  --first-color: #181059;
+  --first-color: #0cdef6;
   --two-color: #8645ff;
-  --greay-color: #b6b6b6;
+  --gray-color: #b6b6b6; /* Corrected variable name */
   --yellow-color: #edbb01;
-  --white-color: #fcf8f8;
+  /* --white-color: #fcf8f8; */
   --black-color: #000000;
   --body-font: "Inter", sans-serif;
   --big-font-size: 2rem;
@@ -32,14 +32,18 @@
 *:focus {
   outline: 0;
 }
+.main{
+  background-color: #000000 !important;
+}
 
 body {
   margin: 0;
   padding: 0;
-  color: var(--first-color);
+  color: var(--first-color) ;
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
-  background: var(--white-color);
+  background: var(--black-color);
+  /* background-color: #000000 !important; */
   font-weight: 400;
 }
 
@@ -47,7 +51,6 @@ h1,
 p,
 ul {
   margin: 0;
-
 }
 
 ul {
@@ -85,7 +88,7 @@ img {
 }
 
 body {
-  background: #f6f5fa;
+  background: black;
 }
 
 section {
@@ -95,6 +98,10 @@ section {
 /*=======================================================
 Base
 ===============================================*/
+.pricing {
+  background-color: var(--black-color); /* Black background for the section */
+  color: var(--white-color); /* Ensure text is readable on black background */
+}
 
 input[type="checkbox"] {
   height: 0;
@@ -129,10 +136,9 @@ input[type="checkbox"] {
 .pricingBox {
   display: flex;
   justify-content: space-between; /* Distribute space evenly between cards */
-  gap: px; /* Reduced space between cards */
+  gap: 20px; /* Corrected space between cards */
   flex-wrap: wrap; /* Wrap cards on smaller screens */ 
 }
-
 
 .card3dPart {
   flex: 1; /* Allow cards to grow and shrink equally */
@@ -145,7 +151,7 @@ input[type="checkbox"] {
   position: relative;
   width: 280px;
   max-width: calc(100% - 20px);
-  height: 350px;
+  height: 370px;
   transform-style: preserve-3d;
   perspective: 1000px;
   margin-top: 80px;
@@ -161,10 +167,31 @@ input[type="checkbox"] {
   transition: transform 700ms 400ms ease-out;
 }
 
+.headBottom {
+  position: relative;
+  background-color: white;
+  bottom: 15px;
+  top:0.3vw;
+  right: 17vw;
+  width: 55vw;
+  height: 5px;
+  border-radius: 20px;
+}
+
+.headTop {
+  position: relative;
+  background-color: white;
+  left: 30vw;
+  bottom: 0.5vw;
+  width: 63vw;
+  height: 5px;
+  border-radius: 20px;
+}
+
 .cardFront {
   width: 100%;
   height: 100%;
-  background-color: rgba(255, 255, 255, 1);
+  background-color: rgb(0, 0, 0);
   position: absolute;
   border-radius: 6px;
   left: 0;
@@ -172,7 +199,7 @@ input[type="checkbox"] {
   transform-style: preserve-3d;
   backface-visibility: hidden;
   box-shadow: 0 12px 35px 0 rgba(16, 39, 112, 0.07);
-  padding: 20vw;
+  padding: 24px; /* Adjusted padding */
 }
 
 .pricingWrap {
@@ -189,12 +216,13 @@ input[type="checkbox"] {
   font-weight: 700;
   margin-bottom: 11px;
   margin-top: 0;
+  color: aliceblue;
 }
 
 .sale {
   font-size: 12px;
   float: right;
-  background: #ffffff;
+  background: #0b0b0b;
   border-radius: 4px;
   padding: 5px 8px;
   color: var(--two-color);
@@ -202,12 +230,13 @@ input[type="checkbox"] {
 
 .description {
   font-size: 30px;
-  opacity: 0.68;
+  opacity: 0.80;
   margin-bottom: 20px;
+  color: white;
 }
 
 .cardFront {
-  background: #ffffff;
+  background: #030303;
   border-radius: 24px;
   padding: 24px;
 }
@@ -226,10 +255,9 @@ input[type="checkbox"] {
   margin-bottom: 25px;
 }
 
- ul {
-    display: block !important;
+ul {
+  display: block !important;
 }
-
 
 .cardListItemHidden {
   opacity: 0.3;
@@ -261,7 +289,7 @@ input[type="checkbox"] {
   list-style: none;
 }
 .btn {
-  background: #f8f4ff;
+  background: #000000;
   border-radius: 8px;
   border: none;
   display: block;
@@ -273,14 +301,33 @@ input[type="checkbox"] {
   cursor: pointer;
 }
 
-.btn:hover {
-  background: var(--first-color);
-  color: var(--white-color);
+/* Button styling */
+.btn {
+  background: #f8f4ff; /* Light background color */
+  border-radius: 8px; /* Rounded corners */
+  width: 225px;
+  border: none; /* Remove default border */
+  padding: 8px ; /* Adjusted padding for better appearance */
+  font-size: 16px; /* Font size */
+  font-weight: 700; /* Bold text */
+  color: var(--two-color); /* Text color */
+  cursor: pointer; /* Pointer cursor on hover */
+  text-align: center; /* Center text inside button */
+  display: inline-block; /* Ensure button fits content */
+  margin: 0 ; /* Center button horizontally */
+  transition: background 0.3s ease, color 0.3s ease; /* Smooth transition for background and color */
 }
+
+/* Button hover effect */
+.btn:hover {
+  background: var(--first-color); /* Background color on hover */
+  color: var(--white-color); /* Text color on hover */
+}
+
 
 /* Card Styles */
 .card3dPart:nth-child(1) .cardFront {
-  background: var(--gray-color); /* Silver background */
+  background: var(--yellow-color); /* Silver background */
   color: black;
 }
 
@@ -312,7 +359,7 @@ input[type="checkbox"] {
 }
 
 .card3dPart:nth-child(2) .btn:hover {
-  background: var(--greay-color);
+  background: var(--gray-color); /* Corrected color for hover */
 }
 
 .card3dPart:nth-child(3) .cardFront {

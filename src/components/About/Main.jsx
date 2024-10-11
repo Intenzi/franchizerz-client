@@ -37,7 +37,7 @@ function Main() {
       <Values />
       <Services />
       <Timeline />
-      <TeamComponent />
+      {/* <TeamComponent /> */}
       {/* <Footer /> */}
     </div>
   );

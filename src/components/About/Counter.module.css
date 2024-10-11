@@ -8,7 +8,9 @@
 }
 
 .counterUp {
+  /* Uncomment and use the background image if required */
   /* background: url("images/bg-2.jpeg") no-repeat; */
+  background-color: #000000; /* Black background */
   min-height: 50vh;
   background-size: cover;
   background-attachment: fixed;
@@ -25,7 +27,7 @@
   left: 0;
   height: 100%;
   width: 100%;
-  background: rgba(0,0,0,0.8);
+  background: rgba(0,0,0,0.8); /* Black overlay with opacity */
 }
 
 .content {
@@ -40,7 +42,7 @@
 }
 
 .box {
-  border: 1px dashed rgba(255,255,255,0.6);
+  border: 1px dashed rgba(255,255,255,0.6); /* White border with transparency */
   width: calc(25% - 30px);
   border-radius: 5px;
   display: flex;
@@ -52,19 +54,19 @@
 
 .icon {
   font-size: 48px;
-  color: #e6e6e6;
+  color: #e6e6e6; /* Light gray icon for visibility on black background */
 }
 
 .counter {
   font-size: 50px;
   font-weight: 500;
-  color: #f2f2f2;
+  color: #f2f2f2; /* White counter text */
   font-family: sans-serif;
 }
 
 .text {
   font-weight: 400;
-  color: #ccc;
+  color: #ccc; /* Light gray text */
 }
 
 @media screen and (max-width: 1036px) {

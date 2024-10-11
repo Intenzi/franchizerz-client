@@ -1,6 +1,8 @@
 import "./FranchiseData.css"
 import SideBrochure from "../SideBrochurePanel/SideBrochure"
 const FranchiseData = ({ franchise }) => {
+	const brochureFileName = `${franchise.name.replace(/\s+/g, '-')}.pdf`; // Example: Mahindra-Scorpio-Brochure.pdf
+	const brandName = franchise.name;
 	const {
 		img,
 		name,
@@ -8,16 +10,15 @@ const FranchiseData = ({ franchise }) => {
 		outlets,
 		requirements,
 		avgsales,
-		profit,
+		grossMargin,
 		margin,
-		growth,
+		// growth,
 	} = franchise
 
 	return (
 		<section data-theme="light" className="product-section pico mb-4">
 			<img
-				src="/image.png"
-				// style={{ width: "20%", height: "20%" }}
+				src={img}
 				alt="Product Image"
 				className="product-image"
 			/>
@@ -41,20 +42,20 @@ const FranchiseData = ({ franchise }) => {
 					{avgsales}
 				</p>
 				<p>
-					<strong>Net Profit: </strong>
-					{profit}
+					<strong>Gross Margin: </strong>
+					{grossMargin}
 				</p>
 				<p>
 					<strong>Net Margin: </strong>
 					{margin}
 				</p>
-				<p>
+				{/* <p>
 					<strong>Growth: </strong>
 					{growth}
-				</p>
-				<div className="mt-[50px]">
-				<SideBrochure name={name} className='downloadBrochure '/>
-				</div>
+				</p> */}
+				 <div className="mt-[50px]">
+        <SideBrochure brochureFileName={brochureFileName} brandName={brandName} className='downloadBrochure' />
+                </div>
 			</div>
 			
 		</section>

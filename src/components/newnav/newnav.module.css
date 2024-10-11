@@ -9,7 +9,7 @@ body {
 }
 .new_nav {
 	width: 100%;
-	background-color: #ffffff; /* White background */
+	background-color: #2c3e50; /* Dark background for better contrast */
 	position: fixed; /* Fix the navbar at the top */
 	top: 0; /* Position it at the top */
 	left: 0;
@@ -41,7 +41,7 @@ body {
 }
 
 .logoTitle {
-	color: #000000; /* Black text for logo */
+	color: #ffffff; /* White text for clear contrast */
 	margin-left: 10px;
 	font-size: 20px; /* Adjusted font size */
 }
@@ -58,7 +58,7 @@ body {
 	display: flex;
 	align-items: center;
 	text-decoration: none;
-	color: #000000; /* Black text */
+	color: #ecf0f1; /* Light grey text for clear contrast */
 	font-weight: 500;
 	font-size: 14px;
 	padding: 10px;
@@ -72,7 +72,6 @@ body {
 .navLogo {
 	margin-right: 5px;
 	font-size: 18px; /* Larger icon for better visibility */
-	color: #000000; /* Black icon */
 }
 
 /* Underline effect on hover */
@@ -83,7 +82,7 @@ body {
 	bottom: 0;
 	height: 2px;
 	width: 0;
-	background-color: #000000; /* Black underline */
+	background-color: black; /* Black underline */
 	transition: width 0.3s ease-in-out;
 }
 
@@ -92,7 +91,7 @@ body {
 }
 
 .navItem:hover {
-	color: #000000; /* Text remains black on hover */
+	color: black; /* Change text color to black on hover */
 }
 
 .right_data {
@@ -110,7 +109,7 @@ body {
 .hamburger div {
 	width: 25px;
 	height: 3px;
-	background-color: #000000; /* Black color for hamburger lines */
+	background-color: #ecf0f1; /* Light grey for contrast */
 	margin: 4px 0;
 	transition: 0.4s;
 }
@@ -124,21 +123,16 @@ body {
 	.hamburger {
 		display: flex; /* Show hamburger on small screens */
 	}
-	.logoTitle {
-		color: #000000; /* Black text */
-		margin-left: 10px;
-		width: 170px;
-		font-size: 20px; /* Adjusted font size */
-	}
-	.logoImage {
-		width: 35px;
-	}
+
 	.new_nav.active .left_data {
 		display: flex;
 		flex-direction: column;
 		background-color: rgba(
-			255, 255, 255, 0.9
-		); /* White semi-transparent background */
+			44,
+			62,
+			80,
+			0.9
+		); /* Slightly darker semi-transparent background */
 		backdrop-filter: blur(10px); /* Blur effect for background */
 		position: absolute;
 		top: 50px;
@@ -150,6 +144,7 @@ body {
 
 	.navItem {
 		justify-content: flex-start;
+		/* padding: 10px; Reduce padding for smaller screens */
 		width: 100%;
 		text-align: center;
 		font-size: 13px; /* Slightly smaller text */
@@ -162,6 +157,5 @@ body {
 
 	.navLogo {
 		font-size: 16px; /* Slightly smaller icon */
-		color: #000000; /* Black icon */
 	}
 }

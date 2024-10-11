@@ -13,6 +13,7 @@ import NewsSection from "./components/Blog/NewsSection"
 import Main from "./components/About/Main"
 import PartnerWithUs from "./components/PartnerWithUs/PartnerWithUs"
 import Newnav from "./components/newnav/Newnav"
+import BrandPage from "./components/BrandPage/BrandPage"
 
 const App = () => {
 	const match = useMatch("/franchise/:id")
@@ -39,6 +40,10 @@ const App = () => {
 					<Route
 						path="/partner-with-us"
 						element={<PartnerWithUs />}
+					/>
+					<Route
+						path="/franchises"
+						element={<BrandPage/>}
 					/>
 				</Routes>
 			</div>

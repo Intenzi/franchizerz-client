@@ -4,22 +4,23 @@ import { saveAs } from 'file-saver';
 import { pdf } from '@react-pdf/renderer';
 import { FaFilePdf } from 'react-icons/fa';
 
-const DownloadBrochure = () => {
+const DownloadBrochure = ({ brochureFileName, brochureTitle }) => {
   const handleDownload = () => {
-    // Dummy PDF creation using pdf library, replace with actual PDF generation logic
-    const doc = (
-      <div>Mahindra Scorpio Brochure</div>
-    );
-
-    pdf(doc).toBlob().then(blob => {
-      saveAs(blob, 'Mahindra-Scorpio-Brochure.pdf');
-    });
+    const link = document.createElement('a');
+    link.href = fileUrl;
+    link.setAttribute('download', brochureFileName);
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
   };
+
+ 
+  ;
 
   return (
     <div className={styles.container}>
       <h2 className={styles.heading}>Download Brochure</h2>
-      <p className={styles.description}>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <p className={styles.description}>  Download the brochure for {brochureTitle} to learn more about the franchise details and opportunities.</p>
 
       <button className={styles.downloadButton} onClick={handleDownload}>
         <FaFilePdf className={styles.downloadIcon} /> Download Brochure
