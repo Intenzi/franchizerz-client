@@ -3,31 +3,37 @@ import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import s from './TrendingChoices.module.css';
 
-const TrendingChoices = () => {
+const TopChoices = () => {
     const allData = [
-        { id: 1, name: 'Mcdonalds', category: 'Food Beverage', image: './img/857d89ea-b84b-4a23-96e4-d653c66298d2 1.jpg' },
-        { id: 2, name: 'Mcdonalds', category: 'Food Beverage', image: './img/Keto Restaurants with Low Carb Options - No Bun Please 1.jpg' },
+        { id: 1, name: 'Mr Sandwich', category: 'Food Beverage', image: '/img/MrSandwich.jpg' },
+        { id: 2, name: 'Lassi Story', category: 'Food Beverage', image: '/img/LassiStory.jpeg' },
         { id: 3, name: 'Mcdonalds', category: 'Food Beverage', image: './img/Fortis Hiranandani Hospital, India 1.jpg' },
         { id: 4, name: 'Mcdonalds', category: 'Food Beverage', image: './img/857d89ea-b84b-4a23-96e4-d653c66298d2 1.jpg' },
         { id: 5, name: 'Mcdonalds', category: 'Food Beverage', image: './img/Fortis Hiranandani Hospital, India 1.jpg' },
-        { id: 6, name: 'Mcdonalds', category: 'Food Beverage', image: './img/Keto Restaurants with Low Carb Options - No Bun Please 1.jpg' },
-        { id: 7, name: 'Mcdonalds', category: 'Food Beverage', image: './img/857d89ea-b84b-4a23-96e4-d653c66298d2 1.jpg' },
-        { id: 8, name: 'Mcdonalds', category: 'Food Beverage', image: './img/Fortis Hiranandani Hospital, India 1.jpg' },
+        { id: 6, name: 'Mr Sandwich', category: 'Food Beverage', image: '/img/MrSandwich.jpg' },
+        { id: 1, name: 'Lassi Story', category: 'Food Beverage', image: '/img/LassiStory.jpeg' },
+        { id: 2, name: 'Mcdonalds', category: 'Food Beverage', image: './img/Fortis Hiranandani Hospital, India 1.jpg' },
     ];
 
     const [currentIndex, setCurrentIndex] = useState(0);
     const [itemsToLoad, setItemsToLoad] = useState(3);
+    const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth <= 450);
     const autoSlideInterval = useRef(null);
+    const touchScrolling = useRef(false); // To track if the user is touch-scrolling
 
     const startAutoSlide = () => {
-        autoSlideInterval.current = setInterval(() => {
-            setCurrentIndex((prevIndex) => {
-                if (prevIndex >= allData.length - itemsToLoad) {
-                    return 0;
+        if (!isSmallScreen) {
+            autoSlideInterval.current = setInterval(() => {
+                if (!touchScrolling.current) {
+                    setCurrentIndex((prevIndex) => {
+                        if (prevIndex >= allData.length - itemsToLoad) {
+                            return 0;
+                        }
+                        return prevIndex + itemsToLoad;
+                    });
                 }
-                return prevIndex + itemsToLoad;
-            });
-        }, 4000);
+            }, 4000);
+        }
     };
 
     const stopAutoSlide = () => {
@@ -39,7 +45,8 @@ const TrendingChoices = () => {
     useEffect(() => {
         const updateItemsToLoad = () => {
             const screenWidth = window.innerWidth;
-            setItemsToLoad(screenWidth <= 768 ? 2 : 3);
+            setItemsToLoad(screenWidth <= 768 ? 3 : 4);
+            setIsSmallScreen(screenWidth <= 450);
         };
 
         updateItemsToLoad();
@@ -54,7 +61,17 @@ const TrendingChoices = () => {
         return () => {
             stopAutoSlide();
         };
-    }, [itemsToLoad]);
+    }, [itemsToLoad, isSmallScreen]);
+
+    const handleTouchStart = () => {
+        touchScrolling.current = true;
+        stopAutoSlide(); // Stop auto-slide when touch scroll starts
+    };
+
+    const handleTouchEnd = () => {
+        touchScrolling.current = false;
+        startAutoSlide(); // Restart auto-slide after a delay when touch ends
+    };
 
     const slideLeft = () => {
         setCurrentIndex((prevIndex) => Math.max(prevIndex - itemsToLoad, 0));
@@ -69,18 +86,22 @@ const TrendingChoices = () => {
     return (
         <div
             className={s.mainContainer}
-            onMouseEnter={stopAutoSlide}
-            onMouseLeave={startAutoSlide}
+            onMouseEnter={isSmallScreen ? null : stopAutoSlide}
+            onMouseLeave={isSmallScreen ? null : startAutoSlide}
+            onTouchStart={handleTouchStart}
+            onTouchEnd={handleTouchEnd}
         >
             <div className={s.headContainer}>
                 <div className={s.headTop}></div>
-                <p className={s.headText}>TRENDING CHOICES</p>
+                <p className={s.headText}>TOP CHOICES</p>
                 <div className={s.headBottom}></div>
             </div>
             <div className={s.subContainer}>
-                <button className={s.navButton} onClick={slideLeft}>
-                    <ArrowBackIosIcon />
-                </button>
+                {!isSmallScreen && (
+                    <button className={s.navButton} onClick={slideLeft}>
+                        <ArrowBackIosIcon />
+                    </button>
+                )}
                 <div className={s.carousel}>
                     <div
                         className={s.carouselTrack}
@@ -97,12 +118,14 @@ const TrendingChoices = () => {
                         ))}
                     </div>
                 </div>
-                <button className={s.navButton} onClick={slideRight}>
-                    <ArrowForwardIosIcon />
-                </button>
+                {!isSmallScreen && (
+                    <button className={s.navButton} onClick={slideRight}>
+                        <ArrowForwardIosIcon />
+                    </button>
+                )}
             </div>
         </div>
     );
 };
 
-export default TrendingChoices;
+export default TopChoices;
