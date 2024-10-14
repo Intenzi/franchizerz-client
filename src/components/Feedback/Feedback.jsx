@@ -3,12 +3,12 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Slider from "react-slick";
-import { testimonials } from "./data/index";
+// import { testimonials } from "./data/index";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 
 const FeedbackCard = ({
-  index,
+  // index,
   testimonial,
   name,
   designation,
@@ -46,7 +46,7 @@ const FeedbackCard = ({
   </motion.div>
 );
 
-const Feedbacks = () => {
+const Feedbacks = ({ testimonials, sectionTitle, subTitle }) => {
   const settings = {
     dots: true,
     infinite: true,
@@ -94,8 +94,8 @@ const Feedbacks = () => {
     <div className="bg-black p-5 relative">
       <div className="rounded-2xl p-6 md:p-10 min-h-[180px] md:min-h-[240px]">
         <motion.div className="min-h-[100px]">
-          <p className="text-gray-400">What others say</p>
-          <h2 className="text-white text-lg md:text-3xl font-bold">Testimonials.</h2>
+          <p className="text-gray-400">{subTitle}</p>
+          <h2 className="text-white text-lg md:text-3xl font-bold">{sectionTitle}</h2>
         </motion.div>
       </div>
       <div className="relative -mt-16 md:-mt-20 pb-14 px-2 md:px-10">

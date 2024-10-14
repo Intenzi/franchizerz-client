@@ -1,191 +1,202 @@
 /* Modal styles */
 .modalOverlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8); /* Dark background */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000; /* Ensure it's on top of other elements */
-  }
-  
-  .modal {
-    position: relative;
-    padding: 1rem;
-    border-radius: 8px;
-    max-width: 90%;
-    max-height: 90%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .modalContent {
-    display: flex;
-    align-items: center;
-  }
-  
-  .modalImage {
-    width: 30vw;
-    height: 70vw;
-    object-fit: contain; /* Keeps the aspect ratio of the image */
-  }
-  
-  .modalCloseBtn {
-    position: absolute;
-    top: 0.5rem;
-    right: 0.5rem;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    border-radius: 10px;
-    width: fit-content;
-  }
-  
-  .modalNavBtn {
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    padding: 0.5rem;
-    border-radius: 10px;
-    width: fit-content;
-  }
-  
-  .modalArrowIcon {
-    width: 2rem;
-    height: 2rem;
-    fill: rgb(253, 251, 251);
-  }
-  .modalCloseIcon{
-    fill: rgb(246, 245, 245);
-    width: 1rem;
-  }
-  
-  /* Existing styles */
-  .mainContainer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: black;
-    padding-top: 20px;
-    padding-bottom: 100px;
-  }
-  
-  .headContainer{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Dark background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Ensure it's on top of other elements */
 }
-.headBottom{
-    position: relative;
-    background-color: white;
-    bottom: 5px;
-    right: 25vw;
-    width: 60vw;
-    height: 5px;
+
+.modal {
+  position: relative;
+  padding: 1rem;
+  border-radius: 8px;
+  max-width: 90%;
+  max-height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.headTop{
-    position: relative;
-    background-color: white;
-    left: 25vw;
-    width: 60vw;
-    height: 5px;
+
+.modalContent {
+  display: flex;
+  align-items: center;
 }
+
+.modalImage {
+  width: 30vw;
+  height: 70vw;
+  object-fit: contain;
+}
+
+.modalCloseBtn {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  width: fit-content;
+}
+
+.modalNavBtn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 10px;
+  width: fit-content;
+}
+
+.modalArrowIcon {
+  width: 2rem;
+  height: 2rem;
+  fill: rgb(253, 251, 251);
+}
+
+.modalCloseIcon {
+  fill: rgb(246, 245, 245);
+  width: 1rem;
+}
+
+/* Existing styles */
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  padding-top: 20px;
+  padding-bottom: 100px;
+}
+
+.headContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.headBottom {
+  position: relative;
+  background-color: white;
+  bottom: 5px;
+  right: 25vw;
+  width: 60vw;
+  height: 5px;
+}
+
+.headTop {
+  position: relative;
+  background-color: white;
+  left: 25vw;
+  width: 60vw;
+  height: 5px;
+}
+
 .headText {
-    position: relative;
-    color: white;
-    font-size: 2rem;
-    font-weight: bold;
-    z-index: 500;
+  position: relative;
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  z-index: 500;
 }
-  
-  .arrowIcon {
-    width: 2rem;
-    height: 2rem;
-    fill: white;
-  }
-  
+
+.arrowIcon {
+  width: 2rem;
+  height: 2rem;
+  fill: white;
+}
+
+.imageContainer {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  height: 25rem;
+  overflow-x: auto;
+  scrollbar-width: none;
+  align-items: center;
+  scroll-behavior: smooth;
+  padding-left: 2rem;
+}
+
+.imageContainer::-webkit-scrollbar {
+  display: none;
+}
+
+.subContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+}
+
+.imageWrapper {
+  flex: 0 0 auto;
+  margin-right: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+}
+
+.menuImage {
+  height: 20rem;
+  border-radius: 20px;
+  width: 10rem;
+}
+
+.imageWrapper:hover {
+  transform: scale(1.2);
+  transition: all ease-in-out 0.2s;
+  border: 2px solid white;
+  border-radius: 30px;
+}
+
+.navBtn {
+  width: 5%;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 710px) {
   .imageContainer {
-    display: flex;
-    flex-direction: row;
-    width: 80%;
-    height: 25rem;
-    overflow-x: auto;
-    scrollbar-width: none;
-    align-items: center;
-    scroll-behavior: smooth;
-    padding-left: 2rem;
+    width: 70%;
   }
-  
-  .imageContainer::-webkit-scrollbar {
-    display: none;
+}
+
+@media (max-width: 615px) {
+  .imageContainer {
+    width: 75%;
   }
-  
-  .subContainer {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width: 100vw;
-  }
-  
   .imageWrapper {
-    flex: 0 0 auto;
-    margin-right: 5px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+    margin-right: 1rem;
   }
-  
+}
+
+@media (max-width: 556px) {
+  .imageContainer {
+    width: 100vw;
+    padding-left: 0; /* Make sure there's no extra padding causing issues */
+    scroll-snap-type: x mandatory;
+    overflow-x: auto;
+  }
+
   .menuImage {
-    height: 20rem;
-    border-radius: 20px;
-    width: 10rem;
+    width: 85vw; /* Ensure the image takes up most of the viewport */
+    height: auto;
   }
-  
-  .imageWrapper:hover {
-    transform: scale(1.2);
-    transition: all ease-in-out 0.2s;
-    border: 2px solid white;
-    border-radius: 30px;
+
+  .imageWrapper {
+    flex: 0 0 85vw; /* Ensure each image takes up the full width of the viewport */
+    scroll-snap-align: start; /* Snap each image to the start */
   }
-  .navBtn{
-    width: 5%;
+}
+@media (max-width: 471px) {
+  .imageContainer {
+    padding-left: 0.5rem;
   }
-  
-  /* Media Queries for Responsiveness */
-  @media (max-width: 710px) {
-    .imageContainer {
-      width: 70%;
-    }
-  }
-  
-  @media (max-width: 615px) {
-    .imageContainer {
-      width: 75%;
-    }
-    .imageWrapper {
-      margin-right: 1rem;
-    }
-  }
-  
-  @media (max-width: 556px) {
-    .menuImage {
-      width: 20vw;
-      height: 40vw;
-    }
-    .imageContainer {
-      height: 50vw;
-    }
-  }
-  
-  @media (max-width: 471px) {
-    .imageContainer {
-      padding-left: 0.5rem;
-    }
-    
-  }
-  
+}

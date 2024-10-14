@@ -15,7 +15,7 @@ body {
 }
 
 .footer {
-  background-color: #4b4848;
+  background-color: #000; /* Black background */
   padding-top: 50px;
   color: white;
 }
@@ -78,11 +78,11 @@ body {
 }
 
 .socialIcons li a:hover {
-  color: #f6f1ec;
+  color: #f6f1ec; /* Slightly off-white for hover effect */
 }
 
 .bottomBar {
-  background: #343434;
+  background: #1a1a1a; /* Darker shade for bottom bar */
   text-align: center;
   padding: 10px 0;
   margin-top: 50px;
@@ -91,7 +91,7 @@ body {
 .bottomBar p {
   margin: 0;
   font-size: 16px;
-  color: #f9f5f1;
+  color: #f9f5f1; /* Light color for text to contrast with the dark background */
 }
 
 /* Responsive Styles */
@@ -105,7 +105,7 @@ body {
     width: 100%;
     padding: 10px 0;
   }
-  .socialIcons{
+  .socialIcons {
     margin-right: 12px;
   }
 }
