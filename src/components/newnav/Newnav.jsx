@@ -123,7 +123,7 @@ const Newnav = () => {
           </div>
         </div>
 
-        {/* Navigation Items */}
+        {/* Navigtion Items */}
         <div className={`${styles.left_data} ${menuOpen ? styles.open : ""}`}>
           <NavLink to="/" className={styles.navItem}>
             <HomeIcon className={styles.navLogo} />

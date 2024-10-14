@@ -1,7 +1,7 @@
 import React from "react";
 import SearchIcon from "@mui/icons-material/Search";
 import styles from "./LargeScreenSearch.module.css";
-
+//this is the code
 const LargeScreenSearch = ({ searchTerm, handleSearchChange, filteredSuggestions, handleSuggestionClick }) => {
   return (
     <div className={styles.searchContainer}>

@@ -45,7 +45,7 @@ const SmallScreenSearch = ({ searchTerm, handleSearchChange, filteredSuggestions
                     className={styles.suggestionItem}
                     onClick={() => {
                       handleSuggestionClick(suggestion);
-                      handlePopupToggle(); // Close popup on suggestion click
+                      handlePopupToggle(); // Clos popup on suggestion click
                     }}
                   >
                     {suggestion.label}
