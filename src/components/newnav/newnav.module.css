@@ -1,6 +1,6 @@
 /* Assuming the height of your navbar is around 50px */
 body {
-	margin-top: 59px; /* Add a top margin to the body equal to the navbar's height */
+	/* margin-top: 59px; Add a top margin to the body equal to the navbar's height */
 }
 
 /* You can also apply this directly to the main content container */
@@ -9,8 +9,8 @@ body {
 }
 .new_nav {
 	width: 100%;
-	background-color: #ffffff; /* White background */
-	position: fixed; /* Fix the navbar at the top */
+	background-color: #efe8e8; /* White background */
+	/* position: fixed; Fix the navbar at the top */
 	top: 0; /* Position it at the top */
 	left: 0;
 	z-index: 1000; /* Ensure it stays on top of other elements */
@@ -74,7 +74,10 @@ body {
 	font-size: 18px; /* Larger icon for better visibility */
 	color: #000000; /* Black icon */
 }
-
+.navText{
+	font-size: large;
+	font-weight: 370;
+}
 /* Underline effect on hover */
 .navItem::after {
 	content: "";
@@ -100,6 +103,7 @@ body {
 	align-items: center;
 }
 
+
 .hamburger {
 	display: none; /* Hidden by default */
 	flex-direction: column;
@@ -114,6 +118,31 @@ body {
 	margin: 4px 0;
 	transition: 0.4s;
 }
+/* Add these styles */
+/* Add these styles for the search container */
+.searchWrapper {
+	display: flex;
+  }
+  
+  .largeScreenSearch {
+	margin-left: 30px;
+	display: none;
+  }
+  
+  .smallScreenSearch {
+	display: block;
+  }
+  
+  @media (min-width: 768px) {
+	.largeScreenSearch {
+	  display: block;
+	}
+  
+	.smallScreenSearch {
+	  display: none;
+	}
+  }
+  
 
 /* Media Query for smaller screens */
 @media (max-width: 808px) {
@@ -124,10 +153,17 @@ body {
 	.hamburger {
 		display: flex; /* Show hamburger on small screens */
 	}
+	.hamburger div {
+		width: 25px;
+		height: 3px;
+		background-color: #000000; /* Black color for hamburger lines */
+		margin: 4px 0;
+		transition: 0.4s;
+	}
 	.logoTitle {
 		color: #000000; /* Black text */
 		margin-left: 10px;
-		width: 170px;
+		width: 140px;
 		font-size: 20px; /* Adjusted font size */
 	}
 	.logoImage {
@@ -141,11 +177,11 @@ body {
 		); /* White semi-transparent background */
 		backdrop-filter: blur(10px); /* Blur effect for background */
 		position: absolute;
-		top: 50px;
+		top: 65px;
 		left: 0;
 		width: 100%;
-		z-index: 1;
-		padding: 10px 0; /* Reduce padding for smaller screens */
+		z-index: 100;
+		padding: 25px 0 ; /* Reduce padding for smaller screens */
 	}
 
 	.navItem {
@@ -153,7 +189,8 @@ body {
 		width: 100%;
 		text-align: center;
 		font-size: 13px; /* Slightly smaller text */
-		margin-bottom: -25px; /* Remove margin */
+		margin-bottom: -10px; /* Remove margin */
+		margin-top: -5px;
 	}
 
 	.navItem::after {

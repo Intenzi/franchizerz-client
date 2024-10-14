@@ -1,0 +1,49 @@
+.searchContainer {
+    position: relative;
+  }
+  
+  .searchInput {
+    padding: 8px 40px 8px 30px; /* Padding for the input */
+    padding-right: 40px; /* Add space for the icon on the right */
+    border: 1px solid #060606;
+    border-radius: 45px;
+    font-size: 14px;
+    width: 100%; /* Ensure full width */
+  }
+  
+  .iconContainer {
+    position: absolute;
+    top: 50%;
+    right: 10px; /* Position the icon towards the end */
+    transform: translateY(-50%); /* Center the icon vertically */
+    pointer-events: none; /* Prevent mouse events on the icon */
+  }
+  
+  .searchIcon {
+    width: 36px; /* Adjust icon size if necessary */
+    height: 25px; /* Adjust icon size if necessary */
+    color: #060606; /* Adjust icon color as needed */
+  }
+  
+  .suggestionsList {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    background-color: white;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    z-index: 10;
+    max-height: 200px;
+    overflow-y: auto;
+  }
+  
+  .suggestionItem {
+    padding: 8px;
+    cursor: pointer;
+  }
+  
+  .suggestionItem:hover {
+    background-color: #f0f0f0;
+  }
+  
