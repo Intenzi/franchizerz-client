@@ -102,11 +102,23 @@ export const data = [
 		img: "/img/LassiStory.jpeg",
 		cost: "Rs. 15,00,000",
 		description: 
-		`<p>Lassi Story is a well known growing cafe chain in India, opened their first out-let in Lucknow(UP) early 2017. We understand the needs and taste of customers and prepare food keeping all healthy factors in mind. </p>
+		`<p>Mr. Shiva initiated Lassi Story with a vision to encourage aspiring entrepreneurs. The brand has already achieved 20 successful milestones in a short span, aiming to establish more such stories across the country. Join hands to write your own success story, our past experiences will surely help you sail through. </p>
 		<br></br>
-		 <p>Lassi Story is a new concept gourmet sandwich delivery/takeaway cafe venue that offers high quality European style sandwiches made fresh with a focus on hygienic preparation and also offers a cool ambience.</p>
+		 <p>: Lassi Story offers a standardized formula for all outlets.
+		 <br></br>
+Zero-Cost Sales Training: Comprehensive sales training provided without any
+charges.
+<br></br>
+Hassle-Free Licensing: Smooth process for licensing and agreements, ensuring a
+hassle-free inception.
+<br></br>
+Guidance and Support: Lassi Story's team assists throughout the franchise journey,
+providing guidance from inception to operations.
+<br></br>
+Entrepreneurial Vision: Opportunity for aspiring entrepreneurs to envision their
+future with a repeatable and successful model.</p>
 		<br></br>	
-		<p>Proffering health in every pack, Mr. Sandwich proffers the most scrumptious Lassi paired along with diverse sauces and beverages like coffee or shakes, with a diverse range of taste and pizzas, thus displaying a complete array of offerings under one roof.</p>`,
+		<p></p></p>`,
 		outlets: "More than 100 top cities of India",
 		requirements: "100 sq ft area, etc.",
 		avgsales: "Rs. 3,00,000",

@@ -11,12 +11,13 @@ export const mrSandwichFeatures = [
 
 
   export const LassiStoryFeatures = [
-    "Working with a well established brand",
-    "High profitability",
-    "Affordable investment",
-    "Marketing support",
-    "Fast growing outlets",
-    "Continue hand holding and support",
-    "CRM Software",
-    "Staff training and support",
+    "Zero cost sales training",
+    "Hassle-free licensing",
+    "Support for operations",
+    "Best recipe",
+    "Gross margins 45 to 50%",
+    "Guaranteed profitability",
+    "Lifetime contract without renewal fees",
+    "Consistent 6-12 months ROI"
   ];
+  

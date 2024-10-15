@@ -4,8 +4,8 @@ import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/bs"
 import "./styles/Carousel.css"
 
 const slides = [
-	{ id: 1, url: "/img/MrSandwich/111.jpeg" },
-	{ id: 2, url: "/img/LassiStoryHome.jpeg" },
+	{ id: 1, url: "/img/NewMrSandwich.png" },
+	{ id: 2, url: "/img/NewLassiStory.png" },
 	{ id: 3, url: "img/starbucks.jpg" },
 ]
 

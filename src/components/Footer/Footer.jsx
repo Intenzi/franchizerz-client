@@ -15,7 +15,7 @@ const Footer = () => {
                     <h3>Office <div className={styles.underline}><span></span></div></h3>
                     <p>Samrala Road,Ludhiana Punjab</p>
                     {/* <p>Ludhiana Punjab</p> */}
-                    <p>PIN 22122, India</p>
+                    <p>PIN 141008, India</p>
                     <p className={styles.emailId}>franchizerz@gmail.com</p>
                     {/* <h4>+91132232242</h4> */}
                 </div>
