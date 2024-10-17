@@ -2,13 +2,11 @@ import { useEffect, useState, useRef } from 'react';
 import s from './TopCategories.module.css';
 
 const categories = [
-    { name: "Education", img: "./img/sooon.jpg", url: "/category1" },
-    { name: "Food and Beverage", img: "./img/LassiStoryHome.jpeg", url: "/category2" },
-    { name: "Health Care", img: "./img/sooon.jpg", url: "/category3" },
-    { name: "Food and Beverage", img: "./img/MrSandwich.jpg", url: "/category2" },
-    { name: "Services and Retail", img: "./img/sooon.jpg", url: "/category1" },
-    { name: "Food and Beverage", img: "./img/LassiStoryHome.jpeg", url: "/category2" },
-    { name: "Tour and Leisure", img: "./img/sooon.jpg", url: "/category2" },
+    { name: "Education", img: "./img/Education (1).png", url: "/category1" },
+    { name: "Food and Beverage", img: "./img/Food & Beverage (1).png", url: "/category2" },
+    { name: "Health Care", img: "./img/Healthcare (1) (1).png", url: "/category3" },
+    { name: "Services and Retail", img: "./img/Service and retail (2).png", url: "/category1" },
+    { name: "Tour and Leisure", img: "./img/Tour & Leisure.png", url: "/category2" },
     { name: "Open to Any", img: "./img/Open to any (1).png", url: "/category3" },
 ];
 
