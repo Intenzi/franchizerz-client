@@ -63,6 +63,7 @@
 .contentInfo p{
     font-size: 20px;
     line-height: 1.6;
+    color:white;
     font-weight: 300;
 }
 @media (max-width:380px){
