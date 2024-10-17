@@ -1,0 +1,62 @@
+.foodContainer {
+    padding: 40px;
+    text-align: center;
+    background: #000;
+}
+
+h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #fff; /* Added white color to the heading */
+}
+
+.cardContainer {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    justify-content: center; /* Centers the grid items */
+    gap: 20px;
+}
+
+.card {
+    width: 100%; /* Make the card take the full width of its grid cell */
+    max-width: 350px; /* Optional: Set a max width for larger screens */
+    height: 100%; /* Ensure the card takes full height */
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    /* background: #474545; Optional: Add a background color to the card */
+    border-radius: 10px; /* Optional: Add border-radius for smooth edges */
+    margin: 0 auto; /* Ensure the card is centered horizontally */
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.cardImage {
+    width: 100%;
+    height: 250px; /* Set a fixed height for the image */
+    object-fit: cover;
+    border-top-left-radius: 10px; /* Match card's border-radius */
+    border-top-right-radius: 10px;
+}
+
+.cardContent {
+    padding: 15px;
+    text-align: center;
+    color: #fff; /*Ensure text is white */
+}
+
+.cardContent h2 {
+    font-size: 1.2em;
+    font-weight: 250;
+    margin-bottom: 10px;
+}
+
+.cardContent p {
+    font-size: 16px;
+    font-weight: 150;
+    color: #ccc; /* Use a lighter shade for the description text */
+    text-align: justify; /* Justify the description text */
+}
