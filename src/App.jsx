@@ -26,7 +26,7 @@ const App = () => {
 
 	return (
 		<>
-			{/* <NavBar /> */}
+			{/* <NavBar/> */}
 			<Newnav />
 			<div>
 				<Routes>

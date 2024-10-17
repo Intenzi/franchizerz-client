@@ -36,6 +36,7 @@ const TopCategories = () => {
     return (
         <div className={s.mainContainer}>
             <div className={s.headContainer}>
+            {/* removing line */}
                 {/* <div className={s.headTop}></div> */}
                 <p className={s.headText}>TOP CATEGORIES</p>
                 {/* <div className={s.headBottom}></div> */}

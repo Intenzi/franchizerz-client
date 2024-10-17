@@ -54,5 +54,5 @@ const FoodAndBeverage = () => {
         </div>
     );
 };
-
+// food 
 export default FoodAndBeverage;
