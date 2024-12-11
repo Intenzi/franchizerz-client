@@ -134,6 +134,10 @@
 .socialIcons .icon:hover {
 	background: rgba(255, 255, 255, 0.2);
 }
+.logoImage {
+    width: 130px; /* Set desired width */
+    height: auto; /* Maintain aspect ratio */
+}
  
 .hr {
 	width: 100vw;

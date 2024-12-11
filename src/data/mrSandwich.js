@@ -21,3 +21,47 @@ export const mrSandwichFeatures = [
     "Consistent 6-12 months ROI"
   ];
   
+
+  export const RameshwaramCafeFeatures = [
+    "Working with a well established brand",
+    "Assistance in site selection",
+    "Restaurant and kitchen layout support",
+    "Assistance by a dedicated team",
+    "Vendor support",
+    "Marketing support",
+    "Staff training and support",
+    "Highly profitable"
+  ];
+
+  export const SSComboKitchenFeatures = [
+    "Working with a well established brand",
+    "Assistance in site selection",
+    "Restaurant and kitchen layout support",
+    "Assistance by a dedicated team",
+    "Vendor support",
+    "Marketing support",
+    "Staff training and support",
+    "Highly profitable"
+  ];
+
+  export const UrbanDesiChatFeatures = [
+    "Working with a well established brand",
+    "Assistance in site selection",
+    "Restaurant and kitchen layout support",
+    "Assistance by a dedicated team",
+    "Continue hand holding and support",
+    "Periodic visit by our experts",
+    "Staff training and support",
+    "Internal managed POS system"
+  ];
+
+  export const NawabiKukkadFeatures = [
+    "Working with a well established brand",
+    "High Quality Skills for Reliability",
+    "Restaurant and kitchen layout support",
+    "Assistance by a dedicated team",
+    "Vendor support",
+    "Marketing support",
+    "Internal managed POS system",
+    "Best customer experience"
+  ];

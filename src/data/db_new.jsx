@@ -204,50 +204,413 @@ future with a repeatable and successful model.</p>
 	},
 	{
 		id: 3,
-		name: "Wow Momos",
-		img: "https://imagetolink.com/ib/7dWpv1zFUL.jpg",
-		cost: "Rs. 8,00,000",
-		outlets: "More than 10 top cities of India",
-		requirements: "100 sq ft area, etc.",
-		avgsales: "Rs. 1,00,000",
-		profit: "Rs. 40,000",
-		margin: "25%",
-		growth: "10% p.a.",
+		name: "RameshwaramCafe",
+		img: "/img/RameshwaramCafe.png",
+		cost: "Rs. 11,00,000-23,00,000",
+		description: 
+		`<p>Rameshwaram, The South Indian Cafe, is a culinary haven that brings the authentic flavors
+of South India to your plate. Our establishment is a celebration of the rich culinary heritage of
+the southern region, where every dish is a carefully crafted masterpiece. </p>
+		<br></br>
+		 <p>At Rameshwaram, we strive to transport you to the vibrant streets of South India, where
+each bite tells a story of tradition, culture, and a deep- rooted passion for exceptional
+cuisine.</p>
+		<br></br>	
+		<p>Welcome to a journey of sensory delights, where authenticity meets innovation, and
+every meal is a tribute to the diverse and flavorful world of South Indian gastronomy.</p>`,
+
+
+		outlets: "83 Outlets pan India",
+		requirements: "1000 sq ft",
+		avgsales: "9 lakh",
+		grossMargin: "60%",
+		margin: "40%",
+		// growth: "30-35%",
 		reviews: [
 			{
-				author: "Abhinav Sehgal",
-				review: "I have been making good money and honest profit! Thankyou wowmomos",
-				rating: 4,
+				customerName: "Rajat Gupta (Khanna punjab)",
+				datePosted: "2024-06-25",
+				reviewHeading: "Amazing Taste",
+				reviewParagraph:
+					"There support and quality is amazing...Company helps at every level...Owner himself is very humble.Process is easy and they support at every step.They are open for any changes and flexible with their decisions",
+				rating: 4.5,
 			},
 			{
-				author: "Ritvik",
-				review: "This is a good franchise, very easy and simple to invest in!",
-				rating: 5,
+				customerName: "Shivam(Gorakhpur, Uttar Pradesh)",
+				datePosted: "2024-06-24",
+				reviewHeading: "Good Value for Money",
+				reviewParagraph:
+					"Partnering with Mr. Sandwich has been an incredibly rewarding experience. From the very beginning, the team provided immense support, making the setup process seamless and hassle-free. The brand itself is strong, with a diverse menu that consistently attracts a wide range of customers. ",
+				rating: 4.0,
+			},
+			{
+				customerName: "Rajat Gupta (Khanna punjab)",
+				datePosted: "2024-06-25",
+				reviewHeading: "Amazing Taste",
+				reviewParagraph:
+					"There support and quality is amazing...Company helps at every level...Owner himself is very humble.Process is easy and they support at every step.They are open for any changes and flexible with their decisions",
+				rating: 4.5,
+			},
+			{
+				customerName: "Shivam(Gorakhpur, Uttar Pradesh)",
+				datePosted: "2024-06-24",
+				reviewHeading: "Good Value for Money",
+				reviewParagraph:
+					"Partnering with Mr. Sandwich has been an incredibly rewarding experience. From the very beginning, the team provided immense support, making the setup process seamless and hassle-free. The brand itself is strong, with a diverse menu that consistently attracts a wide range of customers. ",
+				rating: 4.0,
+			},
+			{
+				customerName: "Rajat Gupta (Khanna punjab)",
+				datePosted: "2024-06-25",
+				reviewHeading: "Amazing Taste",
+				reviewParagraph:
+					"There support and quality is amazing...Company helps at every level...Owner himself is very humble.Process is easy and they support at every step.They are open for any changes and flexible with their decisions",
+				rating: 4.5,
+			},
+			{
+				customerName: "Shivam(Gorakhpur, Uttar Pradesh)",
+				datePosted: "2024-06-24",
+				reviewHeading: "Good Value for Money",
+				reviewParagraph:
+					"Partnering with Mr. Sandwich has been an incredibly rewarding experience. From the very beginning, the team provided immense support, making the setup process seamless and hassle-free. The brand itself is strong, with a diverse menu that consistently attracts a wide range of customers. Whether it's the pizzas, burgers, or the famous momos, every item is crafted to perfection, ensuring repeat business and satisfied customer.",
+				rating: 4.0,
 			},
 		],
 		menuPhotos: [
-			{ url: "/img/df1d76ca-a6c3-4906-9253-7c41944cadb7 1.jpg", description: "Subfway Sandwich" },
-			{ url: "/img/Check out this Plain Bagel from Starbucks_ 1.jpg", description: "Subway Sandwich" },
-			{ url: "/img/Starbucks Pink Drink Recipe 1.jpg", description: "Subway Sandwich" },
-			{ url: "/img/77f17162-4b39-4311-9536-4dbf54d576e3 1.jpg", description: "Subway Sandwich" },
-			{ url: "/img/Starbucks Pink Drink Recipe 1.jpg", description: "Subway Sandwich" },
-			{ url: "/img/df1d76ca-a6c3-4906-9253-7c41944cadb7 1.jpg", description: "Subfway Sandwich" },
-			{ url: "/img/Check out this Plain Bagel from Starbucks_ 1.jpg", description: "Subway Sandwich" },
-			{ url: "/img/Starbucks Pink Drink Recipe 1.jpg", description: "Subway Sandwich" },
-			{ url: "/img/77f17162-4b39-4311-9536-4dbf54d576e3 1.jpg", description: "Subway Sandwich" },
-			{ url: "/img/Starbucks Pink Drink Recipe 1.jpg", description: "Subway Sandwich" },
+			// { url: "/img/MenuPhotos/MrSandwich/Menu1.jpg", description: "Subfway Sandwich" },
+			// { url: "/img/MenuPhotos/MrSandwich/Menu2.jpg", description: "Subfway Sandwich" },
+			// { url: "/img/MenuPhotos/MrSandwich/Menu3.jpg", description: "Subfway Sandwich" },
+			// { url: "/img/MenuPhotos/MrSandwich/Menu4.jpg", description: "Subfway Sandwich" },
+			// { url: "/img/MenuPhotos/MrSandwich/Menu5.jpg", description: "Subfway Sandwich" },
+			// { url: "/img/MenuPhotos/MrSandwich/Menu6.jpg", description: "Subfway Sandwich" },
+		
+
 		],
 		brandGalleryPhotos: [
-			{ url: "/img/aesthetic 1.jpg", description: "Subway Sandwich" },
-			{ url: "/img/b7f2a9d2-823f-4a51-a820-9fcb2c55859a 1.png", description: "Subway Sandwich" },
-			{ url: "/img/Starbucks Just Launched Its New Rewards Program and People Are Already Pissed - E! Online 1.png", description: "Subway Sandwich" },
-			{ url: "/img/Visiting Starbucks Reserve in  SODO • Pacific Northwest Fulfilled 1.jpg", description: "Subway Sandwich" },
-			{ url: "/img/Starbucks Just Launched Its New Rewards Program and People Are Already Pissed - E! Online 1.png", description: "Subway Sandwich" },
-			{ url: "/img/14 Prettiest Starbucks Outlets In Japan For Caffeine Lovers To Chill At In Between Sightseeing 1.png", description: "Subway Sandwich" },
-			{ url: "/img/Starbucks (1) 1.jpg", description: "Subway Sandwich" },
-			{ url: "/img/Starbucks Just Launched Its New Rewards Program and People Are Already Pissed - E! Online 1.png", description: "Subway Sandwich" },
-			{ url: "/img/Starbucks Autumn Edition _ peopleofdesign 1.jpg", description: "Subway Sandwich" },
-			{ url: "/img/Starbucks Coffee Drink - Free photo on Pixabay 1.jpg", description: "Subway Sandwich" },
+			// { url: "/img/MrSandwich/11.jpeg", description: "Subway Sandwich" },
+			// { url: "/img/MrSandwich/12.jpeg", description: "Subway Sandwich" },
+			// { url: "/img/MrSandwich/13.jpeg", description: "Subway Sandwich" },
+			// { url: "/img/MrSandwich/14.jpeg", description: "Subway Sandwich" },
+			// { url: "/img/MrSandwich/15.jpeg", description: "Subway Sandwich" },
+			// { url: "/img/MrSandwich/16.jpeg", description: "Subway Sandwich" },
+			// { url: "/img/MrSandwich/17.jpeg", description: "Subway Sandwich" },
+			// { url: "/img/MrSandwich/18.jpeg", description: "Subway Sandwich" },
+			// { url: "/img/MrSandwich/19.jpeg", description: "Subway Sandwich" },
+			// { url: "/img/MrSandwich/110.jpeg", description: "Subway Sandwich" },
+			// { url: "/img/MrSandwich/111.jpeg", description: "Subway Sandwich" },
+			// { url: "/img/MrSandwich/112.jpeg", description: "Subway Sandwich" },
+			// { url: "/img/MrSandwich/113.jpeg", description: "Subway Sandwich" },
+			// { url: "/img/MrSandwich/114.jpeg", description: "Subway Sandwich" },
+			// { url: "/img/MrSandwich/115.jpeg", description: "Subway Sandwich" },
+		],
+	},
+	{
+		id: 4,
+		name: "SSComboKitchen",
+		img: "/img/Sscombokitchen.jpg",
+		cost: "Rs. 11,00,000-23,00,000",
+		description: 
+		`<p>Started in 2017,SS Combo Kitchen Company is a restaurant chain having its presence in
+four outlets across India. The company focuses on satisfying the multiple cuisine food
+craving of the consumers . It specializes in providing the best combination of Indian food.
+A60-item menu,which satisfies all possible food cravings of the customer.</p>
+		<br></br>
+		 <p>In today’s day and age, people are shifting towards eating a multi-cuisine diet. People
+nowadays, demand a combination of food options packed in one meal to get the utmost
+satisfaction. S.S Combo Kitchen Combo caters to this need of today’s world customer.</p>
+		<br></br>	
+		<p>Specialized combo-food options at Affordable rates to people. Variety of food options
+including all meals such as Breakfast, Brunch, Lunch, Snacks, and Dinner. S.S Combo
+Kitchen ensures that quality and bench mark industry standards.</p>`,
+
+
+		outlets: "40+ Outlets pan India",
+		requirements: "300-380 sq ft.",
+		avgsales: "5 lakh",
+		grossMargin: "60%",
+		margin: "30%",
+		// growth: "30-35%",
+		reviews: [
+			{
+				customerName: "Rajat Gupta (Khanna punjab)",
+				datePosted: "2024-06-25",
+				reviewHeading: "Amazing Taste",
+				reviewParagraph:
+					"There support and quality is amazing...Company helps at every level...Owner himself is very humble.Process is easy and they support at every step.They are open for any changes and flexible with their decisions",
+				rating: 4.5,
+			},
+			{
+				customerName: "Shivam(Gorakhpur, Uttar Pradesh)",
+				datePosted: "2024-06-24",
+				reviewHeading: "Good Value for Money",
+				reviewParagraph:
+					"Partnering with Mr. Sandwich has been an incredibly rewarding experience. From the very beginning, the team provided immense support, making the setup process seamless and hassle-free. The brand itself is strong, with a diverse menu that consistently attracts a wide range of customers. ",
+				rating: 4.0,
+			},
+			{
+				customerName: "Rajat Gupta (Khanna punjab)",
+				datePosted: "2024-06-25",
+				reviewHeading: "Amazing Taste",
+				reviewParagraph:
+					"There support and quality is amazing...Company helps at every level...Owner himself is very humble.Process is easy and they support at every step.They are open for any changes and flexible with their decisions",
+				rating: 4.5,
+			},
+			{
+				customerName: "Shivam(Gorakhpur, Uttar Pradesh)",
+				datePosted: "2024-06-24",
+				reviewHeading: "Good Value for Money",
+				reviewParagraph:
+					"Partnering with Mr. Sandwich has been an incredibly rewarding experience. From the very beginning, the team provided immense support, making the setup process seamless and hassle-free. The brand itself is strong, with a diverse menu that consistently attracts a wide range of customers. ",
+				rating: 4.0,
+			},
+			{
+				customerName: "Rajat Gupta (Khanna punjab)",
+				datePosted: "2024-06-25",
+				reviewHeading: "Amazing Taste",
+				reviewParagraph:
+					"There support and quality is amazing...Company helps at every level...Owner himself is very humble.Process is easy and they support at every step.They are open for any changes and flexible with their decisions",
+				rating: 4.5,
+			},
+			{
+				customerName: "Shivam(Gorakhpur, Uttar Pradesh)",
+				datePosted: "2024-06-24",
+				reviewHeading: "Good Value for Money",
+				reviewParagraph:
+					"Partnering with Mr. Sandwich has been an incredibly rewarding experience. From the very beginning, the team provided immense support, making the setup process seamless and hassle-free. The brand itself is strong, with a diverse menu that consistently attracts a wide range of customers. Whether it's the pizzas, burgers, or the famous momos, every item is crafted to perfection, ensuring repeat business and satisfied customer.",
+				rating: 4.0,
+			},
+		],
+		menuPhotos: [
+			// { url: "/img/MenuPhotos/MrSandwich/Menu1.jpg", description: "Subfway Sandwich" },
+			// { url: "/img/MenuPhotos/MrSandwich/Menu2.jpg", description: "Subfway Sandwich" },
+			// { url: "/img/MenuPhotos/MrSandwich/Menu3.jpg", description: "Subfway Sandwich" },
+			// { url: "/img/MenuPhotos/MrSandwich/Menu4.jpg", description: "Subfway Sandwich" },
+			// { url: "/img/MenuPhotos/MrSandwich/Menu5.jpg", description: "Subfway Sandwich" },
+			// { url: "/img/MenuPhotos/MrSandwich/Menu6.jpg", description: "Subfway Sandwich" },
+		
+
+		],
+		brandGalleryPhotos: [
+			// { url: "/img/MrSandwich/11.jpeg", description: "Subway Sandwich" },
+			// { url: "/img/MrSandwich/12.jpeg", description: "Subway Sandwich" },
+			// { url: "/img/MrSandwich/13.jpeg", description: "Subway Sandwich" },
+			// { url: "/img/MrSandwich/14.jpeg", description: "Subway Sandwich" },
+			// { url: "/img/MrSandwich/15.jpeg", description: "Subway Sandwich" },
+			// { url: "/img/MrSandwich/16.jpeg", description: "Subway Sandwich" },
+			// { url: "/img/MrSandwich/17.jpeg", description: "Subway Sandwich" },
+			// { url: "/img/MrSandwich/18.jpeg", description: "Subway Sandwich" },
+			// { url: "/img/MrSandwich/19.jpeg", description: "Subway Sandwich" },
+			// { url: "/img/MrSandwich/110.jpeg", description: "Subway Sandwich" },
+			// { url: "/img/MrSandwich/111.jpeg", description: "Subway Sandwich" },
+			// { url: "/img/MrSandwich/112.jpeg", description: "Subway Sandwich" },
+			// { url: "/img/MrSandwich/113.jpeg", description: "Subway Sandwich" },
+			// { url: "/img/MrSandwich/114.jpeg", description: "Subway Sandwich" },
+			// { url: "/img/MrSandwich/115.jpeg", description: "Subway Sandwich" },
+		],
+	},
+	{
+		id: 5,
+		name: "UrbanDesiChat",
+		img: "/img/UrbanDesichaat.jpg",
+		cost: "Rs. 11,00,000-23,00,000",
+		description: 
+		`<p>Welcome to Urban Desi Chaat! We're passionate about delivering an unforgettable culinary
+experience right to the streets </p>
+		<br></br>
+		 <p>Our journey began with a simple desire to share our love for
+flavorful, authentic street food with our community. At Urban Desi Chaat, we believe in using
+only the freshest ingredients sourced locally whenever possible. </p>
+		<br></br>	
+		<p>From tantalizing golgappas
+to mouthwatering pav bhaji, each dish is crafted with care and attention to detail, ensuring
+every bite bursts with flavor</p>`,
+
+
+		outlets: " Outlets pan India",
+		requirements: "200-300 sq ft.",
+		avgsales: "3 lakh",
+		grossMargin: "60%",
+		margin: "40%",
+		// growth: "30-35%",
+		reviews: [
+			{
+				customerName: "Rajat Gupta (Khanna punjab)",
+				datePosted: "2024-06-25",
+				reviewHeading: "Amazing Taste",
+				reviewParagraph:
+					"There support and quality is amazing...Company helps at every level...Owner himself is very humble.Process is easy and they support at every step.They are open for any changes and flexible with their decisions",
+				rating: 4.5,
+			},
+			{
+				customerName: "Shivam(Gorakhpur, Uttar Pradesh)",
+				datePosted: "2024-06-24",
+				reviewHeading: "Good Value for Money",
+				reviewParagraph:
+					"Partnering with Mr. Sandwich has been an incredibly rewarding experience. From the very beginning, the team provided immense support, making the setup process seamless and hassle-free. The brand itself is strong, with a diverse menu that consistently attracts a wide range of customers. ",
+				rating: 4.0,
+			},
+			{
+				customerName: "Rajat Gupta (Khanna punjab)",
+				datePosted: "2024-06-25",
+				reviewHeading: "Amazing Taste",
+				reviewParagraph:
+					"There support and quality is amazing...Company helps at every level...Owner himself is very humble.Process is easy and they support at every step.They are open for any changes and flexible with their decisions",
+				rating: 4.5,
+			},
+			{
+				customerName: "Shivam(Gorakhpur, Uttar Pradesh)",
+				datePosted: "2024-06-24",
+				reviewHeading: "Good Value for Money",
+				reviewParagraph:
+					"Partnering with Mr. Sandwich has been an incredibly rewarding experience. From the very beginning, the team provided immense support, making the setup process seamless and hassle-free. The brand itself is strong, with a diverse menu that consistently attracts a wide range of customers. ",
+				rating: 4.0,
+			},
+			{
+				customerName: "Rajat Gupta (Khanna punjab)",
+				datePosted: "2024-06-25",
+				reviewHeading: "Amazing Taste",
+				reviewParagraph:
+					"There support and quality is amazing...Company helps at every level...Owner himself is very humble.Process is easy and they support at every step.They are open for any changes and flexible with their decisions",
+				rating: 4.5,
+			},
+			{
+				customerName: "Shivam(Gorakhpur, Uttar Pradesh)",
+				datePosted: "2024-06-24",
+				reviewHeading: "Good Value for Money",
+				reviewParagraph:
+					"Partnering with Mr. Sandwich has been an incredibly rewarding experience. From the very beginning, the team provided immense support, making the setup process seamless and hassle-free. The brand itself is strong, with a diverse menu that consistently attracts a wide range of customers. Whether it's the pizzas, burgers, or the famous momos, every item is crafted to perfection, ensuring repeat business and satisfied customer.",
+				rating: 4.0,
+			},
+		],
+		menuPhotos: [
+			// { url: "/img/MenuPhotos/MrSandwich/Menu1.jpg", description: "Subfway Sandwich" },
+			// { url: "/img/MenuPhotos/MrSandwich/Menu2.jpg", description: "Subfway Sandwich" },
+			// { url: "/img/MenuPhotos/MrSandwich/Menu3.jpg", description: "Subfway Sandwich" },
+			// { url: "/img/MenuPhotos/MrSandwich/Menu4.jpg", description: "Subfway Sandwich" },
+			// { url: "/img/MenuPhotos/MrSandwich/Menu5.jpg", description: "Subfway Sandwich" },
+			// { url: "/img/MenuPhotos/MrSandwich/Menu6.jpg", description: "Subfway Sandwich" },
+		
+
+		],
+		brandGalleryPhotos: [
+			// { url: "/img/MrSandwich/11.jpeg", description: "Subway Sandwich" },
+			// { url: "/img/MrSandwich/12.jpeg", description: "Subway Sandwich" },
+			// { url: "/img/MrSandwich/13.jpeg", description: "Subway Sandwich" },
+			// { url: "/img/MrSandwich/14.jpeg", description: "Subway Sandwich" },
+			// { url: "/img/MrSandwich/15.jpeg", description: "Subway Sandwich" },
+			// { url: "/img/MrSandwich/16.jpeg", description: "Subway Sandwich" },
+			// { url: "/img/MrSandwich/17.jpeg", description: "Subway Sandwich" },
+			// { url: "/img/MrSandwich/18.jpeg", description: "Subway Sandwich" },
+			// { url: "/img/MrSandwich/19.jpeg", description: "Subway Sandwich" },
+			// { url: "/img/MrSandwich/110.jpeg", description: "Subway Sandwich" },
+			// { url: "/img/MrSandwich/111.jpeg", description: "Subway Sandwich" },
+			// { url: "/img/MrSandwich/112.jpeg", description: "Subway Sandwich" },
+			// { url: "/img/MrSandwich/113.jpeg", description: "Subway Sandwich" },
+			// { url: "/img/MrSandwich/114.jpeg", description: "Subway Sandwich" },
+			// { url: "/img/MrSandwich/115.jpeg", description: "Subway Sandwich" },
+		],
+	},
+	{
+		id: 6,
+		name: "NawabiKukkad",
+		img: "/img/Nawabikukkad.png",
+		cost: "Rs. 11,00,000-23,00,000",
+		description: 
+		`<p>All of our menu items are inspired by cuisine and have been created by our head chef. Not
+only do we have fresh flown-in proper Mughlai foods but we also have a variety of non-veg
+to choose from. </p>
+		<br></br>
+		 <p>Come dine with us & experience an authentic mood relish in an intimate
+dining space. We look forward to serving you! Nawabi Kukkad is a comfortable, brasserie-
+style restaurant offering everything you love about cuisine without the attitude. </p>
+		<br></br>	
+		<p> It features
+classic veg and non veg dishes as well as fresh salads and juicy hamburgers made with
+fresh-ground beef</p>`,
+
+
+		outlets: " Outlets pan India",
+		requirements: "300-800 sq ft.",
+		avgsales: "10 lakh",
+		grossMargin: "60%",
+		margin: "40%",
+		// growth: "30-35%",
+		reviews: [
+			{
+				customerName: "Rajat Gupta (Khanna punjab)",
+				datePosted: "2024-06-25",
+				reviewHeading: "Amazing Taste",
+				reviewParagraph:
+					"There support and quality is amazing...Company helps at every level...Owner himself is very humble.Process is easy and they support at every step.They are open for any changes and flexible with their decisions",
+				rating: 4.5,
+			},
+			{
+				customerName: "Shivam(Gorakhpur, Uttar Pradesh)",
+				datePosted: "2024-06-24",
+				reviewHeading: "Good Value for Money",
+				reviewParagraph:
+					"Partnering with Mr. Sandwich has been an incredibly rewarding experience. From the very beginning, the team provided immense support, making the setup process seamless and hassle-free. The brand itself is strong, with a diverse menu that consistently attracts a wide range of customers. ",
+				rating: 4.0,
+			},
+			{
+				customerName: "Rajat Gupta (Khanna punjab)",
+				datePosted: "2024-06-25",
+				reviewHeading: "Amazing Taste",
+				reviewParagraph:
+					"There support and quality is amazing...Company helps at every level...Owner himself is very humble.Process is easy and they support at every step.They are open for any changes and flexible with their decisions",
+				rating: 4.5,
+			},
+			{
+				customerName: "Shivam(Gorakhpur, Uttar Pradesh)",
+				datePosted: "2024-06-24",
+				reviewHeading: "Good Value for Money",
+				reviewParagraph:
+					"Partnering with Mr. Sandwich has been an incredibly rewarding experience. From the very beginning, the team provided immense support, making the setup process seamless and hassle-free. The brand itself is strong, with a diverse menu that consistently attracts a wide range of customers. ",
+				rating: 4.0,
+			},
+			{
+				customerName: "Rajat Gupta (Khanna punjab)",
+				datePosted: "2024-06-25",
+				reviewHeading: "Amazing Taste",
+				reviewParagraph:
+					"There support and quality is amazing...Company helps at every level...Owner himself is very humble.Process is easy and they support at every step.They are open for any changes and flexible with their decisions",
+				rating: 4.5,
+			},
+			{
+				customerName: "Shivam(Gorakhpur, Uttar Pradesh)",
+				datePosted: "2024-06-24",
+				reviewHeading: "Good Value for Money",
+				reviewParagraph:
+					"Partnering with Mr. Sandwich has been an incredibly rewarding experience. From the very beginning, the team provided immense support, making the setup process seamless and hassle-free. The brand itself is strong, with a diverse menu that consistently attracts a wide range of customers. Whether it's the pizzas, burgers, or the famous momos, every item is crafted to perfection, ensuring repeat business and satisfied customer.",
+				rating: 4.0,
+			},
+		],
+		menuPhotos: [
+			// { url: "/img/MenuPhotos/MrSandwich/Menu1.jpg", description: "Subfway Sandwich" },
+			// { url: "/img/MenuPhotos/MrSandwich/Menu2.jpg", description: "Subfway Sandwich" },
+			// { url: "/img/MenuPhotos/MrSandwich/Menu3.jpg", description: "Subfway Sandwich" },
+			// { url: "/img/MenuPhotos/MrSandwich/Menu4.jpg", description: "Subfway Sandwich" },
+			// { url: "/img/MenuPhotos/MrSandwich/Menu5.jpg", description: "Subfway Sandwich" },
+			// { url: "/img/MenuPhotos/MrSandwich/Menu6.jpg", description: "Subfway Sandwich" },
+		
+
+		],
+		brandGalleryPhotos: [
+			// { url: "/img/MrSandwich/11.jpeg", description: "Subway Sandwich" },
+			// { url: "/img/MrSandwich/12.jpeg", description: "Subway Sandwich" },
+			// { url: "/img/MrSandwich/13.jpeg", description: "Subway Sandwich" },
+			// { url: "/img/MrSandwich/14.jpeg", description: "Subway Sandwich" },
+			// { url: "/img/MrSandwich/15.jpeg", description: "Subway Sandwich" },
+			// { url: "/img/MrSandwich/16.jpeg", description: "Subway Sandwich" },
+			// { url: "/img/MrSandwich/17.jpeg", description: "Subway Sandwich" },
+			// { url: "/img/MrSandwich/18.jpeg", description: "Subway Sandwich" },
+			// { url: "/img/MrSandwich/19.jpeg", description: "Subway Sandwich" },
+			// { url: "/img/MrSandwich/110.jpeg", description: "Subway Sandwich" },
+			// { url: "/img/MrSandwich/111.jpeg", description: "Subway Sandwich" },
+			// { url: "/img/MrSandwich/112.jpeg", description: "Subway Sandwich" },
+			// { url: "/img/MrSandwich/113.jpeg", description: "Subway Sandwich" },
+			// { url: "/img/MrSandwich/114.jpeg", description: "Subway Sandwich" },
+			// { url: "/img/MrSandwich/115.jpeg", description: "Subway Sandwich" },
 		],
 	},
 ]

@@ -6,7 +6,10 @@ import "./styles/Carousel.css"
 const slides = [
 	{ id: 1, url: "/img/NewMrSandwich.png" },
 	{ id: 2, url: "/img/NewLassiStory.png" },
-	{ id: 3, url: "img/starbucks.jpg" },
+	{ id: 3, url: "/img/RameshwaramCafe.png" },
+	{ id: 4, url: "/img/Sscombokitchen.jpg" },
+	{ id: 5, url: "/img/UrbanDesichaat.jpg" },
+	{ id: 6, url: "/img/Nawabikukkad.png" },
 ]
 
 

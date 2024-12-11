@@ -16,11 +16,13 @@ const ContactForm = () => {
             <h3>Get in touch</h3>
             <address>
               <strong>Email:</strong>{' '}
-              <a href="mailto:example@example.com">example@example.com</a>
+              <a href="mailto:franchizerz@gmail.com">franchizerz@gmail.com</a>
               <br />
-              <strong>Phone:</strong> +1234567890
+              <strong>Phone:</strong> +91 7814864884
             </address>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vehicula nibh vel tempus ultrices.</p>
+            <p>Samrala Road,
+              Ludhiana Punjab 
+              141008</p>
           </div>
           <div className={styles['form-fields']}>
             <div className={styles['input-box']}>

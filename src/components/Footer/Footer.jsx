@@ -3,13 +3,15 @@ import styles from './Footer.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { faFacebook, faTwitter, faWhatsapp, faPinterest } from '@fortawesome/free-brands-svg-icons';
+import FranchizerzLogo from "../../assets/logo_1.svg";
+
 
 const Footer = () => {
     return (
         <footer className={styles.footer}>
             <div className={styles.row}>
                 <div className={styles.col}>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, a?</p>
+                <FranchizerzLogo className={styles.logoImage} />
                 </div>
                 <div className={styles.col}>
                     <h3>Office <div className={styles.underline}><span></span></div></h3>
