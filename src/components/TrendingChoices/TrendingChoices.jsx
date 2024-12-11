@@ -5,14 +5,14 @@ import s from './TrendingChoices.module.css';
 
 const TopChoices = () => {
     const allData = [
-        { id: 1, name: 'Mr Sandwich', category: 'Food Beverage', image: '/img/MrSandwich.jpg' },
-        { id: 2, name: 'Lassi Story', category: 'Food Beverage', image: '/img/LassiStory.jpeg' },
-        { id: 3, name: 'Mcdonalds', category: 'Food Beverage', image: './img/Fortis Hiranandani Hospital, India 1.jpg' },
-        { id: 4, name: 'Mcdonalds', category: 'Food Beverage', image: './img/857d89ea-b84b-4a23-96e4-d653c66298d2 1.jpg' },
-        { id: 5, name: 'Mcdonalds', category: 'Food Beverage', image: './img/Fortis Hiranandani Hospital, India 1.jpg' },
-        { id: 6, name: 'Mr Sandwich', category: 'Food Beverage', image: '/img/MrSandwich.jpg' },
-        { id: 1, name: 'Lassi Story', category: 'Food Beverage', image: '/img/LassiStory.jpeg' },
-        { id: 2, name: 'Mcdonalds', category: 'Food Beverage', image: './img/Fortis Hiranandani Hospital, India 1.jpg' },
+        { id: 1, name: 'Rameshwaram Cafe', category: 'Food Beverage', image: '/img/RameshwaramCafe.png' },
+        { id: 2, name: 'SS Combo Kitchen', category: 'Food Beverage', image: '/img/Sscombokitchen.jpg' },
+        { id: 3, name: 'Urban Desi Chaat', category: 'Food Beverage', image: '/img/UrbanDesichaat.jpg' },
+        { id: 4, name: 'Nawabi Kudkkad', category: 'Food Beverage', image: '/img/Nawabikukkad.png' },
+        { id: 5, name: 'Mr Sandwich', category: 'Food Beverage', image: '/img/MrSandwich.jpg' },
+        { id: 6, name: 'Lassi Story', category: 'Food Beverage', image: '/img/LassiStory.jpeg' },
+        { id: 3, name: 'Urban Desi Chaat', category: 'Food Beverage', image: '/img/UrbanDesichaat.jpg' },
+        { id: 4, name: 'Nawabi Kudkkad', category: 'Food Beverage', image: '/img/Nawabikukkad.png' },
     ];
 
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -93,7 +93,7 @@ const TopChoices = () => {
         >
             <div className={s.headContainer}>
                 <div className={s.headTop}></div>
-                <p className={s.headText}>TOP CHOICES</p>
+                <p className={s.headText}>Featured Opportunities</p>
                 <div className={s.headBottom}></div>
             </div>
             <div className={s.subContainer}>
