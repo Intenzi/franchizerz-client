@@ -142,9 +142,9 @@ const TopChoices = () => {
         { id: 1, name: 'Mr Sandwich', category: 'Food Beverage', image: '/img/MrSandwich.jpg' },
         { id: 2, name: 'Lassi Story', category: 'Food Beverage', image: '/img/LassiStory.jpeg' },
         { id: 3, name: 'Rameshwaram Cafe', category: 'Food Beverage', image: '/img/RameshwaramCafe.png' },
-        { id: 4, name: 'SS Combo Kitchen', category: 'Food Beverage', image: '/img/Sscombokitchen.jpg' },
+        { id: 4, name: 'SS Combo Kitchen', category: 'Food Beverage', image: '/img/SScombokitchenLogo.jpg' },
         { id: 5, name: 'Urban Desi Chaat', category: 'Food Beverage', image: '/img/UrbanDesichaat.jpg' },
-        { id: 6, name: 'Nawabi Kudkkad', category: 'Food Beverage', image: '/img/Nawabikukkad.png' },
+        { id: 6, name: 'Nawabi Kudkkad', category: 'Food Beverage', image: '/img/Nawabikukkadlogo.jpg' },
         { id: 1, name: 'Mr Sandwich', category: 'Food Beverage', image: '/img/MrSandwich.jpg' },
         { id: 2, name: 'Lassi Story', category: 'Food Beverage', image: '/img/LassiStory.jpeg' },
     ];
