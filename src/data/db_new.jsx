@@ -277,12 +277,12 @@ every meal is a tribute to the diverse and flavorful world of South Indian gastr
 			},
 		],
 		menuPhotos: [
-			// { url: "/img/MenuPhotos/MrSandwich/Menu1.jpg", description: "Subfway Sandwich" },
-			// { url: "/img/MenuPhotos/MrSandwich/Menu2.jpg", description: "Subfway Sandwich" },
-			// { url: "/img/MenuPhotos/MrSandwich/Menu3.jpg", description: "Subfway Sandwich" },
-			// { url: "/img/MenuPhotos/MrSandwich/Menu4.jpg", description: "Subfway Sandwich" },
-			// { url: "/img/MenuPhotos/MrSandwich/Menu5.jpg", description: "Subfway Sandwich" },
-			// { url: "/img/MenuPhotos/MrSandwich/Menu6.jpg", description: "Subfway Sandwich" },
+			{ url: "/img/MadrasCafe/RameshwaramCafe (2)_page-0001.jpg", description: "Subfway Sandwich" },
+			{ url: "/img/MadrasCafe/RameshwaramCafe (2)_page-0002.jpg", description: "Subfway Sandwich" },
+			{ url: "/img/MadrasCafe/RameshwaramCafe (2)_page-0003.jpg", description: "Subfway Sandwich" },
+			{ url: "/img/MadrasCafe/RameshwaramCafe (2)_page-0004.jpg", description: "Subfway Sandwich" },
+			{ url: "/img/MadrasCafe/RameshwaramCafe (2)_page-0002.jpg", description: "Subfway Sandwich" },
+			{ url: "/img/MadrasCafe/RameshwaramCafe (2)_page-0003.jpg", description: "Subfway Sandwich" },
 		
 
 		],
@@ -381,12 +381,13 @@ Kitchen ensures that quality and bench mark industry standards.</p>`,
 			},
 		],
 		menuPhotos: [
-			// { url: "/img/MenuPhotos/MrSandwich/Menu1.jpg", description: "Subfway Sandwich" },
-			// { url: "/img/MenuPhotos/MrSandwich/Menu2.jpg", description: "Subfway Sandwich" },
-			// { url: "/img/MenuPhotos/MrSandwich/Menu3.jpg", description: "Subfway Sandwich" },
-			// { url: "/img/MenuPhotos/MrSandwich/Menu4.jpg", description: "Subfway Sandwich" },
-			// { url: "/img/MenuPhotos/MrSandwich/Menu5.jpg", description: "Subfway Sandwich" },
-			// { url: "/img/MenuPhotos/MrSandwich/Menu6.jpg", description: "Subfway Sandwich" },
+			{ url: "/img/SSComboKitchen/SSComboKitchen (1)_page-0001.jpg", description: "Subfway Sandwich" },
+			{ url: "/img/SSComboKitchen/SSComboKitchen (1)_page-0002.jpg", description: "Subfway Sandwich" },
+			{ url: "/img/SSComboKitchen/SSComboKitchen (1)_page-0003.jpg", description: "Subfway Sandwich" },
+			{ url: "/img/SSComboKitchen/SSComboKitchen (1)_page-0004.jpg", description: "Subfway Sandwich" },
+			{ url: "/img/SSComboKitchen/SSComboKitchen (1)_page-0002.jpg", description: "Subfway Sandwich" },
+			{ url: "/img/SSComboKitchen/SSComboKitchen (1)_page-0003.jpg", description: "Subfway Sandwich" },
+			
 		
 
 		],
@@ -586,12 +587,13 @@ fresh-ground beef</p>`,
 			},
 		],
 		menuPhotos: [
-			// { url: "/img/MenuPhotos/MrSandwich/Menu1.jpg", description: "Subfway Sandwich" },
-			// { url: "/img/MenuPhotos/MrSandwich/Menu2.jpg", description: "Subfway Sandwich" },
-			// { url: "/img/MenuPhotos/MrSandwich/Menu3.jpg", description: "Subfway Sandwich" },
-			// { url: "/img/MenuPhotos/MrSandwich/Menu4.jpg", description: "Subfway Sandwich" },
-			// { url: "/img/MenuPhotos/MrSandwich/Menu5.jpg", description: "Subfway Sandwich" },
-			// { url: "/img/MenuPhotos/MrSandwich/Menu6.jpg", description: "Subfway Sandwich" },
+			{ url: "/img/NawabiKukkad/NK1.jpeg", description: "Subfway Sandwich" },
+			{ url: "/img/NawabiKukkad/NK2.jpeg", description: "Subfway Sandwich" },
+			{ url: "/img/NawabiKukkad/NK3.jpeg", description: "Subfway Sandwich" },
+			{ url: "/img/NawabiKukkad/NK4.jpeg", description: "Subfway Sandwich" },
+			{ url: "/img/NawabiKukkad/NK2.jpeg", description: "Subfway Sandwich" },
+			{ url: "/img/NawabiKukkad/NK1.jpeg", description: "Subfway Sandwich" },
+			
 		
 
 		],
