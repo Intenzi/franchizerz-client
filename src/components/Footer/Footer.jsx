@@ -24,7 +24,7 @@ const Footer = () => {
                 <div className={styles.col}>
                     <h3>Quick Links <div className={styles.underline}><span></span></div></h3>
                     <p><a href="/">Home</a></p>
-                    <p><a href="/about">About Us</a></p>
+                    <p><a href="/about-us">About Us</a></p>
                     <p><a href="/blogs">Blogs</a></p>
                 </div>
                 <div className={styles.col}>
